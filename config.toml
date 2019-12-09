@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https://jonassodergren.github.io/"
+baseURL = "https://jonassodergren.github.io/blivald/"
 languageCode = "en-US"
 title = "Blivald.se - Ett sätt att stå ut"
 theme = "hugo-split-theme"
