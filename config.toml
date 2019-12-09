@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https://jonassodergren.github.io/"
+baseURL = "https://jonassodergren.github.io/blivald/"
 languageCode = "en-US"
 title = "Blivald.se - Ett sätt att stå ut"
 theme = "hugo-split-theme"
@@ -19,7 +19,7 @@ googleAnalytics = ""
   # Metadata for search engines and social sharing
   author = "Jonas Södergren"
   description = "Stå ut vid jobbinterjun"
-  shareImage = "images/social.jpg"
+  shareImage = "woc_small.png"
   #twitterHandle = "onepagelove"
 
   # Favicon
