@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "https://jonassodergren.github.io/blivald/"
 languageCode = "en-US"
-title = "Blivald.se - Ett sätt att stå ut"
+title = "Blivald.se - Hjälper dig att stå ut i mängden"
 theme = "hugo-split-theme"
 disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 
@@ -18,7 +18,7 @@ googleAnalytics = ""
 
   # Metadata for search engines and social sharing
   author = "Jonas Södergren"
-  description = "Stå ut vid jobbinterjun"
+  description = "Alla kan utfärda ett certifikat till sig själv för att visa vilket jobb man är intresserad av"
   shareImage = "woc_small.png"
   #twitterHandle = "onepagelove"
 
