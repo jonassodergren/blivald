@@ -9,11 +9,13 @@
   <loc>https://www.blivald.se/</loc>
   <lastmod>2019-12-14T16:41:59+00:00</lastmod>
   <priority>1.00</priority>
+  <changefreq>hourly</changefreq>
 </url>
 <url>
   <loc>https://www.blivald.se/certifikat-exempel.pdf</loc>
   <lastmod>2019-12-14T16:41:59+00:00</lastmod>
   <priority>0.80</priority>
+  <changefreq>hourly</changefreq>
 </url>
 
 
