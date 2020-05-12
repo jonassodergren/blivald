@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kvittens</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+
+  <body id="confirmation">
+
+    <nav aria-label="breadcrumb" class="navbar navbar-dark bg-dark">
+  		<ol class="breadcrumb bg-dark">
+  			<li class="breadcrumb-item text-light"><a href="/">Blivald.se</a></li>
+        <li class="breadcrumb-item active text-light" aria-current="page">Kvittens</li>
+  		</ol>
+  	</nav>
+
+    <div class="container bg-white">
+      <div class="row justify-content-md-center">
+  			<div class="col-sm-6">
+
+          <div class="jumbotron bg-white">
+            <div class="text-center">
+
+              <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120"  /> <!-- style="display: block; border: 0px;" -->
+            </div>
+            <h4 class="display-4 text-center">Ditt certifikat är nu utfärdat!</h4>
+            <p class="lead text-center">Certifikatet skickas direkt till din mail.</p>
+            <!--	<hr class="my-4">  -->
+
+            <div class="row">
+              <div class="col-12 text-center">
+                <!--			<a class="btn btn-lg btn-outline-secondary" href="#" role="button" onclick="login();">Kom igång</a>  -->
+                <button type="button" class="btn btn-lg btn-outline-secondary" onclick="window.print();"> <!-- data-toggle="modal" data-target="#exampleModalCenter" -->
+                  Ladda ner kvittensen
+                </button>
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <hr>
+
+          <div id="kvittens">
+
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="align-middle">Kvittens</th>
+                  <th scope="col">Ref: <span id="order_id"></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1 st certifikat</th>
+                  <td>0 kr</td>
+                </tr>
+                <tr>
+                  <th scope="col">Leveransadress</th>
+                  <th scope="col"><span id="email"></span></th>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <hr>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>Om</h6>
+            <p class="text-justify">Syftet är att hjälpa de som söker arbete och de som söker arbetskraft. Den viktigaste frågan under en intervju är varför någon har sökt jobbet. Certifikatet möjliggör att en individ kan förmedla hur intresserad den är på förhand.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Hur går det till</h6>
+            <ul class="footer-links">
+              <li><a href="">Hämta ett certifikat</a></li>
+              <li><a href="">Varför fungerar det</a></li>
+              <li><a href="">Verifiera giltigheten</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Snabblänkar</h6>
+            <ul class="footer-links">
+              <li><a href="">Om</a></li>
+              <li><a href="mailto:info@blivald.se">Kontakt</a></li>
+              <li><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Sajten har status demo. Planerad release Q4 2020
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="js/confirmation.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
+
+  </body>
+
+  </html>

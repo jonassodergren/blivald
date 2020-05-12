@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Skapa certifikat</title>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- Font-->
+  <link rel="stylesheet" type="text/css" href="css/muli-font.css">
+
+  <!--
+  <link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+<!-- Main Style Css -->
+<link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/footer.css"/>
+<link rel="stylesheet" href="css/style.css"/>
+
+</head>
+<body>
+
+  <nav aria-label="breadcrumb" class="navbar navbar-dark bg-dark">
+    <ol class="breadcrumb bg-dark">
+      <li class="breadcrumb-item text-light"><a href="/">Blivald.se</a></li>
+      <li class="breadcrumb-item active text-light" aria-current="page">Skapa certifikat</li>
+    </ol>
+  </nav>
+
+  <div class="container">
+
+    <div class="row justify-content-md-center">
+      <div class="col-sm-6">
+
+        <div class="card-body">
+          <h4 class="display-4">Snart klar!</h4>
+          <p class="lead">Gör <mark>ditt val</mark> och tryck på utfärda.</p>
+        </div>
+
+        <form id="certificate-form'">
+          <div class="card">
+            <!--      <img class="card-img-top" src="images/tickets.jpg" alt="Card image cap">  -->
+            <!--
+            <i class="icon-badge m-auto text-light"></i>
+          -->
+
+          <div class="card-header">
+            Grundinformation om dig
+          </div>
+          <div class="card-body">
+            <!--    <h5 class="card-title">Information om dig till certifikatet</h5> -->
+            <!--    <h6 class="card-subtitle mb-2 text-muted">Grundinformation om dig</h6> -->
+
+
+            <div class="form-group float-label-control">
+              <label id="firstname_label" for="">Förnamn</label>
+              <input id="firstname_input" type="email" class="form-control" placeholder="Förnamn" required>
+            </div>
+            <div class="form-group float-label-control">
+              <label id="lastname_label" for="">Efternamn</label>
+              <input id="lastname_input" type="email" class="form-control" placeholder="Efternamn">
+            </div>
+            <div class="form-group float-label-control">
+              <label for="">Email</label>
+              <input id="email" type="email" class="form-control" placeholder="Email">
+            </div>
+
+
+
+
+          </div>
+
+        </div>
+
+        <div class="card mt-3">
+
+          <div class="card-header">
+            Ditt val
+          </div>
+          <div class="card-body">
+            <!--    <h5 class="page-header">Mottagare <span class="badge badge-secondary">Ditt val</span></h5>-->
+            <h6 class="card-subtitle mb-2 text-muted">Vilket företag väljer du?</h6>
+            <div class="form-group float-label-control label-bottom">
+              <label for=""></label>
+              <input id="company" type="email" class="form-control" placeholder="Namnge företag" required>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card-body">
+          <button type="submit" class="btn btn-lg btn-success" onClick="sendCertificate()">Utfärda certifikat</button>
+          <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal" onClick="cancel()">Avbryt</button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Site footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Om</h6>
+        <p class="text-justify">Syftet är att hjälpa de som söker arbete och de som söker arbetskraft. Den viktigaste frågan under en intervju är varför någon har sökt jobbet. Certifikatet möjliggör att en individ kan förmedla hur intresserad den är på förhand.</p>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Hur går det till</h6>
+        <ul class="footer-links">
+          <li><a href="">Hämta ett certifikat</a></li>
+          <li><a href="">Varför fungerar det</a></li>
+          <li><a href="">Verifiera giltigheten</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Snabblänkar</h6>
+        <ul class="footer-links">
+          <li><a href="">Om</a></li>
+          <li><a href="mailto:info@blivald.se">Kontakt</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Sajten har status demo. Planerad release Q4 2020
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<!--	<script src="js/jquery.steps.js"></script>  -->
+<!-- <script src="js/jquery-ui.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
+<script src="js/app.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
