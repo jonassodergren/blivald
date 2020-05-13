@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Sign In with Auth0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+</head>
+<style>
+  body, html {
+    height: 100%;
+    background-color: #f9f9f9;
+  }
+
+  .login-container {
+    position: relative;
+    height: 100%;
+  }
+
+  .login-box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0px 5px 5px #ccc;
+    border-radius: 5px;
+    border-top: 1px solid #e9e9e9;
+  }
+
+  .login-header {
+    text-align: center;
+  }
+
+  .login-header img {
+    width: 75px;
+  }
+
+  #error-message {
+    display: none;
+  }
+  .breadcrumb {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    }
+</style>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb lighten-6 bg-dark my-auto">
+        <li class="breadcrumb-item active text-light"><i class="icon-badge m-auto" style="color:#D9605F"></i> <a href="/" class="text-white">Blivald.se</a></li>
+        <li class="breadcrumb-item active text-light">Certifikat</li>
+        <li class="breadcrumb-item active text-light" aria-current="page">Verifiera email</li>
+      </ol>
+    </nav>
+  </nav>
+  <div class="container">
+
+    <div class="row justify-content-md-center">
+
+      <div class="col-sm-6">
+
+      <div class="card-body">
+        <h3>Verifiera din email</h3>
+        <p class="lead"><mark>Logga in</mark> för att fortsätta</p>
+      </div>
+
+      <div id="error-message" class="alert alert-danger"></div>
+<dic class="card">
+
+<div class="card-body">
+  <h5 class="card-title">Vad betyder det att logga in?</h5>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Tjänsten kan verifiera att du är ägaren till e-postadressen</li>
+  <li class="list-group-item">För och efternamn hämtas från ditt konto</li>
+  <li class="list-group-item">Din epost-adress raderas direkt du har fått ditt certifikat</li>
+  <li class="list-group-item">Du kommer inte få några reklamutskick</li>
+</ul>
+</div>
+
+<div class="card-body">
+      <form onsubmit="return false;" method="post">
+
+    <button
+    type="button"
+    id="btn-google"
+    class="btn btn-default btn-secondary btn-block">
+    Logga in med Google
+  </button>
+
+</form>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+<!--[if IE 8]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script src="https://cdn.auth0.com/js/polyfills/1.0/base64.min.js"></script>
+<script src="https://cdn.auth0.com/js/polyfills/1.0/es5-shim.min.js"></script>
+<![endif]-->
+
+<script src="https://cdn.auth0.com/js/auth0/9.13/auth0.min.js"></script>
+<script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
+<script>
+  window.addEventListener('load', function() {
+
+    var config = JSON.parse(
+    decodeURIComponent(escape(window.atob('@@config@@')))
+    );
+
+    var params = Object.assign({
+      /* additional configuration needed for use of custom domains
+      overrides: {
+      __tenant: config.auth0Tenant,
+      __token_issuer: 'YOUR_CUSTOM_DOMAIN'
+    }, */
+    domain: config.auth0Domain,
+    clientID: config.clientID,
+    redirectUri: config.callbackURL,
+    responseType: 'code'
+  }, config.internalOptions);
+
+  var webAuth = new auth0.WebAuth(params);
+
+  var databaseConnection = 'Username-Password-Authentication';
+
+  function login(e) {
+    e.preventDefault();
+    var username = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    webAuth.login({
+      realm: databaseConnection,
+      username: username,
+      password: password
+    }, function(err) {
+      if (err) displayError(err);
+    });
+  }
+
+  function signup() {
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+
+    webAuth.redirect.signupAndLogin({
+      connection: databaseConnection,
+      email: email,
+      password: password
+    }, function(err) {
+      if (err) displayError(err);
+    });
+  }
+
+  function loginWithGoogle() {
+    webAuth.authorize({
+      connection: 'google-oauth2'
+    }, function(err) {
+      if (err) displayError(err);
+    });
+  }
+
+  function displayError(err) {
+    var errorMessage = document.getElementById('error-message');
+    errorMessage.innerHTML = err.description;
+    errorMessage.style.display = 'block';
+  }
+
+ // document.getElementById('btn-login').addEventListener('click', login);
+  document.getElementById('btn-google').addEventListener('click', loginWithGoogle);
+ // document.getElementById('btn-signup').addEventListener('click', signup);
+});
+</script>
+</body>
+</html>
