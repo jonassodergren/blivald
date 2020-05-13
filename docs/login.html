@@ -9,12 +9,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://www.blivald.se/css/footer.css"/>
+<link rel="stylesheet" href="https://www.blivald.se/css/footer.css"/>
 </head>
 <style>
   body, html {
     height: 100%;
-    background-color: #f9f9f9;
   }
 
   .login-container {
@@ -48,14 +47,43 @@
     padding-top: 0px;
     padding-bottom: 0px;
   }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+}
+  .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
+    content: none; }
+    .font-up-bold .breadcrumb-item a h5::after {
+      content: "/";
+      margin-left: 1rem;
+      color: #868e96; }
+      h2 {
+      color: #E9565A;
+      }
 </style>
 <body>
-  <nav class="navbar navbar-dark bg-dark">
+  <div class="font-up-bold text-uppercase">
+    <nav class="navbar navbar-dark bg-dark">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb lighten-6 bg-dark my-auto">
+          <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
+            <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
+          </a></li>
+          <li class="breadcrumb-item active text-light" aria-current="page">
+            <h5 class="mr-3 mb-0"><strong>Utfärda</strong></h5>
+          </li>
+        </ol>
+      </nav>
+    </nav>
+
+  </div>
+
+  <nav class="navbar navbar-light bg-white">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb lighten-6 bg-dark my-auto">
-        <li class="breadcrumb-item active text-light"><i class="icon-badge m-auto" style="color:#D9605F"></i> <a href="https://www.blivald.se/" class="text-white">Blivald.se</a></li>
-        <li class="breadcrumb-item active text-light">Certifikat</li>
-        <li class="breadcrumb-item active text-light" aria-current="page">Verifiera email</li>
+      <ol class="breadcrumb bg-white my-auto">
+        <li class="breadcrumb-item active">Kom igång</li>
+        <li class="breadcrumb-item active" aria-current="page">Inloggning</li>
+        <li class="breadcrumb-item active">Välj företag</li>
+        <li class="breadcrumb-item active">Kvitto</li>
       </ol>
     </nav>
   </nav>
@@ -65,85 +93,93 @@
 
       <div class="col-lg-4">
 
-        <div class="card-body">
-          <h4 class="display-4">Vem är du?</h4>
-          <p class="lead">Styrk din identitiet</p>
-          <form onsubmit="return false;" method="post">
+      <div class="jumbotron bg-white">
 
-            <button
-            type="button"
-            id="btn-google"
-            class="btn btn-lg btn-outline-secondary">
-            Logga in med Google
-          </button>
+        <h2 class="display-4">Inloggning</h2>
 
-        </form>
+        <p class="lead">
+          Behövs för att styrka din identitet
+        </p>
+        <form onsubmit="return false;" method="post">
+
+          <button
+          type="button"
+          id="btn-google"
+          class="btn btn-lg btn-outline-secondary">
+          Logga in med Google
+        </button>
+
+      </form>
+
+      </div>
+
+      <div id="error-message" class="alert alert-danger"></div>
+      <div class="card">
+        <div class="card-header">
+          Bra att veta om inloggning
         </div>
 
-        <div id="error-message" class="alert alert-danger"></div>
-        <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Varför måste man logga in?</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Tjänsten måste verifiera att du är ägaren till e-postadressen. Certifikatet tappar sitt värde om det går att utföra för många certifikat.</li>
+          </ul>
+        </div>
 
-          <div class="card-body">
-            <h5 class="card-title">Varför måste man logga in?</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Tjänsten måste verifiera att du är ägaren till e-postadressen. Certifikatet tappar sitt värde om det går att utföra för många certifikat.</li>
-            </ul>
-          </div>
-
-          <div class="card-body">
-            <h5 class="card-title">Bra att veta</h5>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">För och efternamn hämtas från ditt konto</li>
-              <li class="list-group-item">Tjänsten lagrar inte din epostadress</li>
-              <li class="list-group-item">Du kommer inte få några reklamutskick</li>
-            </ul>
-            </div>
-
-</div>
+        <div class="card-body">
+          <h5 class="card-title">Bra att veta</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">För och efternamn hämtas från ditt konto</li>
+            <li class="list-group-item">Tjänsten lagrar inte din epostadress</li>
+            <li class="list-group-item">Du kommer inte få några reklamutskick</li>
+          </ul>
         </div>
 
       </div>
     </div>
 
+  </div>
+</div>
 
-    <!-- Site footer -->
-  	<footer class="site-footer mt-3">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-sm-12 col-md-6">
-  					<h6>Om</h6>
-  					<p class="text-justify">Syftet är att hjälpa de som söker arbete och de som söker arbetskraft. Den viktigaste frågan under en intervju är varför någon har sökt jobbet. Certifikatet möjliggör att en individ kan förmedla hur intresserad den är på förhand.</p>
-  				</div>
 
-  				<div class="col-xs-6 col-md-3">
-  					<h6>Hur går det till</h6>
-  					<ul class="footer-links">
-  						<li><a href="">Hämta ett certifikat</a></li>
-  						<li><a href="">Varför fungerar det</a></li>
-  						<li><a href="">Verifiera giltigheten</a></li>
-  					</ul>
-  				</div>
+<!-- Site footer -->
+<footer class="site-footer mt-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>Om</h6>
+        <p class="text-justify">Syftet är att hjälpa de som söker arbete och de som söker arbetskraft. Den viktigaste frågan under en intervju är varför någon har sökt jobbet. Certifikatet möjliggör att en individ kan förmedla hur intresserad den är på förhand.</p>
+      </div>
 
-  				<div class="col-xs-6 col-md-3">
-  					<h6>Snabblänkar</h6>
-  					<ul class="footer-links">
-  						<li><a href="">Om</a></li>
-  						<li><a href="mailto:info@blivald.se">Kontakt</a></li>
-  						<li><a href="">Privacy Policy</a></li>
-  					</ul>
-  				</div>
-  			</div>
-  			<hr>
-  		</div>
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-md-8 col-sm-6 col-xs-12">
-  					<p class="copyright-text">Sajten har status skakig. Planerad release September 2020
-  					</p>
-  				</div>
-  			</div>
-  		</div>
-  	</footer>
+      <div class="col-xs-6 col-md-3">
+        <h6>Hur går det till</h6>
+        <ul class="footer-links">
+          <li><a href="">Hämta ett certifikat</a></li>
+          <li><a href="">Varför fungerar det</a></li>
+          <li><a href="">Verifiera giltigheten</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-6 col-md-3">
+        <h6>Snabblänkar</h6>
+        <ul class="footer-links">
+          <li><a href="">Om</a></li>
+          <li><a href="mailto:info@blivald.se">Kontakt</a></li>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Sajten har status skakig. Planerad release September 2020
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
 <script src="https://cdn.auth0.com/js/auth0/9.13/auth0.min.js"></script>

@@ -21,32 +21,66 @@
 .breadcrumb {
   padding-top: 0px;
   padding-bottom: 0px;
-  }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+.font-up-bold .breadcrumb-item + .breadcrumb-item::before {
+  content: none; }
+  .font-up-bold .breadcrumb-item a h5::after {
+    content: "/";
+    margin-left: 1rem;
+    color: #868e96; }
 </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb lighten-6 bg-dark my-auto">
-        <li class="breadcrumb-item active text-light"><a href="/" class="text-white">Blivald.se</a></li>
-        <li class="breadcrumb-item active text-light">Certifikat</li>
-        <li class="breadcrumb-item active text-light" aria-current="page">Skapa</li>
-      </ol>
-    </nav>
-  </nav>
+
+      <div class="font-up-bold text-uppercase">
+        <nav class="navbar navbar-dark bg-dark">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb lighten-6 bg-dark my-auto">
+              <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
+                <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
+              </a></li>
+              <li class="breadcrumb-item active text-light" aria-current="page">
+                <h5 class="mr-3 mb-0"><strong>Utfärda</strong></h5>
+              </li>
+            </ol>
+          </nav>
+        </nav>
+
+      </div>
+
+      <nav class="navbar navbar-light bg-white">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-white my-auto">
+            <li class="breadcrumb-item active" aria-current="page">Kom igång</li>
+            <li class="breadcrumb-item active">Inloggning</li>
+            <li class="breadcrumb-item active">Välj företag</li>
+            <li class="breadcrumb-item active">Kvitto</li>
+          </ol>
+        </nav>
+      </nav>
 
   <div class="container-fluid">
 
     <div class="row justify-content-md-center">
       <div class="col-lg-4">
 
-        <div class="card-body">
-          <h2 class="display-4">Gör ditt val</h2>
+        <div class="jumbotron bg-white">
+
+          <h2 class="display-4">Välj företag</h2>
+
           <p class="lead">Vilket <mark>företag</mark> vill du helst arbeta hos</p>
+
+          <button type="submit" class="btn btn-lg btn-success" onClick="sendCertificate()">Utfärda certifikat</button>
+          <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal" onClick="cancel()">Avbryt</button>
+
+
         </div>
 
-        <form id="certificate-form'">
+        <form id="certificate-form">
           <div class="card">
 
             <div class="card-header">
@@ -97,12 +131,6 @@
         </div>
 
 
-        <div class="card-body">
-          <button type="submit" class="btn btn-lg btn-success" onClick="sendCertificate()">Utfärda certifikat</button>
-          <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal" onClick="cancel()">Avbryt</button>
-
-        </div>
-
       </form>
 
     </div>
@@ -112,7 +140,7 @@
 </div>
 
 <!-- Site footer -->
-<footer class="site-footer">
+<footer class="site-footer mt-3">
   <div class="container">
     <div class="row">
       <div class="col-sm-12 col-md-6">
