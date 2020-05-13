@@ -3,12 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Sign In with Auth0</title>
+  <title>Logga in</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.blivald.se/css/footer.css"/>
 </head>
 <style>
   body, html {
@@ -46,13 +47,13 @@
   .breadcrumb {
     padding-top: 0px;
     padding-bottom: 0px;
-    }
+  }
 </style>
 <body>
   <nav class="navbar navbar-dark bg-dark">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb lighten-6 bg-dark my-auto">
-        <li class="breadcrumb-item active text-light"><i class="icon-badge m-auto" style="color:#D9605F"></i> <a href="/" class="text-white">Blivald.se</a></li>
+        <li class="breadcrumb-item active text-light"><i class="icon-badge m-auto" style="color:#D9605F"></i> <a href="https://www.blivald.se/" class="text-white">Blivald.se</a></li>
         <li class="breadcrumb-item active text-light">Certifikat</li>
         <li class="breadcrumb-item active text-light" aria-current="page">Verifiera email</li>
       </ol>
@@ -62,54 +63,88 @@
 
     <div class="row justify-content-md-center">
 
-      <div class="col-sm-6">
+      <div class="col-lg-4">
 
-      <div class="card-body">
-        <h3>Verifiera din email</h3>
-        <p class="lead"><mark>Logga in</mark> för att fortsätta</p>
+        <div class="card-body">
+          <h4 class="display-4">Vem är du?</h4>
+          <p class="lead">Styrk din identitiet</p>
+          <form onsubmit="return false;" method="post">
+
+            <button
+            type="button"
+            id="btn-google"
+            class="btn btn-lg btn-outline-secondary">
+            Logga in med Google
+          </button>
+
+        </form>
+        </div>
+
+        <div id="error-message" class="alert alert-danger"></div>
+        <div class="card">
+
+          <div class="card-body">
+            <h5 class="card-title">Varför måste man logga in?</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Tjänsten måste verifiera att du är ägaren till e-postadressen. Certifikatet tappar sitt värde om det går att utföra för många certifikat.</li>
+            </ul>
+          </div>
+
+          <div class="card-body">
+            <h5 class="card-title">Bra att veta</h5>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">För och efternamn hämtas från ditt konto</li>
+              <li class="list-group-item">Tjänsten lagrar inte din epostadress</li>
+              <li class="list-group-item">Du kommer inte få några reklamutskick</li>
+            </ul>
+            </div>
+
+</div>
+        </div>
+
       </div>
-
-      <div id="error-message" class="alert alert-danger"></div>
-<dic class="card">
-
-<div class="card-body">
-  <h5 class="card-title">Vad betyder det att logga in?</h5>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Tjänsten kan verifiera att du är ägaren till e-postadressen</li>
-  <li class="list-group-item">För och efternamn hämtas från ditt konto</li>
-  <li class="list-group-item">Din epost-adress raderas direkt du har fått ditt certifikat</li>
-  <li class="list-group-item">Du kommer inte få några reklamutskick</li>
-</ul>
-</div>
-
-<div class="card-body">
-      <form onsubmit="return false;" method="post">
-
-    <button
-    type="button"
-    id="btn-google"
-    class="btn btn-default btn-secondary btn-block">
-    Logga in med Google
-  </button>
-
-</form>
-</div>
-</div>
-
-</div>
-</div>
-</div>
+    </div>
 
 
+    <!-- Site footer -->
+  	<footer class="site-footer mt-3">
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-sm-12 col-md-6">
+  					<h6>Om</h6>
+  					<p class="text-justify">Syftet är att hjälpa de som söker arbete och de som söker arbetskraft. Den viktigaste frågan under en intervju är varför någon har sökt jobbet. Certifikatet möjliggör att en individ kan förmedla hur intresserad den är på förhand.</p>
+  				</div>
 
-<!--[if IE 8]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ie8/0.2.5/ie8.js"></script>
-<![endif]-->
+  				<div class="col-xs-6 col-md-3">
+  					<h6>Hur går det till</h6>
+  					<ul class="footer-links">
+  						<li><a href="">Hämta ett certifikat</a></li>
+  						<li><a href="">Varför fungerar det</a></li>
+  						<li><a href="">Verifiera giltigheten</a></li>
+  					</ul>
+  				</div>
 
-<!--[if lte IE 9]>
-<script src="https://cdn.auth0.com/js/polyfills/1.0/base64.min.js"></script>
-<script src="https://cdn.auth0.com/js/polyfills/1.0/es5-shim.min.js"></script>
-<![endif]-->
+  				<div class="col-xs-6 col-md-3">
+  					<h6>Snabblänkar</h6>
+  					<ul class="footer-links">
+  						<li><a href="">Om</a></li>
+  						<li><a href="mailto:info@blivald.se">Kontakt</a></li>
+  						<li><a href="">Privacy Policy</a></li>
+  					</ul>
+  				</div>
+  			</div>
+  			<hr>
+  		</div>
+  		<div class="container">
+  			<div class="row">
+  				<div class="col-md-8 col-sm-6 col-xs-12">
+  					<p class="copyright-text">Sajten har status skakig. Planerad release September 2020
+  					</p>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
+
 
 <script src="https://cdn.auth0.com/js/auth0/9.13/auth0.min.js"></script>
 <script src="https://cdn.auth0.com/js/polyfills/1.0/object-assign.min.js"></script>
@@ -176,9 +211,9 @@
     errorMessage.style.display = 'block';
   }
 
- // document.getElementById('btn-login').addEventListener('click', login);
+  // document.getElementById('btn-login').addEventListener('click', login);
   document.getElementById('btn-google').addEventListener('click', loginWithGoogle);
- // document.getElementById('btn-signup').addEventListener('click', signup);
+  // document.getElementById('btn-signup').addEventListener('click', signup);
 });
 </script>
 </body>
