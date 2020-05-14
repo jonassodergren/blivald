@@ -46,7 +46,7 @@ const sendCertificate = async () => {
   var lastname = document.getElementById("lastname_input").value;
   var company = document.getElementById("company").value;
 
- // https://softwhere.ddns.net/woc
+  // https://softwhere.ddns.net/woc
   $.ajax({
     type: "POST",
     url: "https://api.blivald.se/woc",
@@ -55,13 +55,17 @@ const sendCertificate = async () => {
     contentType: "application/json; charset=utf-8",
     dataType: "json",
     success: function(data){
-      window.location = 'confirmation.html?email='+email+'&order_id='+data.id;
+      setTimeout(function(){
+        $.LoadingOverlay("hide");
+        window.location = 'confirmation.html?email='+email+'&order_id='+data.id;
+      }, 3000);
     },
     error: function(errMsg) {
-      alert(JSON.parse(errMsg.responseText).errorMessage);
+      //$.LoadingOverlay("hide");
+      window.location = 'error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
     },
     complete: function(msg){
-      //    $("#exampleModalCenter").modal("hide");
+
     }
   });
 }
@@ -109,7 +113,7 @@ const updateUI = async () => {
 
 const cancel = async () => {
   logout();
-//  updateUI();
+  //  updateUI();
 }
 
 const login = async () => {
@@ -123,3 +127,14 @@ const logout = () => {
     returnTo: "/"
   });
 };
+
+$(document).ajaxStart(function(){
+  //$.LoadingOverlay("show");
+// $("#content").LoadingOverlay
+  $.LoadingOverlay("show", {
+      background  : "rgba(217, 96, 95, 0.5)"
+  });
+});
+//$(document).ajaxStop(function(){
+//  $.LoadingOverlay("hide");
+//});
