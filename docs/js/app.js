@@ -132,7 +132,7 @@ $(document).ajaxStart(function(){
   //$.LoadingOverlay("show");
 // $("#content").LoadingOverlay
   $.LoadingOverlay("show", {
-      background  : "rgba(217, 96, 95, 0.5)"
+      background  : "rgba(217, 96, 95, 0.8)"
   });
 });
 //$(document).ajaxStop(function(){
