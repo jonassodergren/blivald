@@ -55,9 +55,9 @@
       <nav class="navbar navbar-light bg-white">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-white my-auto">
-            <li class="breadcrumb-item active" aria-current="page">Kom igång</li>
+            <li class="breadcrumb-item active"><a href="certificate.html">Kom igång</a></li>
             <li class="breadcrumb-item active">Inloggning</li>
-            <li class="breadcrumb-item active">Välj företag</li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #E9565A">Välj företag</li>
             <li class="breadcrumb-item active">Kvitto</li>
           </ol>
         </nav>
@@ -72,11 +72,12 @@
 
           <h2 class="display-4">Välj företag</h2>
 
-          <p class="lead">Vilket <mark>företag</mark> vill du helst arbeta hos</p>
+          <p class="lead">Vilket företag vill du helst arbeta hos</p>
 
-          <button type="submit" class="btn btn-lg btn-success" onClick="sendCertificate()">Utfärda certifikat</button>
+          <button type="submit" class="btn btn-lg btn-outline-secondary" onClick="sendCertificate()">Utfärda certifikat</button>
+<!--
           <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal" onClick="cancel()">Avbryt</button>
-
+-->
 
         </div>
 
