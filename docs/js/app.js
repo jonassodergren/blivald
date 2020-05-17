@@ -46,6 +46,20 @@ const sendCertificate = async () => {
   var lastname = document.getElementById("lastname_input").value;
   var company = document.getElementById("company").value;
 
+
+  var form = document.getElementById("certificate-form");
+
+  if (form.checkValidity() === false){
+
+    $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Nu blev det lite galet!</strong> Fyll i företag och förnamn för att gå vidare</div>');
+
+    setTimeout(function() {
+      $('#alert').hide();
+    }, 5000);
+    return;
+  }
+
+
   // https://softwhere.ddns.net/woc
   $.ajax({
     type: "POST",
@@ -95,8 +109,8 @@ const updateUI = async () => {
     //  $("#signup-form").steps("next");
 
     $("#firstname_input").click();
-  //  $("#lastname_input").focus();
-  //  $("#email").focus();
+    //  $("#lastname_input").focus();
+    //  $("#email").focus();
 
     //document.getElementById("firstname_label").innerText = '';
     document.getElementById("firstname_input").value = user.given_name;
@@ -130,9 +144,9 @@ const logout = () => {
 
 $(document).ajaxStart(function(){
   //$.LoadingOverlay("show");
-// $("#content").LoadingOverlay
+  // $("#content").LoadingOverlay
   $.LoadingOverlay("show", {
-      background  : "rgba(92, 184, 92, 0.4)"
+    background  : "rgba(92, 184, 92, 0.4)"
   });
 });
 //$(document).ajaxStop(function(){
