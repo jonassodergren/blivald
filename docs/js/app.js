@@ -94,9 +94,9 @@ const updateUI = async () => {
 
     //  $("#signup-form").steps("next");
 
-    $("#firstname_input").focus();
-    $("#lastname_input").focus();
-    $("#email").focus();
+    $("#firstname_input").click();
+  //  $("#lastname_input").focus();
+  //  $("#email").focus();
 
     //document.getElementById("firstname_label").innerText = '';
     document.getElementById("firstname_input").value = user.given_name;

@@ -81,7 +81,8 @@
 
         </div>
 
-        <form id="certificate-form">
+        <form id="certificate-form" class="form-group was-validated">
+
           <div class="card">
 
             <div class="card-header">
@@ -92,7 +93,9 @@
               <h6 class="card-subtitle mb-2 text-muted">Vilket företag väljer du?</h6>
               <div class="form-group float-label-control label-bottom">
                 <label for=""></label>
-                <input id="company" type="email" class="form-control" placeholder="Namnge företag" required>
+                <input id="company" type="text" class="form-control" placeholder="Namnge företag" required>
+                <div class="valid-feedback">OK. Tjänsten kontrollerar inte stavningen.</div>
+                <div class="invalid-feedback">Fyll i ditt val</div>
               </div>
             </div>
 
@@ -113,15 +116,17 @@
 
             <div class="form-group float-label-control">
               <label id="firstname_label" for="">Förnamn</label>
-              <input id="firstname_input" type="email" class="form-control" placeholder="Förnamn" required>
+              <input id="firstname_input" type="text" class="form-control" placeholder="Förnamn" required>
+              
+              <div class="invalid-feedback">Fyll i ditt förnamn</div>
             </div>
             <div class="form-group float-label-control">
               <label id="lastname_label" for="">Efternamn</label>
-              <input id="lastname_input" type="email" class="form-control" placeholder="Efternamn">
+              <input id="lastname_input" type="text" class="form-control" placeholder="Efternamn">
             </div>
             <div class="form-group float-label-control">
               <label for="">Email</label>
-              <input id="email" type="email" class="form-control" placeholder="Email">
+              <input id="email" type="email" class="form-control" placeholder="Epost">
             </div>
 
 
