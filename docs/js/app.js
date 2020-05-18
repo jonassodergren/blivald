@@ -15,6 +15,8 @@ const configureClient = async () => {
 };
 
 window.onload = async () => {
+
+
   await configureClient();
   // NEW - update the UI state
   updateUI();
@@ -51,7 +53,7 @@ const sendCertificate = async () => {
 
   if (form.checkValidity() === false){
 
-    $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Nu blev det lite galet!</strong> Fyll i företag och förnamn för att gå vidare</div>');
+    $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Nu blev det lite galet!</strong> Företag och förnamn måste vara ifyllda för att kunna gå vidare</div>');
 
     setTimeout(function() {
       $('#alert').hide();
