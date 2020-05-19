@@ -66,7 +66,7 @@ const sendCertificate = async () => {
   // https://softwhere.ddns.net/woc
   $.ajax({
     type: "POST",
-    url: "https://api.blivald.se/woc",
+    url: "https://api.blivald.se/certificates",
     // The key needs to match your method's input parameter (case-sensitive).
     data: JSON.stringify({email: email, firstname: firstname, lastname: lastname, company: company}),
     contentType: "application/json; charset=utf-8",
