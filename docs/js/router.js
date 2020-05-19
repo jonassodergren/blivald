@@ -1,13 +1,11 @@
 
 (function(){
 
-document.body.className = 'redirecting';
+var loc = window.location.href;
+loc = loc.lastIndexOf('/') == loc.length - 1 ? loc.substr(0, loc.length - 1) : loc.substr(0, loc.length + 1);
+var pathname = loc.substr(loc.lastIndexOf('/') + 1);
 
-var slug = location.pathname.slice(1);
-// hash.indexOf('https') == 0? hash :
-var url = 'https://www.blivald.se/' + 'verify.html';
-
-if (slug === "verify")
+if (pathname === "verify")
 url = 'https://www.blivald.se/' + 'verify.html';
 else{
   url = 'https://www.blivald.se/error.html?errorCode=404'
