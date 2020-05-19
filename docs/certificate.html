@@ -154,6 +154,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>
+  <!--  <script src="js/main.js"></script> -->
+  <script>
+  //  window.onload = async () => {
+  //      window.history.replaceState({}, document.title, "/create/");
+  //  };
+  (function() {
+    'use strict';
+    window.history.replaceState({}, document.title, "/create/");
+  })();
+  </script>
   </body>
   </html>

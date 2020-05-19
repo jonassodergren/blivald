@@ -20,6 +20,6 @@ window.onload = async () => {
   document.getElementById("email").innerText = email;
   document.getElementById("order_id").innerText = order_id;
 
-  window.history.replaceState({}, document.title, "/");
+  window.history.replaceState({}, document.title, "/create/");
 
 };

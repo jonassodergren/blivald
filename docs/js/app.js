@@ -16,6 +16,7 @@ const configureClient = async () => {
 
 window.onload = async () => {
 
+//window.history.replaceState({}, document.title, "/create/");
 
   await configureClient();
   // NEW - update the UI state
@@ -38,7 +39,7 @@ window.onload = async () => {
     updateUI();
 
     // Use replaceState to redirect the user away and remove the querystring parameters
-    window.history.replaceState({}, document.title, "/");
+    window.history.replaceState({}, document.title, "/create/");
   }
 };
 
@@ -73,12 +74,12 @@ const sendCertificate = async () => {
     success: function(data){
       setTimeout(function(){
         $.LoadingOverlay("hide");
-        window.location = 'confirmation.html?email='+email+'&order_id='+data.id;
+        window.location = '/confirmation.html?email='+email+'&order_id='+data.id;
       }, 3000);
     },
     error: function(errMsg) {
       //$.LoadingOverlay("hide");
-      window.location = 'error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
+      window.location = '/error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
     },
     complete: function(msg){
 
