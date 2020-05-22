@@ -26,27 +26,27 @@
   <link rel="stylesheet" href="css/style.css"/>
   <style type="text/css">
 
-    //	.jumbotron {
-      //    background-image: url(images/stairs.jpg);
-      //    background-size: cover;
-      //  -webkit-background-size: 100% 100%;
-      //    -moz-background-size: 100% 100%;
-      //    -o-background-size: 100% 100%;
-      //    background-size: 100% 100%;
-      //}
-      .breadcrumb {
-        padding-top: 0px;
-        padding-bottom: 0px;
-      }
-      .breadcrumb-item + .breadcrumb-item::before {
+  //	.jumbotron {
+    //    background-image: url(images/stairs.jpg);
+    //    background-size: cover;
+    //  -webkit-background-size: 100% 100%;
+    //    -moz-background-size: 100% 100%;
+    //    -o-background-size: 100% 100%;
+    //    background-size: 100% 100%;
+    //}
+    .breadcrumb {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: "";
+    }
+    .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
+      content: none; }
+      .font-up-bold .breadcrumb-item a h5::after {
         content: "";
-      }
-      .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
-        content: none; }
-        .font-up-bold .breadcrumb-item a h5::after {
-          content: "";
-          margin-left: 1rem;
-          color: #868e96; }
+        margin-left: 1rem;
+        color: #868e96; }
         </style>
       </head>
       <body>
@@ -146,34 +146,51 @@
         <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
         <script src="js/verify.js"></script>
         <script>
-          // Attach a submit handler to the form
-          $( "#verify" ).submit(function( event ) {
+        // Attach a submit handler to the form
+        $( "#verify" ).submit(function( event ) {
 
-            // Stop form from submitting normally
-            event.preventDefault();
+          // Stop form from submitting normally
+          event.preventDefault();
 
-            // Get some values from elements on the page:
-            var $form = $( this ),
-            id = $form.find( "input[name='certificate']" ).val(),
-            url = $form.attr( "action" ) + id;
+          // Get some values from elements on the page:
+          var $form = $( this ),
+          id = $form.find( "input[name='certificate']" ).val(),
+          url = $form.attr( "action" ) + id;
 
+          var patch = {"action":"verify"};
 
-            // Send the data using post
-            var posting = $.get( url , function() {
-                $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Grattis!</strong> Certifikatet är giltigt. Vi från blivald.se hoppas att certifikatet har möjliggjort för en anställning.</div>');
-            })
-            .done(function() {
-              // second success
-            })
-            .fail(function() {
-              $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Tyvärr!</strong> Hittar inget certifikat med det angivna numret. Dubbelkolla att du angivet rätt nummer. Får du det inte att fungera så kan du maila certifikatet till <a href=\"mailto:info@blivald.se\">verify@blivald.se</a> så kontrollerar vi och återkommer snart med ett svar.</div>');
+    //      $.ajaxSetup({
+    //        converters: {
+    //          "text json" : function(response) {
+    //            return (response == "[]") ? null : JSON.parse(response);
+    //          },
+    //        },
+    //      });
+
+          // Send the data using post
+          var posting = $.ajax( {
+            type: 'PATCH',
+            url: url,
+            data: JSON.stringify(patch),
+            processData: false,
+            contentType: 'application/json',
+            success: function(data){
+              // alert("test");
+               $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Grattis!</strong> Certifikatet är giltigt. Vi från blivald.se hoppas att certifikatet har möjliggjort för en anställning.</div>');
+            }
+          })
+          .done(function() {
+            //alert("done");
+          })
+          .fail(function() {
+            $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Tyvärr!</strong> Hittar inget certifikat med det angivna numret. Dubbelkolla att du angivet rätt nummer. Får du det inte att fungera så kan du maila certifikatet till <a href=\"mailto:info@blivald.se\">verify@blivald.se</a> så kontrollerar vi och återkommer snart med ett svar.</div>');
             //  alert( "error" );
-            })
-            .always(function() {
-              //alert( "finished" );
-            });
+          })
+          .always(function() {
+          //  alert( "finished" );
+          });
 
         });
-      </script>
-    </body>
-    </html>
+        </script>
+      </body>
+      </html>
