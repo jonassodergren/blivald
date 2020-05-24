@@ -31,89 +31,92 @@
     content: "/";
     margin-left: 1rem;
     color: #868e96; }
-</style>
+  </style>
 </head>
 <body>
 
 
-      <div class="font-up-bold text-uppercase">
-        <nav class="navbar navbar-dark bg-dark">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb lighten-6 bg-dark my-auto">
-              <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
-                <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
-              </a></li>
-              <li class="breadcrumb-item active text-light" aria-current="page">
-                <h5 class="mr-3 mb-0"><strong>Utfärda</strong></h5>
-              </li>
-            </ol>
-          </nav>
-        </nav>
-
-      </div>
-
-      <nav class="navbar navbar-light bg-white">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-white my-auto">
-            <li class="breadcrumb-item active">Kom igång</li>
-            <li class="breadcrumb-item active" aria-current="page" style="color: #E9565A">Välj</li>
-            <li class="breadcrumb-item active">Kvitto</li>
-          </ol>
-        </nav>
+  <div class="font-up-bold text-uppercase">
+    <nav class="navbar navbar-dark bg-dark">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb lighten-6 bg-dark my-auto">
+          <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
+            <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
+          </a></li>
+          <li class="breadcrumb-item active text-light" aria-current="page">
+            <h5 class="mr-3 mb-0"><strong>Utfärda</strong></h5>
+          </li>
+        </ol>
       </nav>
+    </nav>
 
-<div id="message"></div>
+  </div>
+
+  <nav class="navbar navbar-light bg-white">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-white my-auto">
+        <li class="breadcrumb-item active">Kom igång</li>
+        <li class="breadcrumb-item active" aria-current="page" style="color: #E9565A">Välj</li>
+        <li class="breadcrumb-item active">Kvitto</li>
+      </ol>
+    </nav>
+  </nav>
+
+  <div id="message"></div>
 
   <div id="content" class="container-fluid">
 
     <div class="row justify-content-md-center">
       <div class="col-md-6">
 
-        <div class="jumbotron bg-white text-center">
+        <div class="jumbotron bg-light text-center">
 
-          <h2 class="display-4">Välj företaget</h2>
+          <h2 class="display-4">Gör ditt val</h2>
 
-          <p class="lead">Som du helst vill arbeta hos</p>
+          <p class="lead">Genom att välja det företag som du helst vill arbeta hos</p>
 
-          <button type="submit" class="btn btn-lg btn-outline-success" onClick="sendCertificate()">Utfärda certifikat</button>
-<!--
+          <!--          <button type="submit" class="btn btn-lg btn-outline-success" onClick="sendCertificate()">Utfärda certifikat</button>
+
           <button type="button" class="btn btn-lg btn-secondary" data-dismiss="modal" onClick="cancel()">Avbryt</button>
--->
+        -->
+
+      </div>
+
+      <form id="certificate-form" class="form-group was-validated needs-validation" novalidate>
+
+        <div class="card">
+
+          <div class="card-header">
+            Ditt val som kommer att stå på certifikatet
+          </div>
+          <div class="card-body">
+            <!--    <h5 class="page-header">Mottagare <span class="badge badge-secondary">Ditt val</span></h5>-->
+            <h6 class="card-subtitle mb-2 text-muted">Vilket företag väljer du?</h6>
+            <div class="form-group float-label-control label-bottom">
+              <label for=""></label>
+              <input id="company" type="text" class="form-control" placeholder="Namnge företag" required>
+              <div class="valid-feedback">OK. Tjänsten kontrollerar inte stavningen.</div>
+              <div class="invalid-feedback">Fyll i ditt val</div>
+            </div>
+          </div>
 
         </div>
 
-        <form id="certificate-form" class="form-group was-validated needs-validation" novalidate>
 
-          <div class="card">
+        <div class="accordion mt-3" id="accordionExample275">
+          <div class="card border-1">
+            <div class="card-header bg-white" id="headingOne2">
+              <h5 class="mb-0">
 
-            <div class="card-header">
-              Ditt val
-            </div>
-            <div class="card-body">
-              <!--    <h5 class="page-header">Mottagare <span class="badge badge-secondary">Ditt val</span></h5>-->
-              <h6 class="card-subtitle mb-2 text-muted">Vilket företag väljer du?</h6>
-              <div class="form-group float-label-control label-bottom">
-                <label for=""></label>
-                <input id="company" type="text" class="form-control" placeholder="Namnge företag" required>
-                <div class="valid-feedback">OK. Tjänsten kontrollerar inte stavningen.</div>
-                <div class="invalid-feedback">Fyll i ditt val</div>
-              </div>
-            </div>
-
+                <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne2"
+                aria-expanded="true" aria-controls="collapseOne2">
+                Kontrollera att dina namnuppgifter är korrekta
+              </button>
+            </h5>
           </div>
-          <div class="card mt-3">
-            <!--      <img class="card-img-top" src="images/tickets.jpg" alt="Card image cap">  -->
-            <!--
-            <i class="icon-badge m-auto text-light"></i>
-          -->
-
-          <div class="card-header">
-            Uppgifter som står på certifikatet
-          </div>
-          <div class="card-body">
-            <!--    <h5 class="card-title">Information om dig till certifikatet</h5> -->
-            <!--    <h6 class="card-subtitle mb-2 text-muted">Grundinformation om dig</h6> -->
-
+          <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
+          data-parent="#accordionExample275">
+          <div class="card-body text-left">
 
             <div class="form-group float-label-control">
               <label id="firstname_label" for="">Förnamn</label>
@@ -130,19 +133,49 @@
               <input id="email" type="email" class="form-control" placeholder="Epost">
             </div>
 
-
-
-
           </div>
-
         </div>
-
-
-      </form>
+      </div>
 
     </div>
 
+<div class="card-body text-right">
+    <button class="btn btn-lg btn-outline-success" onClick="sendCertificate()">Utfärda certifikat</button>
+</div>
+
+    <!--
+    <div class="card mt-3">
+
+    <div class="card-header">
+    Uppgifter som står på certifikatet
   </div>
+  <div class="card-body">
+
+  <div class="form-group float-label-control">
+  <label id="firstname_label" for="">Förnamn</label>
+  <input id="firstname_input" type="text" class="form-control" placeholder="Förnamn" required>
+
+  <div class="invalid-feedback">Fyll i ditt förnamn</div>
+</div>
+<div class="form-group float-label-control">
+<label id="lastname_label" for="">Efternamn</label>
+<input id="lastname_input" type="text" class="form-control" placeholder="Efternamn">
+</div>
+<div class="form-group float-label-control">
+<label for="">Email</label>
+<input id="email" type="email" class="form-control" placeholder="Epost">
+</div>
+</div>
+</div>
+-->
+
+
+
+</form>
+
+</div>
+
+</div>
 
 </div>
 
@@ -181,7 +214,7 @@
 
 
         <div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
-        <p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+          <p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
         </div>
 
       </div>
