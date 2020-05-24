@@ -98,18 +98,11 @@
 
 				<div class="container-fluid p-0">
 
-					<div class="font-up-bold text-uppercase">
-						<nav class="navbar bg-secondary">
-							<nav aria-label="breadcrumb">
-								<ol class="breadcrumb bg-secondary my-auto">
-									<li class="breadcrumb-item active"><a class="text-light" href="/"> <!-- class="text-white" -->
-										<h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
-									</a></li>
-								</ol>
-							</nav>
-						</nav>
 
-					</div>
+						<nav class="navbar bg-secondary">
+							<a class="navbar-brand text-light text-uppercase" href="/"><strong> Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+
+						</nav>
 
 
 					<div class="alert alert-warning" role="alert">
@@ -137,7 +130,7 @@
 
 										<p class="lead">Välj för att bli vald</p>
 
-										<a type="button" class="btn btn-lg btn-outline-secondary" href="certificate.html">Kom igång</a>
+										<a type="button" class="btn btn-lg btn-outline-secondary" onClick="login();">Kom igång</a>
 											<hr class="my-4">
 										<a href="#example" class="btn btn-default">Exempel</a> -
 										<a href="#sale" class="btn btn-default">Fördelar</a> -
@@ -361,6 +354,6 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
-<!-- <script src="js/app.js"></script>  -->
+<script src="js/app.js"></script>
 </body>
 </html>
