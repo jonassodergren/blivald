@@ -77,6 +77,7 @@ const sendCertificate = async () => {
         $.LoadingOverlay("hide");
         window.location = '/confirmation.html?email='+email+'&order_id='+data.id;
       }, 3000);
+      console.log(data);
     },
     error: function(errMsg) {
       //$.LoadingOverlay("hide");
