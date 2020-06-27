@@ -48,6 +48,7 @@ const sendCertificate = async () => {
   var firstname = document.getElementById("firstname_input").value;
   var lastname = document.getElementById("lastname_input").value;
   var company = document.getElementById("company").value;
+  var mode = sessionStorage["Mode"];
 
 
   var form = document.getElementById("certificate-form");
@@ -68,7 +69,7 @@ const sendCertificate = async () => {
     type: "POST",
     url: "https://api.blivald.se/certificates",
     // The key needs to match your method's input parameter (case-sensitive).
-    data: JSON.stringify({email: email, firstname: firstname, lastname: lastname, company: company}),
+    data: JSON.stringify({email: email, firstname: firstname, type: mode, lastname: lastname, company: company}),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
     success: function(data){
@@ -137,6 +138,18 @@ const login = async () => {
   await auth0.loginWithRedirect({
     redirect_uri: window.location.origin + "/create.html"
   });
+};
+
+const demo = () => {
+// Set demo mode
+sessionStorage["Mode"] = "Demo";
+login();
+};
+
+const create = () => {
+// Set demo mode
+sessionStorage["Mode"] = "Live";
+login();
 };
 
 const logout = () => {

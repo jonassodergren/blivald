@@ -17,10 +17,10 @@
 
 	<!-- favicon -->
 
-<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-<link rel="manifest" href="images/icons/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+	<link rel="manifest" href="images/icons/site.webmanifest">
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
 
@@ -94,72 +94,59 @@
 
 				</style>
 			</head>
-			<body>
-
-				<div class="container-fluid p-0">
+			<body class="container-fluid p-0">
 
 
-						<nav class="navbar bg-secondary">
-							<a class="navbar-brand text-light text-uppercase" href="/"><strong> Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+				<header>
 
-						</nav>
+					<nav class="navbar bg-secondary">
+						<a class="navbar-brand text-light text-uppercase" href="/"><strong> Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
 
+					</nav>
 
-					<div class="alert alert-warning" role="alert">
-						<p class="mb-0">Tjänsten är under utveckling. Hittar du några problem uppskattas all <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a>.</p>
-					</div>
-
+				</header>
 
 
-
-
-					<div class="row justify-content-md-center mx-auto">
-						<div class="col-md-6 text-center">
+				<div class="alert alert-warning" role="alert">
+					<p class="mb-0">Tjänsten är under utveckling. Hittar du några problem uppskattas all <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a>.</p>
+				</div>
 
 
 
-							<div class="jumbotron bg-white">
-								<div id="wrap">
-									<div class="inner">
 
 
+				<div class="row justify-content-md-center mx-auto">
+					<div class="col-md-6 text-center">
 
-										<h2 class="display-4">Workplace<br> of<br> Choice</h2>
+						<div class="jumbotron bg-white">
+							<div id="wrap">
+								<div class="inner">
 
+									<h2 class="display-4">Workplace<br> of<br> Choice</h2>
+									<p class="lead">Välj för att bli vald</p>
 
-
-										<p class="lead">Välj för att bli vald</p>
-
-										<a type="button" class="btn btn-lg btn-outline-secondary" onClick="login();">Kom igång</a>
-											<hr class="my-4">
-										<a href="#example" class="btn btn-default">Exempel</a> -
-										<a href="#sale" class="btn btn-default">Fördelar</a> -
-										<a href="#faq" class="btn btn-default">Vanliga frågor</a>
-
-
-
+									<a type="button" class="btn btn-lg btn-outline-secondary" onClick="demo();">Prova demon</a> <a type="button" class="btn btn-lg btn-outline-secondary" onClick="create();">Skapa ditt certifikat</a>
+									<hr class="my-4">
+									<a href="#example" class="btn btn-default">Exempel</a> -
+									<a href="#sale" class="btn btn-default">Fördelar</a> -
+									<a href="#faq" class="btn btn-default">Vanliga frågor</a>
 
 								</div>
 							</div>
 						</div>
 
+</div>
+</div>
+						<div class="row justify-content-md-center mx-auto">
+							<div class="col-md-6 text-center">
 
-
-
-
+						<hr class="line" style="color: #E9565A;width: 25%;">
+						<div class="section-text align-center mbr-fonts-style display-5">
+							Det finns idag cirka 1,2 miljoner företag i Sverige. Det är svårt att visa hur intresserad man är av ett jobb genom att bifoga ett CV. Blivald.se hjälper dig att namnge vilket företag du vill i ett certifikat. Blivald.se löfte till företagen är att du inte kan skapa flera certifikat.
+							<hr class="line" style="width: 25%;">
+						</div>
 					</div>
 				</div>
-
-				<div class="row justify-content-md-center mx-auto">
-					<div class="col-md-6 text-center">
-
-				<hr class="line" style="color: #E9565A;width: 25%;">
-			 <div class="section-text align-center mbr-fonts-style display-5">
-							 Det finns idag cirka 1,2 miljoner företag i Sverige. Det är svårt att visa hur intresserad man är av ett jobb genom att bifoga ett CV. Blivald.se hjälper dig att namnge vilket företag du vill i ett certifikat. Blivald.se löfte till företagen är att du inte kan skapa flera certifikat.
-			 <hr class="line" style="width: 25%;">
-		 </div>
-	 </div>
- </div>
 
 				<section id="sale" class="features-icons bg-light text-center">
 					<div class="container-fluid">
@@ -272,83 +259,83 @@
 </section>
 
 
-				<section id="example" class="features-icons bg-light">
-					<div class="container-fluid">
-						<div class="row justify-content-md-center mx-auto">
+<section id="example" class="features-icons bg-light">
+	<div class="container-fluid">
+		<div class="row justify-content-md-center mx-auto">
 
-							<div class="col-md-6">
-
-
-									<h3 class="text-center">Exempel</h3>
-									<p class="lead mb-0">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Enkelt att bifoga när du söker ett jobb.</p>
+			<div class="col-md-6">
 
 
-
-								<div class="card mt-5">
-									<img class="card-img-top" src="images/certificate_example.png" alt="Card image cap">
-									<!--
-									<div class="card-body bg-light">
-										<h5 class="card-title">Workplace Of Choice</h5>
-										<p class="card-text">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Tanken är att du enkelt ska kunna bifoga det när du söker ett jobb.</p>
-										<a href="#" class="btn btn-secondary">Kolla på certifikatet</a>
-
-									</div>
-								-->
-								</div>
+				<h3 class="text-center">Exempel</h3>
+				<p class="lead mb-0">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Enkelt att bifoga när du söker ett jobb.</p>
 
 
 
-							</div>
-						</div>
-					</div>
-				</section>
+				<div class="card mt-5">
+					<img class="card-img-top" src="images/certificate_example.png" alt="Card image cap">
+					<!--
+					<div class="card-body bg-light">
+					<h5 class="card-title">Workplace Of Choice</h5>
+					<p class="card-text">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Tanken är att du enkelt ska kunna bifoga det när du söker ett jobb.</p>
+					<a href="#" class="btn btn-secondary">Kolla på certifikatet</a>
+
+				</div>
+			-->
+		</div>
 
 
 
-				<footer class="bg-light">
-					<div class="container-fluid">
-						<hr class="mt-0">
-						<div class="row mx-auto">
-							<div class="col-sm-12 col-md-6">
-								<h6>Kort om blivald.se</h6>
-								<p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
-							</div>
-
-							<div class="col-xs-6 col-md-3">
-								<h6>Erbjudande</h6>
-								<ul class="list-unstyled">
-									<li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
-									<li><a href="" class="text-dark">Verifiera giltigheten</a></li>
-								</ul>
-							</div>
-
-							<div class="col-xs-6 col-md-3">
-								<h6>Snabblänkar</h6>
-								<ul class="list-unstyled">
-									<li><a href="" class="text-dark">Om sajten</a></li>
-									<li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
-									<li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
-								</ul>
-							</div>
-						</div>
-						<hr>
-					</div>
-					<div class="container-fluid">
-						<div class="row justify-content-md-center mx-auto">
-							<div class="col-sm-12 col-md-8">
-
-
-								<div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
-								<p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
-								</div>
-
-							</div>
-						</div>
-					</div>
-
-				</footer>
-
+	</div>
 </div>
+</div>
+</section>
+
+
+
+<footer class="bg-light">
+	<div class="container-fluid">
+		<hr class="mt-0">
+		<div class="row mx-auto">
+			<div class="col-sm-12 col-md-6">
+				<h6>Kort om blivald.se</h6>
+				<p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<h6>Erbjudande</h6>
+				<ul class="list-unstyled">
+					<li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
+					<li><a href="" class="text-dark">Verifiera giltigheten</a></li>
+				</ul>
+			</div>
+
+			<div class="col-xs-6 col-md-3">
+				<h6>Snabblänkar</h6>
+				<ul class="list-unstyled">
+					<li><a href="" class="text-dark">Om sajten</a></li>
+					<li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
+					<li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+	</div>
+	<div class="container-fluid">
+		<div class="row justify-content-md-center mx-auto">
+			<div class="col-sm-12 col-md-8">
+
+
+				<div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
+					<p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</footer>
+
+
 
 
 <script src="js/jquery-3.3.1.min.js"></script>

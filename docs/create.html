@@ -52,6 +52,8 @@
 
   </div>
 
+  <div id="demo"></div>
+
   <nav class="navbar navbar-light bg-white">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-white my-auto">
@@ -230,6 +232,12 @@
 (function() {
   'use strict';
   window.addEventListener('load', function() {
+
+    // Show if in demo mode
+    var mode = sessionStorage["Mode"];
+    if (mode === 'Demo')
+    $('#demo').html('<div id="alert" class="alert alert-warning alert-dismissible show" role="alert">Demo - Riskfritt att prova och trycka!</div>');
+
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     //var forms = document.getElementsByClassName('needs-validation'); //certificate-form
     var forms = document.getElementById("certificate-form");
