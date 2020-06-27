@@ -158,13 +158,20 @@ const logout = () => {
   });
 };
 
-$(document).ajaxStart(function(){
+//$(document).ajaxStart(function(){
+  // set overlay
+//  $.LoadingOverlay("show", {
+//    background  : "rgba(92, 184, 92, 0.4)"
+//  });
+//});
+
+//$(document).ajaxStart(function(){
   //$.LoadingOverlay("show");
   // $("#content").LoadingOverlay
-  $.LoadingOverlay("show", {
-    background  : "rgba(92, 184, 92, 0.4)"
-  });
-});
+//  $(#certificate-form).LoadingOverlay("show", {
+//    background  : "rgba(92, 184, 92, 0.4)"
+//  });
+//});
 //$(document).ajaxStop(function(){
 //  $.LoadingOverlay("hide");
 //});
