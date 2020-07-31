@@ -15,7 +15,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Skapa certifikat</title>
 	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
 	<!-- Tag on social media -->
 	<meta property="og:title" content="Välj vilket företag du vill arbeta oss">
 	<meta property="og:description" content="Stick ut i cv-högen med certifikatet Workplace Of Choice">
@@ -92,7 +92,7 @@
 					position: absolute;
 					font-size: 400px;
 					color: #F8F9FA;
-				//	color: #7f7f7f;
+				//	color: #C0C0C0;
 					top: 40%;
 					left: 50%;
 					margin: -300px 0 0 -200px;
@@ -103,6 +103,27 @@
 					background-color: #E9565A;
 				}
 
+				.bimage {
+  			background: url('images/stairs.jpg');
+
+				/*
+				background-color: rgba(255, 255, 255, .15);
+				filter: blur(5px);
+				*/
+
+				/* Add the blur effect */
+				/*filter: blur(4px);
+				-webkit-filter: blur(4px);*/
+				/*opacity: 0.5; */
+				/* Full height */
+				height: 100%;
+  			background-repeat: no-repeat !important;
+  			background-size: cover !important;
+  			background-position: center;
+				}
+
+				.bg-darken-1 { background-color: var(--darken-1) }
+
 				</style>
 			</head>
 			<body class="container-fluid p-0">
@@ -110,27 +131,42 @@
 
 				<header>
 
-					<nav class="navbar navbar-dark bg-dark">
+					<nav class="navbar fixed-top navbar-dark bg-dark">
 						<a class="navbar-brand text-light text-uppercase" href="/"><strong>Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					    <span class="navbar-toggler-icon"></span>
+					  </button>
+					  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+							<hr>
+					    <ul class="navbar-nav navbar-right ml-auto">
+					      <li class="nav-item">
+							<!--		<h4 class="text-light">För arbetsgivare</h4>-->
+					        <a class="nav-link" href="https://www.blivald.se/verify.html">Verifiera certifikat</a>
+					      </li>
+					    </ul>
+					  </div>
 
 					</nav>
 
 				</header>
 
 
+				<div class="container">
 				<div class="alert alert-warning" role="alert">
 					<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
 				</div>
-
-
+			</div>
 
 
 
 				<div class="row justify-content-md-center mx-auto">
+
+
 					<div class="col-md-6 text-center">
 
 				<!--		<div class="jumbotron bg-white">  -->
-					  <div class="card-body bg-white text-center mb-0 mt-0">
+					  <div class="card-body bg-lighten-2 text-center mb-0 mt-0">
 							<div id="wrap">
 								<div class="inner">
 
@@ -141,7 +177,7 @@
 
 <!--
 									<p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
-									<p class="lead">Visa arbetsgivaren att denne är ditt<br>förstahandsval med certifikatet<br>Workplace Of Choice.</p>
+									<p class="lead">Visa arbetsgivaren att denne är ditt<br>förstahandsval med certifikatet<br><mark>Workplace Of Choice</mark>.</p>
 
 									<div class="btn-group pull-center">
 						<!--			<span class="badge badge-white">1</span><button type="button" class="btn btn-lg btn-outline-secondary" data-toggle="modal" data-target="#exampleModalCenter">Läs manualen</button>  -->
