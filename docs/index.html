@@ -92,8 +92,8 @@
 					position: absolute;
 					font-size: 350px;
 					color: #F8F9FA;
-				//	color: #C0C0C0;
-					top: 55%;
+			//		color: #FDF3D1;
+					top: 65%;
 					left: 55%;
 					margin: -300px 0 0 -200px;
 					z-index: 1;
@@ -131,8 +131,8 @@
 
 				<header>
 
-					<nav class="navbar navbar-dark bg-dark">
-						<a class="navbar-brand text-light text-uppercase" href="/"><strong>Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+					<nav class="navbar navbar-light"> <!-- navbar-dark bg-dark -->
+						<a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
 
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					    <span class="navbar-toggler-icon"></span>
@@ -153,11 +153,33 @@
 
 
 
-				<div class="alert alert-warning" role="alert">
+				<div class="alert alert-warning mb-0" role="alert">
 					<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
 				</div>
 
 
+
+				<div class="row justify-content-md-center mx-auto no-gutters">
+					<div class="col-md-6 text-center">
+
+				<div class="card-body bg-dark mb-0 mt-0">
+
+				<div class="mb-2 text-white"><h5>Välj bland miljoner svenska företag!<h5></div>
+
+					<div class="input-group input-group-lg">
+
+						<input id="company" type="text" class="form-control" placeholder="Skriv ett företagsnamn">
+						<div class="input-group-append">
+
+							<button class="btn btn-lg btn-success" type="button" onClick="create();">
+								<i class="fa fa-search">Starta</i>
+							</button>
+						</div>
+					</div>
+
+<div class="mt-2 text-white"><strong>Ingen fara! Du låser ditt val senare.</strong></div>
+
+				</div>
 
 
 				<div class="row justify-content-md-center mx-auto no-gutters">
@@ -173,18 +195,18 @@
 									<!--
 									<h2 class="display-4">Workplace<br>of<br>choice</h2>
 								-->
-								<h4 class="display-4">Stick ut bland<br>andra<br>kandidater!</h4>
+								<h1 class="display-4">Stick ut bland<br>andra<br>kandidater!</h1>
 
 <!--
 									<p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
 									<p class="lead">Visa arbetsgivaren att denne är ditt<br>förstahandsval med certifikatet<br><mark>Workplace Of Choice</mark>.</p>
 
-									<!--
+
 									<div class="btn-group pull-center">
-									<button type="button" class="btn btn-lg btn-outline-secondary" onClick="demo();">Prova</button>
+							<!--		<button type="button" class="btn btn-lg btn-outline-secondary" onClick="demo();">Prova</button> -->
 									<button type="button" class="btn btn-lg btn-outline-success" onClick="create();">Kom igång</button>
 								  </div>
-								-->
+
 
 
 <!--
@@ -211,9 +233,10 @@
 </div>
 
 
-<div class="row justify-content-md-center mx-auto no-gutters">
+<div class="row justify-content-md-center mx-auto">
 	<div class="col-md-6 text-center">
 
+<!--
 <div class="card-body bg-dark mb-0 mt-0">
 
 <div class="mb-2 text-white"><strong>Ingen fara! Du låser ditt val senare.</strong></div>
@@ -229,6 +252,7 @@
 		</div>
 	</div>
 </div>
+-->
 
 <a href="#example" class="btn btn-default"><u>Visa ett certifikat</u></a> -
 <!--	<a href="#sale" class="btn btn-default">Fördelar</a> -  -->
@@ -238,7 +262,11 @@
 </div>
 </div>
 
-
+<!--
+<div class="alert alert-warning" role="alert">
+	<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
+</div>
+-->
 
 <!--
 						<div class="row justify-content-md-center mx-auto">
