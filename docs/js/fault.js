@@ -51,6 +51,8 @@ window.onerror = function (messageOrEvent, source, lineno, colno, error) {
 
           var logMsg = JSON.stringify(logObject);
 
+          var transactionId = sessionStorage['transactionId'];
+
           $.ajax({
             type: "POST",
             url: url,
@@ -58,6 +60,9 @@ window.onerror = function (messageOrEvent, source, lineno, colno, error) {
             data: logMsg,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
+            headers: {
+            "TransactionUid": transactionId
+            },
             success: function(data){
               //console.log(data);
               window.location = '/error.html?errorCode=400';

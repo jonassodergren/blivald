@@ -18,6 +18,10 @@ window.onload = async () => {
 
 //window.history.replaceState({}, document.title, "/create/");
 
+  //Add sessionId
+
+  sessionStorage['transactionId'] = newGuid();
+
   await configureClient();
   // NEW - update the UI state
   updateUI();
@@ -43,6 +47,33 @@ window.onload = async () => {
   }
 };
 
+function newGuid() {
+    var guidHolder = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+    var hex = "0123456789abcdef";
+    var r = 0;
+    var guidResponse = "";
+
+    for (var i = 0; i < 36; i++) {
+        if (guidHolder[i] !== "-" && guidHolder[i] !== "4") {
+            // each x and y needs to be random
+            r = (Math.random() * 16) | 0;
+        }
+
+        if (guidHolder[i] === "x") {
+            guidResponse += hex[r];
+        } else if (guidHolder[i] === "y") {
+            // clock-seq-and-reserved first hex is filtered and remaining hex values are random
+            r &= 0x3; // bit and with 0011 to set pos 2 to zero ?0??
+            r |= 0x8; // set pos 3 to 1 as 1???
+            guidResponse += hex[r];
+        } else {
+            guidResponse += guidHolder[i];
+        }
+    }
+
+    return guidResponse;
+}
+
 const sendCertificate = async () => {
   var email = document.getElementById("email").value;
   var firstname = document.getElementById("firstname_input").value;
@@ -63,7 +94,15 @@ const sendCertificate = async () => {
     return;
   }
 
+  var transactionId = sessionStorage['transactionId'];
 
+//  $.ajaxSetup({
+//    headers: {
+//    "TransactionUid": transationId
+//    }
+//  });
+
+  var transationId = newGuid();
   // https://softwhere.ddns.net/woc
   $.ajax({
     type: "POST",
@@ -72,6 +111,9 @@ const sendCertificate = async () => {
     data: JSON.stringify({email: email, firstname: firstname, type: mode, lastname: lastname, company: company}),
     contentType: "application/json; charset=utf-8",
     dataType: "json",
+    headers: {
+    "TransactionUid": transactionId
+    },
     success: function(data){
       setTimeout(function(){
         $.LoadingOverlay("hide");
