@@ -20,7 +20,10 @@ window.onload = async () => {
 
   //Add sessionId
 
+  if(sessionStorage['transactionId'] === null || sessionStorage['transactionId'] === undefined)
   sessionStorage['transactionId'] = newGuid();
+
+  console.log(sessionStorage['transactionId']);
 
   await configureClient();
   // NEW - update the UI state
