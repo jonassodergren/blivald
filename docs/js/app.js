@@ -181,8 +181,13 @@ const cancel = async () => {
 }
 
 const login = async () => {
+  var company = document.getElementById("company").value;
+  var url = "/create.html";
+  if(company !== null)
+  url += "?" + "company="+company;
+  const encoded = encodeURI(url);
   await auth0.loginWithRedirect({
-    redirect_uri: window.location.origin + "/create.html"
+    redirect_uri: window.location.origin + encoded
   });
 };
 

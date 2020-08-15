@@ -69,7 +69,7 @@ body, html {
     <body>
 
 
-
+<!--
       <div class="font-up-bold text-uppercase">
         <nav class="navbar navbar-dark bg-dark">
           <nav aria-label="breadcrumb">
@@ -85,6 +85,28 @@ body, html {
         </nav>
 
       </div>
+    -->
+    <header>
+
+      <nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
+        <a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <hr>
+          <ul class="navbar-nav navbar-right ml-auto">
+            <li class="nav-item">
+          <!--		<h4 class="text-light">För arbetsgivare</h4>-->
+              <a class="nav-link" href="https://www.blivald.se/verify.html">Verifiera certifikat</a>
+            </li>
+          </ul>
+        </div>
+
+      </nav>
+
+    </header>
 
       <nav class="navbar navbar-light bg-white">
         <nav aria-label="breadcrumb">
@@ -96,13 +118,13 @@ body, html {
         </nav>
       </nav>
 
-      <div class="container-fluid">
+      <div class="container-fluid p-0">
 
         <div class="row justify-content-md-center">
 
           <div class="col-md-6">
 
-            <div class="jumbotron bg-light text-center mb-3">
+            <div class="jumbotron bg-light text-center mb-0">
 
               <h2 class="display-4">Logga in</h2>
 
@@ -140,13 +162,15 @@ body, html {
         <div id="error-message" class="alert alert-danger"></div>
 
 
-          <div id="about" class="card mb-3">
+          <div id="about" class="card mb-0 border-0">
+            <!--
             <div class="card-header">
               Bra att veta om inloggning
             </div>
+          -->
 
             <div class="card-body">
-          <!--    <h5 class="card-title">Varför måste man logga in?</h5>  -->
+              <h5 class="card-title">Bra att veta om inloggningen</h5>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item">Inloggningen verifierar att du är ägaren till e-postadressen.</li>
                 <li class="list-group-item">För och efternamn hämtas från ditt konto</li>

@@ -17,6 +17,12 @@ $(document).ajaxStart(function(){
   window.addEventListener('load', function() {
 
 
+      let params = (new URL(document.location)).searchParams;
+      let company = params.get('company');
+      document.getElementById("company").value = company;
+
+
+
     // Show if in demo mode
     var mode = sessionStorage["Mode"];
     if (mode === 'Demo')
