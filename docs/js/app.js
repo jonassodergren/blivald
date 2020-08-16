@@ -158,6 +158,13 @@ const updateUI = async () => {
 
     //  $("#signup-form").steps("next");
 
+    var path = window.location.pathname;
+    //const path = url.pathname;
+
+    //console.log(path);
+
+    if (path !== "/"){
+
     $("#firstname_input").click();
     //  $("#lastname_input").focus();
     //  $("#email").focus();
@@ -169,6 +176,8 @@ const updateUI = async () => {
     document.getElementById("lastname_input").readOnly = true;
     document.getElementById("email").value = user.email;
     document.getElementById("email").readOnly = true;
+
+  }
 
   } else {
 

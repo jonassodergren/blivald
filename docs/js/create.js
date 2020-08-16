@@ -42,7 +42,6 @@ $(document).ajaxStart(function(){
       document.getElementById("company").value = company;
 
 
-
     // Show if in demo mode
     var mode = sessionStorage["Mode"];
     if (mode === 'Demo')
