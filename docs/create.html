@@ -27,6 +27,7 @@
 <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/footer.css"/>
 <link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/create_preview.css"/>
 <style type="text/css">
 .breadcrumb {
   padding-top: 0px;
@@ -103,7 +104,7 @@
     <div id="selectCompany" class="row justify-content-md-center">
       <div class="col-md-6 bg-white mb-3">
 
-        <div class="card-body bg-white text-center mb-3">
+        <div class="card-body bg-white text-center mb-0">
 
 
           <h2 class="display-4">Utfärda certifikat</h2>
@@ -125,6 +126,39 @@
 
 
       </div>
+
+
+<!--
+<div class="card" style="width: 10rem;">
+  <img class="card-img-top" src="images/certificate_example.png" alt="Card image cap 2">
+</div>
+-->
+
+<!--
+<a href="#" id="pop">
+    <img id="imageresource" src="images/certificate_example.png" style="width: 10rem;">
+    Click to Enlarge
+</a>
+-->
+
+<!-- Trigger the Modal -->
+<div class="card-body bg-white text-center mb-0">
+<img id="myImg" src="/images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att förstora</p>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- The Close Button -->
+  <span class="close">&times;</span>
+
+  <!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+
+  <!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+</div>
 
       <form id="certificate-form" class="form-group was-validated needs-validation mb-0" novalidate>
 
@@ -188,8 +222,8 @@
 
 </form>
 
-<div class="card-body bg-light text-right">
-    <button type="submit" class="btn btn-lg btn-outline-success" onClick="sendCertificate()">Utfärda</button>
+<div class="card-body bg-white">
+    <button type="submit" class="btn btn-lg btn-block btn-success" onClick="sendCertificate()">Utfärda</button>
 </div>
 
     <!--
