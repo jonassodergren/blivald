@@ -96,7 +96,7 @@ window.onerror = function (messageOrEvent, source, lineno, colno, error) {
         obj.messageOrEvent = (messageOrEvent || '').toString().substring(0, 150);
         obj.url = (window.location.href || '').toString().substring(0, 150);
 
-        postError("https://api.blivald.se/errors",obj);
+        postError("https://api.blivald.se/logs",obj);
     }
     catch (e) {
         // squelch, because we don’t want to prevent method from returning true
