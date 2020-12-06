@@ -119,7 +119,6 @@ var queueUri = "https://blivald.queue.core.windows.net";
 var sas = claims[queueUri];
 
 var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri, sas);
-//var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri,conn_string);
 
 var encoder = new AzureStorage.Queue.QueueMessageEncoder.TextBase64QueueMessageEncoder();
 
@@ -140,8 +139,6 @@ queueService.createMessage('orders', encoder.encode(jsonMsg), function (error, r
 
     }
 });
-
-//var sas = generateAccountSharedAccessSignature("blivald","06/wgtpEM6WyBkBDGvc5HDvnPSt8ij8ouxNX1nLl+VGy79Ibg/+gaWdLkW9zkSTHBodmVohvKerh8NRw3xA6nA==",null);
 
   // https://softwhere.ddns.net/woc
   $.ajax({
