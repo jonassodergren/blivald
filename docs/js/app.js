@@ -112,8 +112,11 @@ const sendCertificate = async () => {
 //    }
 //  });
 
-var queueUri = 'https://' + 'blivald' + '.queue.core.windows.net';
-var sas = "?sv=2019-12-12&ss=q&srt=sco&sp=rwdlacup&se=2021-01-21T23:25:43Z&st=2020-12-06T15:25:43Z&spr=https&sig=ISkGkRg1%2FlrWDmJbsj8uPWIFm7W5FP%2B2SuLPIZfKQHY%3D";
+var claims = await auth0.getIdTokenClaims();
+
+var queueUri = "https://blivald.queue.core.windows.net";
+
+var sas = claims[queueUri];
 
 var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri, sas);
 //var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri,conn_string);
