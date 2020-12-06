@@ -1,6 +1,11 @@
 let auth0 = null;
 let order_id = null;
 
+//import * as lib from './place.js';
+//const place_order2 = createRequire(import.meta.url);
+//import * as lib from './place.js';
+
+
 const fetchAuthConfig = () => fetch("/auth_config.json");
 
 const configureClient = async () => {
@@ -99,13 +104,42 @@ const sendCertificate = async () => {
 
   var transactionId = sessionStorage['transactionId'];
 
+  //var transationId = newGuid();
+
 //  $.ajaxSetup({
 //    headers: {
 //    "TransactionUid": transationId
 //    }
 //  });
 
-  var transationId = newGuid();
+var queueUri = 'https://' + 'blivald' + '.queue.core.windows.net';
+var sas = "?sv=2019-12-12&ss=q&srt=sco&sp=rwdlacup&se=2021-01-21T23:25:43Z&st=2020-12-06T15:25:43Z&spr=https&sig=ISkGkRg1%2FlrWDmJbsj8uPWIFm7W5FP%2B2SuLPIZfKQHY%3D";
+
+var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri, sas);
+//var queueService = AzureStorage.Queue.createQueueServiceWithSas(queueUri,conn_string);
+
+var encoder = new AzureStorage.Queue.QueueMessageEncoder.TextBase64QueueMessageEncoder();
+
+var message = new Object();
+message.transactionId = transactionId;
+message.email = email;
+message.firstname = firstname;
+message.lastname = lastname;
+message.type = mode;
+message.company = company;
+
+var jsonMsg = JSON.stringify(message);
+
+queueService.createMessage('orders', encoder.encode(jsonMsg), function (error, results, response) {
+    if (error) {
+        window.location = '/error.html?errorCode=' + JSON.parse(error.responseText).httpStatusCode;
+    } else {
+
+    }
+});
+
+//var sas = generateAccountSharedAccessSignature("blivald","06/wgtpEM6WyBkBDGvc5HDvnPSt8ij8ouxNX1nLl+VGy79Ibg/+gaWdLkW9zkSTHBodmVohvKerh8NRw3xA6nA==",null);
+
   // https://softwhere.ddns.net/woc
   $.ajax({
     type: "POST",
@@ -133,6 +167,7 @@ const sendCertificate = async () => {
     }
   });
 }
+window.sendCertificate = sendCertificate;
 
 // NEW
 const updateUI = async () => {
@@ -211,6 +246,7 @@ const create = () => {
 sessionStorage["Mode"] = "Live";
 login();
 };
+window.create = create;
 
 const logout = () => {
   auth0.logout({
