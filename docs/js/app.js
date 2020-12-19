@@ -136,36 +136,40 @@ queueService.createMessage('orders', encoder.encode(jsonMsg), function (error, r
     if (error) {
         window.location = '/error.html?errorCode=' + JSON.parse(error.responseText).httpStatusCode;
     } else {
-
+      setTimeout(function(){
+           $.LoadingOverlay("hide");
+         window.location = '/confirmation.html?email='+message.email+'&order_id='+message.transactionId;
+       }, 200);
+         console.log(results);
     }
 });
 
-  // https://softwhere.ddns.net/woc
-  $.ajax({
-    type: "POST",
-    url: "https://api.blivald.se/certificates",
-    // The key needs to match your method's input parameter (case-sensitive).
-    data: JSON.stringify({email: email, firstname: firstname, type: mode, lastname: lastname, company: company}),
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    headers: {
-    "TransactionUid": transactionId
-    },
-    success: function(data){
-      setTimeout(function(){
-        $.LoadingOverlay("hide");
-        window.location = '/confirmation.html?email='+email+'&order_id='+data.id;
-      }, 3000);
-      console.log(data);
-    },
-    error: function(errMsg) {
-      //$.LoadingOverlay("hide");
-      window.location = '/error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
-    },
-    complete: function(msg){
+//  $.ajax({
+//    type: "POST",
+//    url: "https://api.blivald.se/certificates",
+  //  // The key needs to match your method's input parameter (case-sensitive).
+//    data: JSON.stringify({email: email, firstname: firstname, type: mode, lastname: lastname, company: company}),
+//    contentType: "application/json; charset=utf-8",
+//    dataType: "json",
+//    headers: {
+//    "TransactionUid": transactionId
+//    },
+//    success: function(data){
+//      setTimeout(function(){
+//        $.LoadingOverlay("hide");
+//      window.location = '/confirmation.html?email='+email+'&order_id='+data.id;
+//      }, 3000);
+//      console.log(data);
+//    },
+//    error: function(errMsg) {
+  //    //$.LoadingOverlay("hide");
+//      window.location = '/error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
+//    },
+//    complete: function(msg){
 
-    }
-  });
+//    }
+//  });
+
 }
 window.sendCertificate = sendCertificate;
 
