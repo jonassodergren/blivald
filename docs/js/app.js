@@ -132,7 +132,7 @@ message.company = company;
 
 var jsonMsg = JSON.stringify(message);
 
-queueService.createMessage('orders', encoder.encode(jsonMsg), function (error, results, response) {
+queueService.createMessage('incoming-order', encoder.encode(jsonMsg), function (error, results, response) {
     if (error) {
         window.location = '/error.html?errorCode=' + JSON.parse(error.responseText).httpStatusCode;
     } else {
