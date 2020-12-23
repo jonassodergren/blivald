@@ -37,6 +37,7 @@ window.onload = async () => {
   const isAuthenticated = await auth0.isAuthenticated();
 
   if (isAuthenticated) {
+
     // show the gated content
     return;
   }
@@ -104,13 +105,6 @@ const sendCertificate = async () => {
 
   var transactionId = sessionStorage['transactionId'];
 
-  //var transationId = newGuid();
-
-//  $.ajaxSetup({
-//    headers: {
-//    "TransactionUid": transationId
-//    }
-//  });
 
 var claims = await auth0.getIdTokenClaims();
 
@@ -143,32 +137,6 @@ queueService.createMessage('incoming-order', encoder.encode(jsonMsg), function (
          console.log(results);
     }
 });
-
-//  $.ajax({
-//    type: "POST",
-//    url: "https://api.blivald.se/certificates",
-  //  // The key needs to match your method's input parameter (case-sensitive).
-//    data: JSON.stringify({email: email, firstname: firstname, type: mode, lastname: lastname, company: company}),
-//    contentType: "application/json; charset=utf-8",
-//    dataType: "json",
-//    headers: {
-//    "TransactionUid": transactionId
-//    },
-//    success: function(data){
-//      setTimeout(function(){
-//        $.LoadingOverlay("hide");
-//      window.location = '/confirmation.html?email='+email+'&order_id='+data.id;
-//      }, 3000);
-//      console.log(data);
-//    },
-//    error: function(errMsg) {
-  //    //$.LoadingOverlay("hide");
-//      window.location = '/error.html?errorCode=' + JSON.parse(errMsg.responseText).httpStatusCode;
-//    },
-//    complete: function(msg){
-
-//    }
-//  });
 
 }
 window.sendCertificate = sendCertificate;
@@ -215,6 +183,14 @@ const updateUI = async () => {
     document.getElementById("lastname_input").readOnly = true;
     document.getElementById("email").value = user.email;
     document.getElementById("email").readOnly = true;
+
+
+    var claims = await auth0.getIdTokenClaims();
+
+    var api_key = claims['https://api.blivald.se'];
+    //const event = new CustomEvent("adduserinfo", { detail: {api_key: api_key} });
+
+    $(document).trigger("adduserinfo",[user.email,api_key]);
 
   }
 
