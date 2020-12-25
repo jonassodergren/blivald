@@ -5,15 +5,15 @@ var employers = new Bloodhound({
   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
   prefetch: {
     url: '../employers3.json',
-    filter: function(list) {
-                return $.map(list, function(item) {
-                    return {
-                        name: item.name,
-                        org: item.org
-                    //    logo: item.logo
-                    };
-                });
-            },
+  //  filter: function(list) {
+  //              return $.map(list, function(item) {
+  //                  return {
+  //                      name: item.name,
+  //                      org: item.org
+  //                  //    logo: item.logo
+  //                  };
+  //              });
+  //          },
     cache: false
   }
 });
