@@ -14,7 +14,7 @@ var employers = new Bloodhound({
                     };
                 });
             },
-    cache: true
+    cache: false
   }
 });
 
