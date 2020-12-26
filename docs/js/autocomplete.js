@@ -4,7 +4,7 @@ var employers = new Bloodhound({
   // url points to a json file that contains an array of country names, see
   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
   prefetch: {
-    url: '../employers2.json',
+    url: '../employers3.json',
   //  filter: function(list) {
   //              return $.map(list, function(item) {
   //                  return {
