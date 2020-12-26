@@ -35,7 +35,7 @@ $('#prefetch .form-control').typeahead({
       '</div>'
     ].join('\n'),
     suggestion: function (data) {
-        return '<div class="card border"><h5 class="card-title">'+data.name+'</h5><p class="card-text"><u><a class="button" target="_blank" href="https://allabolag.se/'+data.org+'">Mer om företaget</a></u><p></div>';
+        return '<div class="card border-bottom"><div class="card-body"><h5 class="card-title">'+data.name+'</h5><h6 class="card-subtitle mb-2 text-muted">Rekryterar just nu</h6><p class="card-text"><u><a class="button" target="_blank" href="https://allabolag.se/'+data.org+'">Mer om företaget</a></u><p></div></div>';
     }
   }
 });
