@@ -5,15 +5,15 @@ var employers = new Bloodhound({
   // https://github.com/twitter/typeahead.js/blob/gh-pages/data/countries.json
   prefetch: {
     url: '../employers2.json',
-    filter: function(list) {
-                return $.map(list, function(item) {
-                    return {
-                        name: item.name,
-                        org: item.org,
-                        logo: item.logo
-                    };
-                });
-            },
+  //  filter: function(list) {
+  //              return $.map(list, function(item) {
+  //                  return {
+  //                      name: item.name,
+  //                      org: item.org,
+  //                      logo: item.logo
+  //                  };
+  //              });
+  //          },
     cache: false
   }
 });
@@ -35,7 +35,7 @@ $('#prefetch .form-control').typeahead({
       '</div>'
     ].join('\n'),
     suggestion: function (data) {
-        return '<div class="card border"><img class="img-fluid src="'+data.logo+'"><h5 class="card-title">'+data.name+'</h5><p class="card-text"><u><a class="button" target="_blank" href="https://allabolag.se/'+data.org+'">Mer om företaget</a></u><p></div>';
+        return '<div class="card border"><h5 class="card-title">'+data.name+'</h5><p class="card-text"><u><a class="button" target="_blank" href="https://allabolag.se/'+data.org+'">Mer om företaget</a></u><p></div>';
     }
   }
 });
