@@ -92,12 +92,12 @@
 					font-weight: normal;
 					text-decoration: inherit;
 					position: absolute;
-					font-size: 350px;
+					font-size: 320px;
 					color: #F8F9FA;
 			//		color: #FDF3D1;
 					top: 65%;
 					left: 55%;
-					margin: -300px 0 0 -200px;
+					margin: -300px 0 0 -180px;
 					z-index: 1;
 				}
 				.line{
@@ -134,7 +134,7 @@
 				<header>
 
 					<nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
-						<a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Provperiod 2020</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+						<a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Ny tjänst 2020</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
 
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					    <span class="navbar-toggler-icon"></span>
@@ -159,7 +159,7 @@
 							<strong><i class="icon-info mx-auto text-warning" style="font-size: 24px;"></i></strong>
 </div>
 <div class="col-11 text-left">
-<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
+<p class="mb-0"><a href="mailto:info@blivald.se" class="text-muted"><u>Kontakta oss</u></a> för hjälp eller återkoppling.</p>
 </div>
 
 				</div>
@@ -182,8 +182,12 @@
 
 				<div class="card-body bg-dark mb-0 mt-0">
 
-				<div class="mb-2 text-white"><h4>Vilket företag väljer du?<h4></div>
+				<div class="mb-2 text-white"><h4>Vilket företag väljer du?</h4>
 
+
+        Gör ditt val och välj nästa eller demo.
+
+        </div>
 
 					<div class="input-group">
 
@@ -193,20 +197,19 @@
 					<div class="input-group-append">
 
 							<button class="btn btn-success" type="button" onClick="create();">
-								<i class="fa fa-search">Starta</i>
+								<i class="fa fa-search">Nästa</i>
 							</button>
 						</div>
+
 					</div>
 
+          <button class="btn btn-warning btn-lg mt-3" type="button" onClick="demo();">
+            <i class="fa fa-search">Demoversion</i>
+          </button>
 
 
-<!--
-					<div id="prefetch">
-  					<input class="typeahead" type="text" placeholder="Företag som annonserar">
-					</div>
--->
+<div class="mt-2 text-white">Du kan ändra ditt val i nästa steg.</div>
 
-<div class="mt-2 text-white"><strong>Ingen fara! Du låser ditt val senare.</strong></div>
 
 				</div>
 
@@ -235,10 +238,12 @@
 									<p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet<br><mark>Workplace Of Choice</mark></p>
 
 
+
+                  <!--
 									<div class="btn-group pull-center">
-							<!--		<button type="button" class="btn btn-lg btn-outline-secondary" onClick="demo();">Prova</button> -->
 									<button type="button" class="btn btn-lg btn-outline-success" onClick="create();">Kom igång</button>
 								  </div>
+                -->
 
 
 
@@ -254,6 +259,11 @@
 									<a href="#faq" class="btn btn-default"><u>Vanliga frågor</u></a>
 								-->
 
+                <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
+                <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
+                <!--
+                <span><a href="#" title="Tets" onClick="demo();"><u>Demoversion</u></a></span>
+-->
 
 								</div>
 				</div>
@@ -266,34 +276,7 @@
 </div>
 
 
-<div class="row justify-content-md-center mx-auto no-gutters">
-	<div class="col-md-6 text-center">
 
-<!--
-<div class="card-body bg-dark mb-0 mt-0">
-
-<div class="mb-2 text-white"><strong>Ingen fara! Du låser ditt val senare.</strong></div>
-
-	<div class="input-group input-group-lg">
-
-		<input id="company" type="text" class="form-control" placeholder="Skriv ett företagsnamn">
-		<div class="input-group-append">
-
-			<button class="btn btn-lg btn-success" type="button" onClick="create();">
-				<i class="fa fa-search">Kom igång</i>
-			</button>
-		</div>
-	</div>
-</div>
--->
-
-<a href="#example" class="btn btn-default"><u>Visa ett certifikat</u></a> -
-<!--	<a href="#sale" class="btn btn-default">Fördelar</a> -  -->
-<a href="#faq" class="btn btn-default"><u>Vanliga frågor</u></a> -
-<a class="btn btn-default" onClick="demo();"><u>Demoversion</u></a>
-
-</div>
-</div>
 
 <!--
 <div class="alert alert-warning" role="alert">
