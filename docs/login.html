@@ -65,6 +65,24 @@ body, html {
     h2 {
       color: #E9565A;
     }
+/* Google image branding */
+
+.bouton-image:before {
+    content: "";
+    width: 382px;
+    height: 92px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+}
+
+.monBouton:before{
+     background-image : url(../images/google.png);
+}
+
     </style>
     <body>
 
@@ -136,17 +154,31 @@ body, html {
                   <button
                   type="button"
                   id="btn-google"
-                  class="btn btn-lg btn-social btn-google"> <!-- btn btn-lg btn-outline-secondary -->
-                  <span class = "fa fa-google"></span>Logga in
+                  class="btn btn-lg"> <!-- btn-social btn-google btn btn-lg btn-outline-secondary -->
+                  <img src="../images/google.png" />
+                <!--  <span class = "fa fa-google"></span> -->
                 </button>
+
+<!--
               </p>
               <p>
+              -->
+                <!--
                 <button
                 type="button"
                 id="btn-facebook"
                 class="btn btn-lg btn-social btn-facebook">
+
                 <span class = "fa fa-facebook"></span>Logga in
               </button>
+            -->
+            <button
+            type="button"
+            id="btn-facebook"
+            class="btn btn-lg">
+
+            <img src="../images/facebook.png" />
+          </button>
 
             </p>
 

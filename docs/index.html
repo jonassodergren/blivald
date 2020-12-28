@@ -54,7 +54,7 @@ window.addEventListener("load", function () {
      *
 		 *jQuery("#consent-out").show();
      */
-		onConsent();
+		//onConsent();
 	} else if (document.cookie.indexOf('cookieconsent_status=deny') > -1) {
 		/**
 		 * Cookie set and usage is banned
@@ -314,13 +314,15 @@ function deleteAllCookies() {
 
 				</header>
 
-				<div class="row alert no-gutters mb-0 align-items-center">
-
+				<div class="row alert mb-0 align-items-center">
+<!--
 <div class="col-1">
-							<strong><i class="icon-info mx-auto text-warning" style="font-size: 24px;"></i></strong>
+							<strong><i class="icon-info text-warning" style="font-size: 24px;"></i></strong>
 </div>
-<div class="col-11 text-left">
-<p class="mb-0"><a href="mailto:info@blivald.se" class="text-muted"><u>Kontakta oss</u></a> för hjälp eller återkoppling.</p>
+-->
+
+<div class="col">
+<p class="mb-0"><strong><i class="icon-info text-warning" style="font-size: 24px;"></i></strong>  <a href="mailto:info@blivald.se" class="text-muted"><u>Kontakta oss</u></a> för hjälp eller återkoppling.</p>
 </div>
 
 				</div>
@@ -387,8 +389,13 @@ function deleteAllCookies() {
 				</div>
 
 			</div>
+
+
 			<div class="col-md-3 bg-dark text-center"></div>
-		</div>
+
+
+
+    </div>
 
 
 				<div class="row justify-content-md-center mx-auto no-gutters">
