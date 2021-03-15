@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Kolla loggen</title>
+  <!-- Mobile Specific Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+  <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" />
+
+
+  <style>
+
+    tr:nth-child(even) {background-color: #f2f2f2;}
+
+  </style>
+
+</head>
+<body class="container-fluid p-0">
+
+
+  <header>
+
+    <nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
+      <a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Admin</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <hr>
+        <ul class="navbar-nav navbar-right ml-auto">
+          <li class="nav-item">
+            <!--		<h4 class="text-light">För arbetsgivare</h4>-->
+            <a class="nav-link" href="/">Blivald.se</a>
+            <a class="nav-link" href="/.auth/login/github" v-if="!user.userDetails">Login</a>
+            <a class="nav-link" href="/.auth/logout" v-if="user.userDetails">Log out</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <nav aria-label="breadcrumb" class="mb-0 bg-white">
+  <ol class="breadcrumb mb-0 bg-white">
+    <li id="breadcrumbLog" class="breadcrumb-item"></li>
+    <li id="breadcrumbDate" class="breadcrumb-item"></li>
+  </ol>
+</nav>
+
+    <div id="alert" class="alert alert-success fixed-top" role="alert">
+      <a href="javascript:void(0)" id="close" class="close" onclick="$('#alert').hide();return false">&times;</a>
+      <h4 class="alert-heading">Händelse</h4>
+
+      <p id="message"></p>
+
+      <hr>
+      <p class="mb-0" id="links"><a id="messageUrl" href="#">Se rådatan</a></p>
+    </div>
+
+  </header>
+
+
+  <div class="row justify-content-md-center bg-light mx-auto no-gutters">
+    <div class="col-md-10">
+      <div class="card text-center">
+
+        <div class="card-body bg-light mb-0 mt-0">
+
+          <h3 class="card-title">Logg</h3>
+          <h6 class="card-subtitle mb-2 text-muted">Händelser för blivald.se</h6>
+
+<!--
+          <p>
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+                Logg
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#audit">Audit</a>
+                <a class="dropdown-item" href="#client">Client</a>
+                <a class="dropdown-item" href="#system">System</a>
+                <a class="dropdown-item" href="#event">Event</a>
+                <a class="dropdown-item" href="#">Alla</a>
+              </div>
+            </div>
+          </p>
+          <p>
+            <h5>Snabbstart</h5>
+            <div class="btn-group btn-group-sm">
+              <a href="#audit">Audit</a> -
+              <a href="#client">Client</a> -
+              <a href="#system">System</a> -
+              <a href="#event">Event</a> -
+              <a href="#">Alla</a>
+            </div>
+          </p>
+          -->
+<p>
+  <a class="btn btn-sm btn-outline-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Sökfilter
+  </a>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body text-left">
+    <p>
+    <strong>Logg:</strong>
+    <a class="card-link" href="#audit">Audit</a>
+    <a class="card-link ml-2" href="#client">Client</a>
+    <a class="card-link ml-2" href="#system">System</a>
+    <a class="card-link ml-2" href="#event">Event</a>
+    <a class="card-link ml-2" href="#">Alla</a>
+    </p>
+    <p>
+    <strong>Filter:</strong>
+    <a id="showError" class="card-link" onclick="filterOnError();return false" href="#">Alla fel</a>
+    <a class="card-link ml-2" onclick='filterOnDate("today");return false;' href="#">Dagens</a>
+    <a class="card-link ml-2" onclick='filterOnDate("yesterday");return false;' href="#">Gårdagens</a>
+    </p>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-md-center bg-light mx-auto no-gutters">
+    <div class="col-md-10">
+      <div class="card text-center">
+        <div class="card-body bg-light mb-0 mt-0">
+          <div id="wrapper"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer class="bg-light">
+    <div class="container-fluid">
+      <hr class="mt-0">
+      <div class="row mx-auto">
+        <div class="col-sm-12 col-md-6">
+          <h6>Kort om blivald.se</h6>
+          <p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Erbjudande</h6>
+          <ul class="list-unstyled">
+            <li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
+            <li><a href="" class="text-dark">Verifiera giltigheten</a></li>
+          </ul>
+        </div>
+
+        <div class="col-xs-6 col-md-3">
+          <h6>Snabblänkar</h6>
+          <ul class="list-unstyled">
+            <li><a href="privacy.html" class="text-dark">Om sajten</a></li>
+            <li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
+            <li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container-fluid">
+      <div class="row justify-content-md-center mx-auto">
+        <div class="col-sm-12 col-md-8">
+
+
+          <div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
+            <p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/gridjs/dist/gridjs.production.min.js"></script>
+
+  <script>
+
+    async function getUserInfo() {
+      const response = await fetch("/.auth/me");
+      const payload = await response.json();
+      const { clientPrincipal } = payload;
+      return clientPrincipal;
+    }
+
+    async function login(){
+      var client = await getUserInfo();
+      if(client == null)
+        return false;
+
+      console.log(client);
+      return true;
+    }
+
+    $("#close").on("click", function(e)
+    {
+      $("#alert").hide();
+
+    });
+
+    function filterOnError()
+    {
+      $("#wrapper > div.gridjs.gridjs-container > div.gridjs-head > div > input").val("Error");
+
+      grid.updateConfig({
+        search: {keyword: "Error"},
+      }).forceRender();
+
+      $("#breadcrumbDate").text("Filter: fel");
+
+      $(".gridjs-head").html('<a href="#" class="btn btn-primary active" role="button" onClick="cleanField();return false;" aria-pressed="true">Rensa</a>');
+
+    }
+
+    function filterOnDate(filter)
+    {
+
+      var goBackDays = 0;
+      if(filter === 'yesterday')
+        goBackDays = 1;
+
+      var date = ( function(){this.setDate(this.getDate()-goBackDays); return this} )
+            .call(new Date);
+
+      let date_iso = date.toISOString().slice(0, 10);
+
+
+      $("#wrapper > div.gridjs.gridjs-container > div.gridjs-head > div > input").val(date_iso);
+
+      grid.updateConfig({
+        search: {keyword: date_iso},
+      }).forceRender();
+
+      $("#breadcrumbDate").text("Filter: datum");
+
+      $(".gridjs-head").html('<a href="#" class="btn btn-primary active" role="button" onClick="cleanField();return false;" aria-pressed="true">Rensa</a>');
+
+    }
+
+
+    function syntaxHighlight(json) {
+      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+          if (/:$/.test(match)) {
+            cls = 'key';
+          } else {
+            cls = 'string';
+          }
+        } else if (/true|false/.test(match)) {
+          cls = 'boolean';
+        } else if (/null/.test(match)) {
+          cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+      });
+    }
+
+    var mapArray;
+
+    function loadData(){
+
+      $("#alert").hide();
+
+      if( typeof mapArray === 'undefined' ) {
+        $.get("https://api.blivald.se/user:455/customernumber", function(data, status){
+          mapArray = data;
+          populateTable();
+        });
+      }
+
+    }
+
+    function getCustomerNumer(uuid){
+
+
+      const found = mapArray.find(element => element.TransactionUid === uuid);
+
+      if(typeof found === 'undefined'){
+        return uuid.substring(0,8);
+      }
+
+      var customerKey = found.rowKey;
+      console.log( customerKey );
+      return customerKey;
+
+    }
+
+    function hasJsonStructure(str) {
+      if (typeof str !== 'string') return false;
+      try {
+        const result = JSON.parse(str);
+        const type = Object.prototype.toString.call(result);
+        return type === '[object Object]'
+        || type === '[object Array]';
+      } catch (err) {
+        return false;
+      }
+    }
+
+    function prettifyJson(json, prettify) {
+      if (typeof json !== 'string') {
+        if (prettify) {
+          json = JSON.stringify(json, null, 2);
+        } else {
+          json = JSON.stringify(json);
+        }
+      }
+
+      var jsonPretty = json.replace(/(\r\n|\n|\r)/g,"<br />");
+
+      return jsonPretty.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+      function(match) {
+        let cls = "<span>";
+          if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+              cls = "<span class='text-danger'>";
+              } else {
+                cls = "<span>";
+                }
+              } else if (/true|false/.test(match)) {
+                cls = "<span class='text-primary'>";
+                } else if (/null/.test(match)) {
+                  cls = "<span class='text-info'>";
+                  }
+                  return cls + match + "</span>";
+                }
+                );
+              }
+
+              function showAlert(event,showCert,id){
+
+                event.preventDefault();
+
+                var url = event.currentTarget.href;
+
+
+                $.get({url: url, beforeSend: function(xhr){xhr.setRequestHeader('Api-Key', 'Basic YXBpdXNlcjp1czN0aDNBcDE=');}, success: function(data, status){
+
+                  var response;
+                  if(typeof data.Message !== 'undefined')
+                  response = data.Message;
+                  else{
+                    response = data;
+                    response = JSON.stringify(response,null,2);
+                  }
+
+
+                  var pretty = hasJsonStructure(response);
+
+                  var mess = JSON.stringify(response,null,2);
+
+                  if (pretty)
+                  mess = JSON.parse(response,null,2);
+                  else
+                  mess = response;
+
+                  $("#message").html(prettifyJson(mess,pretty));
+
+                  var linkName = "Se rådata";
+                  if(showCert){
+                    linkName = "Ladda ner certifikat";
+                    const lastSegment = url.split("/").pop();
+                    url = "https://produkt.blivald.se/certifikat/"+lastSegment+".pdf";
+                  }
+
+                  $("#links").html('<a href="'+url+'">'+linkName+'</a>');
+
+                  $("#messageUrl").attr("href", url)
+                  $("#alert").show();
+                  return false;
+                }});
+
+              }
+
+              function showAlert2(event,message,id,severity,log,certificateId){
+
+                event.preventDefault();
+
+                var text;
+                var logpath;
+                var type;
+
+                switch (log) {
+                  case 'ClientLog':
+                  logpath = "client";
+                  type = "tech / "+logpath;
+                  text = "Fel i webbläsaren";
+                  break;
+                  case 'SystemLog':
+                  logpath = "system";
+                  type = "tech / "+logpath;
+                  text = message.substring(0,12);
+                  break;
+                  case 'EventLog':
+                  logpath = "event";
+                  type = "domain / "+logpath;
+                  text = message.substring(0,12);
+                  break;
+                  case 'AuditLog':
+                  logpath = "audit";
+                  type = "audit";
+                  text = JSON.parse(message).title;
+                  break;
+                  default:
+                  logpath = "";
+                }
+
+                var url = "https://api.blivald.se/logs/"+logpath+"/"+id;
+
+
+                $.get({url: url, beforeSend: function(xhr){xhr.setRequestHeader('Api-Key', 'Basic YXBpdXNlcjp1czN0aDNBcDE=');}, success: function(data, status){
+
+                  var response;
+                  if(typeof data.Message !== 'undefined')
+                  response = data.Message;
+                  else{
+                    response = data;
+                    response = JSON.stringify(response,null,2);
+                  }
+
+
+                  var pretty = hasJsonStructure(response);
+
+                  var mess = JSON.stringify(response,null,2);
+
+                  if (pretty)
+                  mess = JSON.parse(response,null,2);
+                  else
+                  mess = response;
+
+                  $("#message").html(prettifyJson(mess,pretty));
+
+                  var linkName = "Se rådata";
+
+                  $("#links").html('<a href="'+url+'">'+linkName+'</a>');
+
+                  $("#messageUrl").attr("href", url)
+                  $("#alert").show();
+                  return false;
+                }});
+
+              }
+
+              function formatMessage(message,uuid,severity,log,certificateId){
+
+                var text;
+                var logpath;
+                var type;
+                var title;
+
+                switch (log) {
+                  case 'ClientLog':
+                  logpath = "client";
+                  type = "tech / klient";
+                  title = "Fel";
+                  text = "I webbläsaren";
+                  break;
+                  case 'SystemLog':
+                  logpath = "system";
+                  type = "tech / system";
+                  title = "Fel";
+                  text = message.substring(0,12);
+                  break;
+                  case 'EventLog':
+                  logpath = "event";
+                  type = "domain";
+                  title = "CertificateEvent";
+                  text = message;
+                  break;
+                  case 'AuditLog':
+                  logpath = "audit";
+                  title = "Spårning";
+                  type = "audit";
+                  text = JSON.parse(message).title;
+                  break;
+                  default:
+                  logpath = "";
+                }
+
+                var url = "https://api.blivald.se/logs/"+logpath+"/"+uuid;
+
+                var color = "white";
+                var html;
+
+                if (severity === "Warning"){
+                  color = "badge-warning";
+                }
+                else if (severity === "Error"){
+                  color = "badge-danger";
+                }
+                else{
+                  color = "badge-primary";
+                }
+
+                html = '<div class="card text-left text-white mb-0 border-0"><div class="card-body">';
+                  html += '<h5 class="card-title text-dark mb-0">'+title+'</h5>';
+                  html += '<p class="text-muted">'+text+'</p>'; // <h5 class="card-title text-dark mb-2">'+text+'</h5>';
+                  html += '<h6 class="card-subtitle mb-0 text-muted"><span class="badge '+color+'">'+type+'</span></h6>'; /** <span class="badge '+color+'">s</span><br> */
+
+                  //html += ' <a class="card-link" href="'+url+'" onClick="return showAlert(event,false);">visa mer</a>'
+                  //if(certificateId !== 'undefined'){
+                  //
+                  //  html += ' | <a class="card-link" href="https://api.blivald.se/certificates/'+certificateId+'" onClick="return showAlert(event,true);">certifikat</a>'
+                  //}
+
+                  html += "</div></div>"
+
+                  var html2 = '<div class="card text-white bg-warning mb-3 border-0" style="width: 10rem;"><div class="card-body">'+'<span class="badge '+color+'">s</span><h6 class="card-subtitle mb-2 text-muted">Klientloggen</h6><p class="card-text">Error 34</p><a href="#" class="card-link">Card link</a></div></div>';
+
+                  return html;
+                }
+
+                var grid;
+
+                function populateTable(){
+                  getUserInfo().then(response => {
+                    if (response == null) {
+                      window.location.href = '/.auth/login/github';
+                    }else{
+                      populateTable2();
+                    }
+                  });
+                }
+
+                function populateTable2(){
+
+                  var hash = window.location.hash.split('#')[1];
+                  var log = '';
+                  if(typeof hash !== "undefined")
+                  {
+                    log = hash;
+                  }
+
+                  var url = "https://api.blivald.se/logs" + '/' + log;
+
+                  $("#wrapper").children().remove();
+
+                  var dagens = new Date().toISOString().substring(0,10);
+
+                  grid = new gridjs.Grid({
+                    columns: [
+                    {
+                      name: 'Datum',
+                      formatter: (cell) => gridjs.html(calender(`${cell}`)),//`${cell.substring(0, 10)}`,
+                      width: '20%',
+                      //  attributes: (cell) => {
+                      //    return {
+                      //      'data-cell-content': cell,
+                      //      'style': 'margin:0'
+                      //      };
+                      //  }
+                    },
+                    {
+                      name: 'Id',
+                      sort: false,
+                      //  data: (row) => row[2],
+                      formatter: (cell) => gridjs.html(showId(`${cell}`)),
+                      width: '20%',
+                      attributes: (cell) => {
+                        return {
+                          //        'data-cell-content': cell,
+                          'onclick': () => searchId(cell),
+                          //        'style': 'padding:2px;background:#f7f7f7'
+                        };
+                      }
+                    },
+                    {
+                      name:'tuid',hidden:true
+                    },
+                    {
+                      name:'Severity',hidden: true
+                    },
+                    {
+                      name:'Log',hidden: true
+                    },
+                    {
+                      name: 'Händelse',
+                      formatter: (cell, row) => gridjs.html(formatMessage(`${cell}`,`${row.cells[6].data}`,`${row.cells[3].data}`,`${row.cells[4].data}`,`${row.cells[7].data}`)),
+                      sort: false,
+                      attributes: (cell,row) => {
+                        return {
+                          //        'data-cell-content': cell,
+                          'onclick': () => showAlert2(event,`${cell}`,`${row.cells[6].data}`,`${row.cells[3].data}`,`${row.cells[4].data}`,`${row.cells[7].data}`),
+                          //        'style': 'padding:2px;background:#f7f7f7'
+                          //'className': 'table table-striped'
+                        };
+                      }
+                    },
+                    {
+                      name:'RowKey',hidden:true
+                    },
+                    {
+                      name:'TransactionUid',hidden:true
+                    }
+                    ],
+                    search: {
+                      enabled: true,
+                      keyword: ""
+                    },
+                    className: {
+                      td: 'text-center',
+                      table: 'table-striped mt-0 pd-0',
+                    },
+                    language: {
+                      'search': {
+                        'placeholder': 'Sök på id, fritextsök, eller allvarlighetsgrad'
+                      },
+                      'pagination': {
+                        'previous': 'Föregående',
+                        'next': 'Nästa',
+                        'showing': 'Visar',
+                        'results': () => 'Resultat'
+                      }
+                    },
+                    sort: true,
+                    //fixedHeader: true,
+                    pagination: {limit: 15},
+                    style: {
+                      td: {
+                        padding: 0
+                      },
+                      th: {
+                        padding: 5,
+                        margin: 5
+                      },
+                      tr: {
+                        padding: 0,
+                        margin: 0
+                      },
+                      table: {
+                      }
+                    },
+                    server: {
+                      url: url,
+                      then: data => {collapseEvent(data);return data.map(card => [card.Created, getCustomerNumer(card.TransactionUid), card.TransactionUid,card.Severity, card.PartitionKey,card.Message,card.RowKey,card.CertificateId])}
+                    },
+                  }).render(document.getElementById("wrapper"));
+
+
+                  $(".gridjs-head").html('<a href="#" class="btn btn-primary active" role="button" onClick="cleanField();return false;" aria-pressed="true">Rensa</a>');
+                  //$('input[type=text].textboxclass').val('some value')
+
+
+                }
+
+                function collapseEvent(data){
+                  sortBy(data, { prop: "Created",desc: true });
+                }
+
+                function cleanField(){
+                  //  $("#wrapper > div.gridjs.gridjs-container > div.gridjs-head > div > input").val("");
+                  grid.updateConfig({
+                    search: {keyword: ""},
+                  }).forceRender();
+
+                  $("#breadcrumbDate").text("");
+
+                  $(".gridjs-head").html('<a href="#" class="btn btn-primary active" role="button" onClick="cleanField();return false;" aria-pressed="true">Rensa</a>');
+
+                }
+
+                function searchId(cell){
+
+                  $("#wrapper > div.gridjs.gridjs-container > div.gridjs-head > div > input").val(cell);
+                  //      $("#wrapper > div.gridjs.gridjs-container > div.gridjs-head > div > input").keyup();
+
+                  grid.updateConfig({
+                    search: {keyword: cell},
+                  }).forceRender();
+
+                  $("#breadcrumbDate").text("Filter: ID");
+
+                  $(".gridjs-head").html('<a href="#" class="btn btn-primary active" role="button" onClick="cleanField();return false;" aria-pressed="true">Rensa</a>');
+
+
+                }
+
+                var sortBy = (function () {
+                  var toString = Object.prototype.toString,
+                  // default parser function
+                  parse = function (x) { return x; },
+                  // gets the item to be sorted
+                  getItem = function (x) {
+                    var isObject = x != null && typeof x === "object";
+                    var isProp = isObject && this.prop in x;
+                    return this.parser(isProp ? x[this.prop] : x);
+                  };
+
+                  /**
+                  * Sorts an array of elements.
+                  *
+                  * @param  {Array} array: the collection to sort
+                  * @param  {Object} cfg: the configuration options
+                  * @property {String}   cfg.prop: property name (if it is an Array of objects)
+                  * @property {Boolean}  cfg.desc: determines whether the sort is descending
+                  * @property {Function} cfg.parser: function to parse the items to expected type
+                  * @return {Array}
+                  */
+                  return function sortby (array, cfg) {
+                    if (!(array instanceof Array && array.length)) return [];
+                    if (toString.call(cfg) !== "[object Object]") cfg = {};
+                    if (typeof cfg.parser !== "function") cfg.parser = parse;
+                    cfg.desc = !!cfg.desc ? -1 : 1;
+                    return array.sort(function (a, b) {
+                      a = getItem.call(cfg, a);
+                      b = getItem.call(cfg, b);
+                      return cfg.desc * (a < b ? -1 : +(a > b));
+                    });
+                  };
+
+                }());
+
+                window.onload = (function (){loadData();setNavigation();})();   //this gets fired on load
+
+
+                function setNavigation(){
+                  var log;
+                  var hash = window.location.hash.split('#')[1];
+                  if(typeof hash === "undefined")
+                    log = "Alla loggar";
+                  else if (hash === "client"){
+                    log = "Klientlogg";
+                  }
+                  else {
+                    log = hash.charAt(0).toUpperCase() + hash.slice(1)+"logg";
+                  }
+
+                  $("#breadcrumbLog").text(log);
+
+                }
+
+                function calender(logdate){
+                  var day=['Sön','Mån','Tid','Ons','Tor','Fre','Lör'];
+                  var month= ["Januari","Februari","Mars","April","Maj","Juni","Juli",
+                  "Augusti","September","Oktober","November","December"];
+                  var d=new Date(logdate);
+                  var dag = day[d.getDay()];
+                  var datum = d.getDate();
+
+                  var html = '<div class="text-danger"><strong>'+dag+'</strong></div><h3 class="mt-0 mb-0">'+datum+'</h3><div>Januari</div>';
+                  return html;
+                };
+
+                function showId(id){
+                  return '<small>'+id+'</small>';
+                }
+
+                $(window).bind('hashchange', function() {
+                  window.location.reload();
+                });
+
+              </script>
+
+            </body>
+            </html>

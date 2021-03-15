@@ -218,6 +218,7 @@ const login = async () => {
 const demo = () => {
 // Set demo mode
 sessionStorage["Mode"] = "Demo";
+//window.location = "/create.html";
 login();
 };
 
