@@ -1,5 +1,6 @@
-- name: Azure Static Web Apps CI/CD
-  with:
+name: Azure Static Web Apps CI/CD
+
+with:
     scm-do-build-during-deployment: false
 
 on:
