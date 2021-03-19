@@ -1,8 +1,5 @@
 name: Azure Static Web Apps CI/CD
 
-with:
-    scm-do-build-during-deployment: false
-
 on:
   push:
     branches:
