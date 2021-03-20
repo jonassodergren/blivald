@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167607629-1"></script>-->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167607629-1"></script>-->
 
 
-<script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -20,31 +20,31 @@
 <script>
 
 /**
- * To use this one, you need https://github.com/osano/cookieconsent/tree/master or https://www.osano.com/cookieconsent/download/
- * Example: https://3sechzig.eu/
- */
+* To use this one, you need https://github.com/osano/cookieconsent/tree/master or https://www.osano.com/cookieconsent/download/
+* Example: https://3sechzig.eu/
+*/
 
 window.addEventListener("load", function () {
 
-	/**
-	 * Hide Privacy Controls on Privacy-Page.
-	 * Privacy Controls might look like this:
-	 * <h3>Data collection</h3>
-	 * <p>The data collection by Google Analytics or Leadfeeder only takes place if you have agreed when first opening this website.</p>
-	 * <div id="consent-out">
-	 *   <p>
-	 *     So far, you agreed to the use of Google Analytics and LeadFeeder.<br>
-	 *     <a href="#" title="disable">Click to disable.</a>
-	 *   </p>
-	 * </div>
-	 * <div id="consent-in">
-	 *   <p>
-	 *     So far, you banned the use of Google Analytics and LeadFeeder.<br>
-	 *     <a href="#" title="enable">Click to allow.</a>
-	 *   </p>
-	 * </div>
-	 */
-	//jQuery("#consent-in, #consent-out").hide();
+  /**
+  * Hide Privacy Controls on Privacy-Page.
+  * Privacy Controls might look like this:
+  * <h3>Data collection</h3>
+  * <p>The data collection by Google Analytics or Leadfeeder only takes place if you have agreed when first opening this website.</p>
+  * <div id="consent-out">
+  *   <p>
+  *     So far, you agreed to the use of Google Analytics and LeadFeeder.<br>
+  *     <a href="#" title="disable">Click to disable.</a>
+  *   </p>
+  * </div>
+  * <div id="consent-in">
+  *   <p>
+  *     So far, you banned the use of Google Analytics and LeadFeeder.<br>
+  *     <a href="#" title="enable">Click to allow.</a>
+  *   </p>
+  * </div>
+  */
+  //jQuery("#consent-in, #consent-out").hide();
 
   window.cookieconsent.initialise({
     "palette": {
@@ -84,394 +84,353 @@ window.addEventListener("load", function () {
       "dismiss": "OK",
       "link": "Privacy policy",
       "href": "https://www.blivald.se/privacy.html"
-  }});
+    }});
 
 
 
-	if (document.cookie.indexOf('cookieconsent_status=allow') > -1) {
-		/**
-		 * Cookie set and usage is allowed
-		 * Show #consent-out Button
-		 *
-     *
-		 *jQuery("#consent-out").show();
-     */
-		//onConsent();
-	} else if (document.cookie.indexOf('cookieconsent_status=deny') > -1) {
-		/**
-		 * Cookie set and usage is banned
-		 * Show #consent-in Button
-		 *
-		 *jQuery("#consent-in").show();
-     */
-     //consentOut();
-	} else {
-		/**
-		 * Nothing happened yet
-		 * Initalise Message
-		 */
-     <!--
-    -->
-	}
+    if (document.cookie.indexOf('cookieconsent_status=allow') > -1) {
+      /**
+      * Cookie set and usage is allowed
+      * Show #consent-out Button
+      *
+      *
+      *jQuery("#consent-out").show();
+      */
+      //onConsent();
+    } else if (document.cookie.indexOf('cookieconsent_status=deny') > -1) {
+      /**
+      * Cookie set and usage is banned
+      * Show #consent-in Button
+      *
+      *jQuery("#consent-in").show();
+      */
+      //consentOut();
+    } else {
+      /**
+      * Nothing happened yet
+      * Initalise Message
+      */
+      <!--
+      -->
+    }
 
-});
+  });
 
-function consentOut() {
-	deleteAllCookies();
-	document.cookie = 'cookieconsent_status=deny; expires=Thu, 31 Dec 2199 23:59:59 UTC;path=/';
-//	if (!alert('All services for this website have been deactivated in this browser.')) {
-//		window.location.reload();
-//	}
-}
+  function consentOut() {
+    deleteAllCookies();
+    document.cookie = 'cookieconsent_status=deny; expires=Thu, 31 Dec 2199 23:59:59 UTC;path=/';
+    //	if (!alert('All services for this website have been deactivated in this browser.')) {
+    //		window.location.reload();
+    //	}
+  }
 
-function consentIn() {
-	document.cookie = 'cookieconsent_status=allow; expires=Thu, 31 Dec 2199 23:59:59 UTC;path=/';
-//	if (!alert('All services for this website have been activated in this browser.')) {
-//		window.location.reload();
-//	}
-}
+  function consentIn() {
+    document.cookie = 'cookieconsent_status=allow; expires=Thu, 31 Dec 2199 23:59:59 UTC;path=/';
+    //	if (!alert('All services for this website have been activated in this browser.')) {
+    //		window.location.reload();
+    //	}
+  }
 
-/**
- * Will be run if services allowed
- * e.g. Google Analytics and Leadfeeder
- */
-function onConsent(anonymous) {
   /**
-	var gaProperty = 'UA-167607629-1';
-
-	(function (i, s, o, g, r, a, m) {
-		i['GoogleAnalyticsObject'] = r;
-		i[r] = i[r] || function () {
-			(i[r].q = i[r].q || []).push(arguments)
-		}, i[r].l = 1 * new Date();
-		a = s.createElement(o),
-			m = s.getElementsByTagName(o)[0];
-		a.async = 1;
-		a.src = g;
-		m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-	ga('create', gaProperty, 'auto');
-	ga('set', 'anonymizeIp', anonymous);
-	ga('send', 'pageview');
-
+  * Will be run if services allowed
+  * e.g. Google Analytics and Leadfeeder
   */
+  function onConsent(anonymous) {
+    /**
+    var gaProperty = 'UA-167607629-1';
+
+    (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments)
+  }, i[r].l = 1 * new Date();
+  a = s.createElement(o),
+  m = s.getElementsByTagName(o)[0];
+  a.async = 1;
+  a.src = g;
+  m.parentNode.insertBefore(a, m)
+})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', gaProperty, 'auto');
+ga('set', 'anonymizeIp', anonymous);
+ga('send', 'pageview');
+
+*/
 
 }
 
 function deleteAllCookies() {
-	var cookies = document.cookie.split("; ");
-	for (var c = 0; c < cookies.length; c++) {
-		var d = window.location.hostname.split(".");
-		while (d.length > 0) {
-			var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
-			var p = location.pathname.split('/');
-			document.cookie = cookieBase + '/';
-			while (p.length > 0) {
-				document.cookie = cookieBase + p.join('/');
-				p.pop();
-			};
-			d.shift();
-		}
-	}
-	window.localStorage.clear()
+  var cookies = document.cookie.split("; ");
+  for (var c = 0; c < cookies.length; c++) {
+    var d = window.location.hostname.split(".");
+    while (d.length > 0) {
+      var cookieBase = encodeURIComponent(cookies[c].split(";")[0].split("=")[0]) + '=; expires=Thu, 01-Jan-1970 00:00:01 GMT; domain=' + d.join('.') + ' ;path=';
+      var p = location.pathname.split('/');
+      document.cookie = cookieBase + '/';
+      while (p.length > 0) {
+        document.cookie = cookieBase + p.join('/');
+        p.pop();
+      };
+      d.shift();
+    }
+  }
+  window.localStorage.clear()
 }
 
 </script>
 
 
-	<meta charset="utf-8">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Skapa certifikat</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
-	<!-- Tag on social media -->
-	<meta property="og:title" content="Stick ut bland andra kandidater">
-	<meta property="og:description" content="Stick ut i cv-högen med certifikatet Workplace Of Choice">
-	<meta property="og:image" content="https://www.blivald.se/images/stairs.jpg">
-	<meta property="og:url" content="https://www.blivald.se/">
-	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="https://www.blivald.se/images/stairs.jpg">
-	<meta property="og:site_name" content="Blivald.se">
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Skapa certifikat</title>
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+<!-- Tag on social media -->
+<meta property="og:title" content="Stick ut bland andra kandidater">
+<meta property="og:description" content="Stick ut i cv-högen med certifikatet Workplace Of Choice">
+<meta property="og:image" content="https://www.blivald.se/images/stairs.jpg">
+<meta property="og:url" content="https://www.blivald.se/">
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="https://www.blivald.se/images/stairs.jpg">
+<meta property="og:site_name" content="Blivald.se">
 
 
-	<!-- favicon -->
+<!-- favicon -->
 
-	<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
-	<link rel="manifest" href="images/icons/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+<link rel="manifest" href="images/icons/site.webmanifest">
 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
 
-	<link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
-	<link href="css/typeahead.css" rel="stylesheet" type="text/css">
-	<!-- Main Style Css -->
-	<link rel="stylesheet" href="css/features.css"/>
+<link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
+<link href="css/typeahead.css" rel="stylesheet" type="text/css">
+<!-- Main Style Css -->
+<link rel="stylesheet" href="css/features.css"/>
 
-	<link rel="stylesheet" href="css/footer.css"/>
+<link rel="stylesheet" href="css/footer.css"/>
 
-	<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/style.css"/>
 
-	<style type="text/css">
-
-
-	//.jumbotronbg {
-		//    background-image: url(images/stairs.jpg);
-		//background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="%232196F3" d="M 5,3L 19,3L 20.7359,6L 20.7304,6C 20.9018,6.29149 21,6.63428 21,7L 21,19C 21,20.1046 20.1046,21 19,21L 5,21C 3.89543,21 3,20.1046 3,19L 3,7C 3,6.638 3.09618,6.29846 3.26437,6L 3.26135,6L 5,3 Z M 5.57294,4L 5,5L 5,5L 19,5L 18.4303,4L 5.57294,4 Z M 7,12L 12,17L 17,12L 14,12L 14,10L 10,10L 10,12L 7,12 Z "></path></svg>');
-
-		//background-size: cover;
-		//-webkit-background-size: 100% 100%;
-		//-moz-background-size: 100% 100%;
-		//-o-background-size: 100% 100%;
-		//background-size: 100% 100%;
-		//}
-		.breadcrumb {
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
-		.breadcrumb-item + .breadcrumb-item::before {
-			content: "";
-		}
-		.font-up-bold .breadcrumb-item + .breadcrumb-item::before {
-			content: none; }
-			.font-up-bold .breadcrumb-item a h5::after {
-				content: "";
-				margin-left: 1rem;
-				color: #868e96; }
-
-				// Background image
-
-				#wrap {
-					width: 80%;
-					margin: 1em auto;
-					padding: 1em 5%;
-					background: #fff;
-					position: relative;
-				}
-
-				.inner {
-					position: relative;
-					z-index: 2;
-				}
-
-				#wrap:after {
-					content: "\e028";
-					font-family: simple-line-icons;
-					font-style: normal;
-					font-weight: normal;
-					text-decoration: inherit;
-					position: absolute;
-					font-size: 320px;
-					color: #F8F9FA;
-			//		color: #FDF3D1;
-					top: 65%;
-					left: 55%;
-					margin: -300px 0 0 -180px;
-					z-index: 1;
-				}
-				.line{
-					color: #E9565A;
-					background-color: #E9565A;
-				}
-
-				.bimage {
-  			background: url('images/stairs.jpg');
-
-				/*
-				background-color: rgba(255, 255, 255, .15);
-				filter: blur(5px);
-				*/
-
-				/* Add the blur effect */
-				/*filter: blur(4px);
-				-webkit-filter: blur(4px);*/
-				/*opacity: 0.5; */
-				/* Full height */
-				height: 100%;
-  			background-repeat: no-repeat !important;
-  			background-size: cover !important;
-  			background-position: center;
-				}
-
-				.bg-darken-1 { background-color: var(--darken-1) }
-
-        .bg-yellow {background-color:#FFE960;}
-
-				</style>
-
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-
-			</head>
-			<body class="container-fluid p-0">
+<style type="text/css">
 
 
-				<header>
+//.jumbotronbg {
+  //    background-image: url(images/stairs.jpg);
+  //background-image: url('data:image/svg+xml;utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path fill="%232196F3" d="M 5,3L 19,3L 20.7359,6L 20.7304,6C 20.9018,6.29149 21,6.63428 21,7L 21,19C 21,20.1046 20.1046,21 19,21L 5,21C 3.89543,21 3,20.1046 3,19L 3,7C 3,6.638 3.09618,6.29846 3.26437,6L 3.26135,6L 5,3 Z M 5.57294,4L 5,5L 5,5L 19,5L 18.4303,4L 5.57294,4 Z M 7,12L 12,17L 17,12L 14,12L 14,10L 10,10L 10,12L 7,12 Z "></path></svg>');
 
-					<nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
-						<a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Ny tjänst 2020</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
+  //background-size: cover;
+  //-webkit-background-size: 100% 100%;
+  //-moz-background-size: 100% 100%;
+  //-o-background-size: 100% 100%;
+  //background-size: 100% 100%;
+  //}
+  .breadcrumb {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "";
+  }
+  .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
+    content: none; }
+    .font-up-bold .breadcrumb-item a h5::after {
+      content: "";
+      margin-left: 1rem;
+      color: #868e96; }
 
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					    <span class="navbar-toggler-icon"></span>
-					  </button>
-					  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-							<hr>
-					    <ul class="navbar-nav navbar-right ml-auto">
-					      <li class="nav-item">
-							<!--		<h4 class="text-light">För arbetsgivare</h4>-->
-					        <a class="nav-link" href="https://www.blivald.se/verify.html">Verifiera certifikat</a>
-					      </li>
-					    </ul>
-					  </div>
+      // Background image
 
-					</nav>
+      #wrap {
+        width: 80%;
+        margin: 1em auto;
+        padding: 1em 5%;
+        background: #fff;
+        position: relative;
+      }
 
-				</header>
+      .inner {
+        position: relative;
+        z-index: 2;
+      }
 
-<!--
-				<div id="infobox" class="row alert mx-auto no-gutters mb-0">
-<p class="mb-0"><strong><i class="icon-info text-warning" style="font-size: 24px;"></i></strong>  <a href="mailto:info@blivald.se" class="text-muted"><u>Kontakta oss</u></a> för hjälp eller återkoppling.</p>
+      #wrap:after {
+        content: "\e028";
+        font-family: simple-line-icons;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        font-size: 320px;
+        color: #F8F9FA;
+        //		color: #FDF3D1;
+        top: 65%;
+        left: 55%;
+        margin: -300px 0 0 -180px;
+        z-index: 1;
+      }
+      .line{
+        color: #E9565A;
+        background-color: #E9565A;
+      }
 
-				</div>
-      -->
+      .bimage {
+        background: url('images/stairs.jpg');
 
-<!--
-				<div class="alert alert-white mb-0" role="alert">
-					<p class="mb-0">
+        /*
+        background-color: rgba(255, 255, 255, .15);
+        filter: blur(5px);
+        */
+
+        /* Add the blur effect */
+        /*filter: blur(4px);
+        -webkit-filter: blur(4px);*/
+        /*opacity: 0.5; */
+        /* Full height */
+        height: 100%;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center;
+      }
+
+      .bg-darken-1 { background-color: var(--darken-1) }
+
+      .bg-yellow {background-color:#FFE960;}
+
+      </style>
+
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+
+    </head>
+    <body class="container-fluid p-0">
 
 
-						Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
+      <header>
 
-				</div>
-			-->
+        <nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
+          <a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Ny tjänst 2020</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
 
-<div class="row justify-content-md-center mx-auto no-gutters">
-      <div class="col-md-12 bg-light text-center">
-        <strong><i class="icon-paper-clip text-primary" style="font-size: 24px;"></i></strong>
-         <strong>Vid jobbansökan</strong> - Bifoga certifikatet med CV:n
-      </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <hr>
+            <ul class="navbar-nav navbar-right ml-auto">
+              <li class="nav-item">
+                <!--		<h4 class="text-light">För arbetsgivare</h4>-->
+                <a class="nav-link" href="https://www.blivald.se/verify.html">Verifiera certifikat</a>
+              </li>
+            </ul>
+          </div>
 
+        </nav>
 
-<div class="col text-center">
-  <span>Fungerar med ansökningar via email och rekryteringssystem</span>
-</div>
+      </header>
+
+      <!--
+      <div id="infobox" class="row alert mx-auto no-gutters mb-0">
+      <p class="mb-0"><strong><i class="icon-info text-warning" style="font-size: 24px;"></i></strong>  <a href="mailto:info@blivald.se" class="text-muted"><u>Kontakta oss</u></a> för hjälp eller återkoppling.</p>
 
     </div>
-
-				<div class="row justify-content-md-center mx-auto no-gutters">
-					<div class="col-md-3 bg-dark text-center"></div>
-					<div class="col-md-6 text-center">
-
-				<div class="card-body bg-dark mb-0 mt-0">
-
-				<div class="mb-2 text-white">
-
-        <h3 class="text-muted">Workplace of Choice</h3>
-
-        <p class="lead">Vilket företag väljer du?</p>
-
-        </div>
-
-					<div class="input-group">
-
-<div id="prefetch" style="width: 100%; height: 100%;">
-						<input id="company" type="text" class="form-control typeahead" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" placeholder="Skriv företagsnamn"> <!-- form-control style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" -->
-	</div>
+  -->
 
   <!--
-					<div class="input-group-append">
-
-							<button class="btn btn-success" type="button" onClick="create();">
-								<i class="fa fa-search">Nästa</i>
-							</button>
-						</div>
-
--->
-					</div>
+  <div class="alert alert-white mb-0" role="alert">
+  <p class="mb-0">
 
 
+  Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
 
-<div class="input-group-append">
-  <button class="btn btn-lg btn-block btn-primary mt-3 mr-1" type="button" onClick="create();">
-    Gå vidare
-  </button>
-          <button class="btn btn-outline-primary btn-lg btn-block mt-3" type="button" onClick="demo();">
-            Gå vidare (Demo)
-          </button>
-        </div>
-
-
-<div class="mt-2 text-white">Välj demo för att prova först</div>
-
-
-
-				</div>
-
-			</div>
-
-
-			<div class="col-md-3 bg-dark text-center"></div>
-
-
-
-    </div>
-
-
-				<div class="row justify-content-md-center mx-auto no-gutters">
-
-
-					<div class="col-md-6 text-center">
-
-				<!--		<div class="jumbotron bg-white">  -->
-					  <div class="card-body text-center mb-0 mt-0">
-							<div id="wrap">
-								<div class="inner">
-
-									<!--
-									<h2 class="display-4">Workplace<br>of<br>choice</h2>
-								-->
-								<h1 class="display-4">Stick ut bland<br>andra<br>kandidater!</h1>
-
-<!--
-									<p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
-									<p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet<br><mark>Workplace Of Choice</mark></p>
-
-
-
-                  <!--
-									<div class="btn-group pull-center">
-									<button type="button" class="btn btn-lg btn-outline-success" onClick="create();">Kom igång</button>
-								  </div>
-                -->
-
-
-
-<!--
-										<hr class="my-3" style="color: #E9565A">
-									<strong>Stick ut bland andra kandidater!</strong>
-									<br> Visa arbetsgivaren att de är ditt förstahandsval med certifikatet Workplace Of Choice.
+</div>
 -->
 
 <!--
-									<hr class="my-2" style="color: #E9565A">
-									<a href="#example" class="btn btn-default"><u>Visa exempelcertifikat</u></a> -
-									<a href="#faq" class="btn btn-default"><u>Vanliga frågor</u></a>
-								-->
+<div class="row justify-content-md-center mx-auto no-gutters">
+  <div class="col-md-12 bg-light text-center">
+    <strong><i class="icon-paper-clip text-primary" style="font-size: 24px;"></i></strong>
+    <strong>Vid jobbansökan</strong> - Bifoga certifikatet med CV:n
+  </div>
 
-                <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
-                <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
-                <!--
-                <span><a href="#" title="Tets" onClick="demo();"><u>Demoversion</u></a></span>
+
+  <div class="col text-center">
+    <span>Fungerar med ansökningar via email och rekryteringssystem</span>
+  </div>
+
+</div>
 -->
 
-								</div>
-				</div>
-						</div>
+
+<div class="row justify-content-md-center mx-auto no-gutters">
+
+
+  <div class="col-md-6 text-center">
+
+    <!--		<div class="jumbotron bg-white">  -->
+    <div class="card-body text-center mb-0 mt-0">
+      <div id="wrap">
+        <div class="inner">
+
+          <!--
+          <h2 class="display-4">Workplace<br>of<br>choice</h2>
+        -->
+        <h1 class="display-4">Stick ut bland<br>andra<br>kandidater!</h1>
+
+        <!--
+        <p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
+        <p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet<br><mark>Workplace Of Choice</mark></p>
+
+<!--
+<span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
+<span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
+-->
+
+</div>
+</div>
+</div>
 
 
 
 
 </div>
+</div>
+
+<div class="row justify-content-md-center mx-auto no-gutters">
+  <div class="col-md-3 text-center"></div>
+  <div class="col-md-6 bg-light text-center">
+
+    <div class="card-body mb-0 mt-0">
+
+      <div class="mb-2">
+
+        <h4>Börja skapa ditt certifikat</h4>
+
+        <p>Bifogas tillsammans med CV och personligt brev</p>
+
+      </div>
+
+      <div class="input-group">
+
+        <div id="prefetch" style="width: 100%; height: 100%;">
+          <input id="company" type="text" class="form-control typeahead" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" placeholder="Vilken arbetsgivare väljer du?"> <!-- form-control style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" -->
+        </div>
+      </div>
+      <div class="input-group-append">
+        <button class="btn btn-lg btn-block btn-primary mt-3 mr-1" type="button" onClick="create();">
+          Gå vidare
+        </button>
+        <button class="btn btn-outline-primary btn-lg btn-block mt-3" type="button" onClick="demo();">
+          Prova demoversion
+        </button>
+      </div>
+      <div class="mt-2">
+      <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
+      <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 text-center"></div>
+
 </div>
 
 
@@ -479,238 +438,238 @@ function deleteAllCookies() {
 
 <!--
 <div class="alert alert-warning" role="alert">
-	<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
+<p class="mb-0">Under utveckling. All <a href="mailto:info@blivald.se" class="text-muted"><u>återkoppling</u></a> uppskattas.</p>
 </div>
 -->
 
 <!--
-						<div class="row justify-content-md-center mx-auto">
-							<div class="col-md-6 text-center">
+<div class="row justify-content-md-center mx-auto">
+<div class="col-md-6 text-center">
 
-						<hr class="line" style="color: #E9565A;width: 25%;">
-						<div class="section-text align-center mbr-fonts-style display-5">
-							<strong>Hur kan man sticka ut bland andra kandidater?</strong>
-							<br><br> Du som sökande kan med certifikatet Workplace Of Choice visa vilken arbetsgivare som är ditt förstahandsval och därmed ökar chansen att sticka ut.
-							Enkelt att bifoga till arbetsgivaren.
-							<hr class="line" style="width: 25%;">
-						</div>
-					</div>
-				</div>
+<hr class="line" style="color: #E9565A;width: 25%;">
+<div class="section-text align-center mbr-fonts-style display-5">
+<strong>Hur kan man sticka ut bland andra kandidater?</strong>
+<br><br> Du som sökande kan med certifikatet Workplace Of Choice visa vilken arbetsgivare som är ditt förstahandsval och därmed ökar chansen att sticka ut.
+Enkelt att bifoga till arbetsgivaren.
+<hr class="line" style="width: 25%;">
+</div>
+</div>
+</div>
 -->
 
 <!--
 <section id="rules" class="features-icons text-center" style="background-color: #FFE960;">
-	<div class="container-fluid">
-		<div class="row justify-content-md-center mx-auto no-gutters">
-								<h2 class="text-dark">Certifikatet är ett bevis<small class="text-muted"> på att du som arbetsgivaren står ut i konkurens bland andra</small></h2>
-		</div>
-	</div>
+<div class="container-fluid">
+<div class="row justify-content-md-center mx-auto no-gutters">
+<h2 class="text-dark">Certifikatet är ett bevis<small class="text-muted"> på att du som arbetsgivaren står ut i konkurens bland andra</small></h2>
+</div>
+</div>
 </section>
 -->
 
 
 <section id="rules" class="features-icons text-center" style="background-color: #FFE960;">
-	<div class="container-fluid">
-		<div class="row justify-content-center align-items-center">
-			<h3>endast</h3>
-			<div class="col-1 mr-2">
-					<h1 class="display-1" style="font-size: 8em;"><strong>1</strong></h1>
-			</div>
-			<div class="col-3 text-left ml-3">
-				<h3 class="text-dark">certifikat per person</h3>
-			</div>
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center">
+      <h3>endast</h3>
+      <div class="col-1 mr-2">
+        <h1 class="display-1" style="font-size: 8em;"><strong>1</strong></h1>
+      </div>
+      <div class="col-3 text-left ml-3">
+        <h3 class="text-dark">certifikat per person</h3>
+      </div>
 
-<div class="card-body">
-      <blockquote class="blockquote">
-        <p class="mb-0">Arbetsgivaren kontaktar blivald.se när de får certifikatet av dig. Vi intygar att du har valt dem!</p>
-        <footer class="blockquote-footer">Blivalds löfte till sina användare</footer>
-      </blockquote>
+      <div class="card-body">
+        <blockquote class="blockquote">
+          <p class="mb-0">Arbetsgivaren kontaktar blivald.se när de får certifikatet av dig. Vi intygar att du har valt dem!</p>
+          <footer class="blockquote-footer">Blivalds löfte till sina användare</footer>
+        </blockquote>
+      </div>
+
     </div>
-
-		</div>
-	</div>
+  </div>
 </section>
 
 <section id="sale" class="features-icons bg-light text-center">
-	<div class="container-fluid">
-		<div class="row justify-content-md-center mx-auto no-gutters">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center mx-auto no-gutters">
 
-<!--
-			<div class="col-md-4">
-				<div class="features-icons-item mx-auto mb-5 mb-lg-3">
-					<div class="features-icons-icon d-flex">
-						<i class="icon-wallet m-auto text-secondary"></i>
-					</div>
-					<h3>Kostnadsfritt</h3>
-					<p class="lead mb-0">Alla kan utfärda och inneha endast <strong>ett</strong> aktivt certifikat. Certifikatet är giltigt tills vidare. Efter 30 dagar kan ett nytt skapas och det gamla avaktiveras automatiskt.</p>
-				</div>
-			</div>
-		-->
+      <!--
+      <div class="col-md-4">
+      <div class="features-icons-item mx-auto mb-5 mb-lg-3">
+      <div class="features-icons-icon d-flex">
+      <i class="icon-wallet m-auto text-secondary"></i>
+    </div>
+    <h3>Kostnadsfritt</h3>
+    <p class="lead mb-0">Alla kan utfärda och inneha endast <strong>ett</strong> aktivt certifikat. Certifikatet är giltigt tills vidare. Efter 30 dagar kan ett nytt skapas och det gamla avaktiveras automatiskt.</p>
+  </div>
+</div>
+-->
 
-			<div class="col-md-4">
-				<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-					<div class="features-icons-icon d-flex">
-						<i class="icon-user-female m-auto text-secondary"></i>
-					</div>
-					<h3>Hjälper jobbsökare</h3>
-					<p class="lead mb-0">Med certifikatet kan du visa ditt intresse långt innan en intervju</p>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-					<div class="features-icons-icon d-flex">
-						<i class="icon-trophy m-auto text-secondary"></i>
-					</div>
-					<h3>Enklare för företag</h3>
-					<p class="lead mb-0">Hitta någon som verkligen vill jobba med er</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="col-md-4">
+  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+    <div class="features-icons-icon d-flex">
+      <i class="icon-user-female m-auto text-secondary"></i>
+    </div>
+    <h3>Hjälper jobbsökare</h3>
+    <p class="lead mb-0">Med certifikatet kan du visa ditt intresse långt innan en intervju</p>
+  </div>
+</div>
+<div class="col-md-4">
+  <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+    <div class="features-icons-icon d-flex">
+      <i class="icon-trophy m-auto text-secondary"></i>
+    </div>
+    <h3>Enklare för företag</h3>
+    <p class="lead mb-0">Hitta någon som verkligen vill jobba med er</p>
+  </div>
+</div>
+</div>
+</div>
 </section>
 
 
 <section id="rules" class="features-icons text-center" style="background-color: #FFE960;">
-	<div class="container-fluid">
-		<div class="row justify-content-md-center mx-auto">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center mx-auto">
 
 
-			<div class="col-md-6">
-				<div class="features-icons-item mx-auto">
-					<div class="features-icons-icon d-flex">
-						<i class="icon-game-controller m-auto text-secondary"></i>
-					</div>
-					<h3>Snabbfakta</h3>
+      <div class="col-md-6">
+        <div class="features-icons-item mx-auto">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-game-controller m-auto text-secondary"></i>
+          </div>
+          <h3>Snabbfakta</h3>
 
-				</div>
-
-
-<div class="card-body p-0">
-					<ul class="list-group">
-						<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-					    Vem får utfärda ett certifikat?
-					    <span class="badge badge-primary badge-pill">Alla</span>
-					  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-    Vad kostar tjänsten?
-    <span class="badge badge-primary badge-pill">Kostnadsfritt</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-    Antal certifikat per person
-    <span class="badge badge-primary badge-pill">1</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-    Giltighetstid på certifikatet
-    <span class="badge badge-primary badge-pill">Tillsvidare</span>
-  </li>
-	<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-		Går certifikatet att avaktivera?
-		<span class="badge badge-primary badge-pill">Ja</span>
-	</li>
-	<li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
-		Kan jag skapa ett nytt certifikat efter avaktivering
-		<span class="badge badge-primary badge-pill">Efter 30 dagar</span>
-	</li>
-</ul>
-
-</div>
+        </div>
 
 
-			</div>
+        <div class="card-body p-0">
+          <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Vem får utfärda ett certifikat?
+              <span class="badge badge-primary badge-pill">Alla</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Vad kostar tjänsten?
+              <span class="badge badge-primary badge-pill">Kostnadsfritt</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Antal certifikat per person
+              <span class="badge badge-primary badge-pill">1</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Giltighetstid på certifikatet
+              <span class="badge badge-primary badge-pill">Tillsvidare</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Går certifikatet att avaktivera?
+              <span class="badge badge-primary badge-pill">Ja</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center" style="background-color: #FFE960;">
+              Kan jag skapa ett nytt certifikat efter avaktivering
+              <span class="badge badge-primary badge-pill">Efter 30 dagar</span>
+            </li>
+          </ul>
+
+        </div>
 
 
-		</div>
-	</div>
+      </div>
+
+
+    </div>
+  </div>
 </section>
 
 
-				<section id="faq" class="features-icons">
-					<div class="container-fluid">
-						<div class="row justify-content-md-center mx-auto">
-							<div class="col-md-6 text-center">
+<section id="faq" class="features-icons">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center mx-auto">
+      <div class="col-md-6 text-center">
 
-								<div class="features-icons-item mx-auto mb-5 mb-lg-3">
-									<div class="features-icons-icon d-flex">
-										<i class="icon-question m-auto text-secondary"></i>
-									</div>
-									<h3>Vanliga frågor</h3>
-								</div>
+        <div class="features-icons-item mx-auto mb-5 mb-lg-3">
+          <div class="features-icons-icon d-flex">
+            <i class="icon-question m-auto text-secondary"></i>
+          </div>
+          <h3>Vanliga frågor</h3>
+        </div>
 
-								<div class="accordion" id="accordionExample275">
-									<div class="card border-1">
-										<div class="card-header bg-white" id="headingOne2">
-											<h5 class="mb-0">
+        <div class="accordion" id="accordionExample275">
+          <div class="card border-1">
+            <div class="card-header bg-white" id="headingOne2">
+              <h5 class="mb-0">
 
-												<button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne2"
-												aria-expanded="true" aria-controls="collapseOne2">
-												Behöver jag fortfarande ett CV?
-											</button>
-										</h5>
-									</div>
-									<div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
-									data-parent="#accordionExample275">
-									<div class="card-body text-left">
-										<strong>JA.</strong> Certifikatet Workplace Of Choice är ett komplement till dina befintliga ansökningshandlingar.
-										Om det är tuff konkurrens om ett jobb så är det perfekt att komplettera med certifikatet Workplace Of Choice.
-										CV, Personligt brev och certifikatet Workplace of Choice är exempel på handlingar som du kan använda tillsammans när du ansöker till ett jobb.
-									</div>
-								</div>
-							</div>
-							<div class="card border-1">
-								<div class="card-header bg-white" id="headingTwo2">
-									<h5 class="mb-0">
-										<button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
-										data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
-										Kan jag söka hur många jobb jag vill?
-									</button>
-								</h5>
-							</div>
-							<div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
-							data-parent="#accordionExample275">
-							<div class="card-body text-left">
-								<strong>JA.</strong> Sajten blivald.se försöker inte påverka någon att söka mer eller mindre jobb.
-								Vi har inget att göra med om någon söker fem eller hundra jobb. Däremot kan man bara utfärda ett certifikat.
-								Oavsett om du söker många eller få jobb kan du bara utfärda ett certifikat.
-							</div>
-						</div>
-					</div>
-					<div class="card border-1">
-						<div class="card-header bg-white" id="headingThree2">
-							<h5 class="mb-0">
-								<button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
-								data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
-								Vet företagen vad certifikatet innebär?
-							</button>
-						</h5>
-					</div>
-					<div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
-					data-parent="#accordionExample275">
-					<div class="card-body text-left">
-						<strong>Inte alltid. </strong> Det är därför det står skrivet på certifikat vad det är, vad det betyder, och hur man som arbetsgivare kan verifiera att det är giltigt.
-					</div>
-				</div>
-			</div>
-			<div class="card border-1">
-				<div class="card-header bg-white" id="headingThree3">
-					<h5 class="mb-0">
-						<button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
-						data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
-						Får företaget jag väljer kännedom om att jag namngett de?
-					</button>
-				</h5>
-			</div>
-			<div id="collapseThree3" class="collapse" aria-labelledby="headingThree3"
-			data-parent="#accordionExample275">
-			<div class="card-body text-left">
-				<strong>Nej. </strong> Ingen får automatiskt reda på att du har skapat ett certifikat. Först när du väljer att skicka certifikatet till företaget får de kännedom.
-			</div>
-		</div>
-	</div>
-		</div>
+                <button class="btn btn-link text-dark" type="button" data-toggle="collapse" data-target="#collapseOne2"
+                aria-expanded="true" aria-controls="collapseOne2">
+                Behöver jag fortfarande ett CV?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne2" class="collapse" aria-labelledby="headingOne2"
+          data-parent="#accordionExample275">
+          <div class="card-body text-left">
+            <strong>JA.</strong> Certifikatet Workplace Of Choice är ett komplement till dina befintliga ansökningshandlingar.
+            Om det är tuff konkurrens om ett jobb så är det perfekt att komplettera med certifikatet Workplace Of Choice.
+            CV, Personligt brev och certifikatet Workplace of Choice är exempel på handlingar som du kan använda tillsammans när du ansöker till ett jobb.
+          </div>
+        </div>
+      </div>
+      <div class="card border-1">
+        <div class="card-header bg-white" id="headingTwo2">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+            data-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+            Kan jag söka hur många jobb jag vill?
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo2"
+      data-parent="#accordionExample275">
+      <div class="card-body text-left">
+        <strong>JA.</strong> Sajten blivald.se försöker inte påverka någon att söka mer eller mindre jobb.
+        Vi har inget att göra med om någon söker fem eller hundra jobb. Däremot kan man bara utfärda ett certifikat.
+        Oavsett om du söker många eller få jobb kan du bara utfärda ett certifikat.
+      </div>
+    </div>
+  </div>
+  <div class="card border-1">
+    <div class="card-header bg-white" id="headingThree2">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+        data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
+        Vet företagen vad certifikatet innebär?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseThree2" class="collapse" aria-labelledby="headingThree2"
+  data-parent="#accordionExample275">
+  <div class="card-body text-left">
+    <strong>Inte alltid. </strong> Det är därför det står skrivet på certifikat vad det är, vad det betyder, och hur man som arbetsgivare kan verifiera att det är giltigt.
+  </div>
+</div>
+</div>
+<div class="card border-1">
+  <div class="card-header bg-white" id="headingThree3">
+    <h5 class="mb-0">
+      <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+      data-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+      Får företaget jag väljer kännedom om att jag namngett de?
+    </button>
+  </h5>
+</div>
+<div id="collapseThree3" class="collapse" aria-labelledby="headingThree3"
+data-parent="#accordionExample275">
+<div class="card-body text-left">
+  <strong>Nej. </strong> Ingen får automatiskt reda på att du har skapat ett certifikat. Först när du väljer att skicka certifikatet till företaget får de kännedom.
+</div>
+</div>
+</div>
+</div>
 
 
 
-	</div>
+</div>
 </div>
 
 </div>
@@ -718,77 +677,77 @@ function deleteAllCookies() {
 
 
 <section id="example" class="features-icons bg-light">
-	<div class="container-fluid">
-		<div class="row justify-content-md-center mx-auto">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center mx-auto">
 
-			<div class="col-md-6">
-
-
-				<h3 class="text-center">Certifikatet</h3>
-				<p class="lead mb-0">Certifikatet intygar vilket företag du valt. Företag ersätts med det företagsnamn som du själv anger.</p>
+      <div class="col-md-6">
 
 
-
-				<div class="card mt-5">
-					<img class="card-img-top" src="images/certificate_example.png" alt="Card image cap">
-					<!--
-					<div class="card-body bg-light">
-					<h5 class="card-title">Workplace Of Choice</h5>
-					<p class="card-text">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Tanken är att du enkelt ska kunna bifoga det när du söker ett jobb.</p>
-					<a href="#" class="btn btn-secondary">Kolla på certifikatet</a>
-
-				</div>
-			-->
-		</div>
+        <h3 class="text-center">Certifikatet</h3>
+        <p class="lead mb-0">Certifikatet intygar vilket företag du valt. Företag ersätts med det företagsnamn som du själv anger.</p>
 
 
 
-	</div>
+        <div class="card mt-5">
+          <img class="card-img-top" src="images/certificate_example.png" alt="Card image cap">
+          <!--
+          <div class="card-body bg-light">
+          <h5 class="card-title">Workplace Of Choice</h5>
+          <p class="card-text">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Tanken är att du enkelt ska kunna bifoga det när du söker ett jobb.</p>
+          <a href="#" class="btn btn-secondary">Kolla på certifikatet</a>
+
+        </div>
+      -->
+    </div>
+
+
+
+  </div>
 </div>
 </div>
 </section>
 
 
 <footer class="bg-light">
-	<div class="container-fluid">
-		<hr class="mt-0">
-		<div class="row mx-auto">
-			<div class="col-sm-12 col-md-6">
-				<h6>Kort om blivald.se</h6>
-				<p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
-			</div>
+  <div class="container-fluid">
+    <hr class="mt-0">
+    <div class="row mx-auto">
+      <div class="col-sm-12 col-md-6">
+        <h6>Kort om blivald.se</h6>
+        <p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
+      </div>
 
-			<div class="col-xs-6 col-md-3">
-				<h6>Erbjudande</h6>
-				<ul class="list-unstyled">
-					<li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
-					<li><a href="" class="text-dark">Verifiera giltigheten</a></li>
-				</ul>
-			</div>
+      <div class="col-xs-6 col-md-3">
+        <h6>Erbjudande</h6>
+        <ul class="list-unstyled">
+          <li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
+          <li><a href="" class="text-dark">Verifiera giltigheten</a></li>
+        </ul>
+      </div>
 
-			<div class="col-xs-6 col-md-3">
-				<h6>Snabblänkar</h6>
-				<ul class="list-unstyled">
-					<li><a href="privacy.html" class="text-dark">Om sajten</a></li>
-					<li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
-					<li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
-				</ul>
-			</div>
-		</div>
-		<hr>
-	</div>
-	<div class="container-fluid">
-		<div class="row justify-content-md-center mx-auto">
-			<div class="col-sm-12 col-md-8">
+      <div class="col-xs-6 col-md-3">
+        <h6>Snabblänkar</h6>
+        <ul class="list-unstyled">
+          <li><a href="privacy.html" class="text-dark">Om sajten</a></li>
+          <li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
+          <li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-md-center mx-auto">
+      <div class="col-sm-12 col-md-8">
 
 
-				<div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
-					<p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
-				</div>
+        <div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
+          <p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+        </div>
 
-			</div>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
 
 </footer>
 
@@ -803,14 +762,14 @@ function deleteAllCookies() {
 <script src="js/autocomplete.js"></script>
 <script src="js/app.js"></script>
 
-	<script type="text/javascript">
-	(function(w, d, s, u) {
-		w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
-		var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
-		j.async = true; j.src = 'https://api.blivald.se/chat/livechat/rocketchat-livechat.min.js?_=201903270000';
-		h.parentNode.insertBefore(j, h);
-	})(window, document, 'script', 'https://api.blivald.se/chat/livechat');
-	</script>
+<script type="text/javascript">
+(function(w, d, s, u) {
+  w.RocketChat = function(c) { w.RocketChat._.push(c) }; w.RocketChat._ = []; w.RocketChat.url = u;
+  var h = d.getElementsByTagName(s)[0], j = d.createElement(s);
+  j.async = true; j.src = 'https://api.blivald.se/chat/livechat/rocketchat-livechat.min.js?_=201903270000';
+  h.parentNode.insertBefore(j, h);
+})(window, document, 'script', 'https://api.blivald.se/chat/livechat');
+</script>
 
 
 </body>
