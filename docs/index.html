@@ -391,7 +391,7 @@ function deleteAllCookies() {
         <p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
         <p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet</p>
 
-<h4 class="display-5">Workplace Of Choice</h4>
+<h3 class="display-5">Workplace Of Choice</h3>
 <!--
 <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
 <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
@@ -410,13 +410,13 @@ function deleteAllCookies() {
 
 <div class="row justify-content-md-center mx-auto no-gutters">
   <div class="col-md-3 text-center"></div>
-  <div class="col-md-6 bg-light text-center">
+  <div class="col-md-6 bg-white text-center">
 
     <div class="card-body mb-0 mt-0">
 
       <div class="mb-2">
 
-        <h4>Börja skapa ditt certifikat</h4>
+        <h5>Börja skapa ditt certifikat</h5>
 
         <p>Bifogas tillsammans med CV och personligt brev</p>
 
@@ -429,16 +429,19 @@ function deleteAllCookies() {
         </div>
       </div>
       <div class="input-group-append">
-        <button class="btn btn-lg btn-block btn-primary mt-3 mr-1" type="button" onClick="create();">
+        <button class="btn btn-lg btn-block btn-success mt-3 mr-1" type="button" onClick="create();">
           Gå vidare
         </button>
+        <!--
         <button class="btn btn-outline-primary btn-lg btn-block mt-3" type="button" onClick="demo();">
           Prova demoversion
         </button>
+      -->
       </div>
       <div class="mt-2">
       <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
-      <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
+      <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a> -</span>
+      <a href="javascript:demo();"><u>Prova demoversion</u></a>
       </div>
     </div>
   </div>
@@ -782,6 +785,9 @@ data-parent="#accordionExample275">
   j.async = true; j.src = 'https://api.blivald.se/chat/livechat/rocketchat-livechat.min.js?_=201903270000';
   h.parentNode.insertBefore(j, h);
 })(window, document, 'script', 'https://api.blivald.se/chat/livechat');
+RocketChat(function() {
+    this.setGuestToken(sessionStorage['transactionId']);
+});
 </script>
 
 
