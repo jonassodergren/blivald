@@ -891,6 +891,7 @@ var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 var url="http://localhost:9090/createpdf?";
+var spinner;
 img.onclick = function(){
 
   var firstname=$("#firstname").val();
@@ -909,7 +910,7 @@ img.onclick = function(){
       document.body.style.top = '-${window.scrollY}px';
       $("#spinner").show();
       var target = document.getElementById('spinner');
-      var spinner = new Spin.Spinner().spin();
+      spinner = new Spin.Spinner().spin();
       target.appendChild(spinner.el);
     },
     success: function(response){
@@ -929,9 +930,13 @@ img.onclick = function(){
       }
 
     },
+    error:function(){
+      modal.style.display = "block";
+      modalImg.src = "images/certificate_example.png";
+      captionText.innerHTML = "Workplace Of Choice";//this.alt;
+    },
     complete:function(data){
-      // Hide image container
-      //$("#spinner").hide();
+      spinner.stop();
     }
   });
 }
