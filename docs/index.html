@@ -476,7 +476,7 @@ function deleteAllCookies() {
 
       </div>
 
-      <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att få en känsla för hur certifikatet kommer att se ut</p>
+      <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Fyll i informationen i steg ett och klicka på bilden</p>
 
       <!-- The Modal -->
       <div id="myModal" class="modal">
@@ -768,38 +768,6 @@ data-parent="#accordionExample275">
 </section>
 
 
-<section id="example" class="features-icons bg-light">
-  <div class="container-fluid">
-    <div class="row justify-content-md-center mx-auto">
-
-      <div class="col-md-6">
-
-
-        <h3 class="text-center">Certifikatet</h3>
-        <p class="lead mb-0">Certifikatet intygar vilket företag du valt. Företag ersätts med det företagsnamn som du själv anger.</p>
-
-
-
-        <div class="card mt-5">
-          <img class="card-img-top" src="images/certificate_example.png" alt="Card image cap">
-          <!--
-          <div class="card-body bg-light">
-          <h5 class="card-title">Workplace Of Choice</h5>
-          <p class="card-text">Certifikatet är utformat som ett brev som intygar vilket företag du valt. Tanken är att du enkelt ska kunna bifoga det när du söker ett jobb.</p>
-          <a href="#" class="btn btn-secondary">Kolla på certifikatet</a>
-
-        </div>
-      -->
-    </div>
-
-
-
-  </div>
-</div>
-</div>
-</section>
-
-
 <footer class="bg-light">
   <div class="container-fluid">
     <hr class="mt-0">
@@ -922,7 +890,8 @@ img.onclick = function(){
         // convert image file to base64 string
         modal.style.display = "block";
         modalImg.src = reader.result;
-        captionText.innerHTML = "Workplace Of Choice";//this.alt;
+        captionText.innerHTML = "Workplace Of Choice";
+        spinner.stop();
       }, false);
 
       if (file) {
@@ -931,12 +900,16 @@ img.onclick = function(){
 
     },
     error:function(){
-      modal.style.display = "block";
-      modalImg.src = "images/certificate_example.png";
-      captionText.innerHTML = "Workplace Of Choice";//this.alt;
+      setTimeout(function(){
+        modal.style.display = "block";
+        modalImg.src = "images/certificate_example.png";
+        captionText.innerHTML = "Tekniskt fel för tillfället - Visar ett exempel";
+        spinner.stop();
+    }, 3000);
+
     },
     complete:function(data){
-      spinner.stop();
+
     }
   });
 }
