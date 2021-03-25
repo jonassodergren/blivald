@@ -210,6 +210,7 @@ function deleteAllCookies() {
 <link rel="stylesheet" href="css/features.css"/>
 
 <link rel="stylesheet" href="css/footer.css"/>
+<link rel="stylesheet" href="css/spin.css"/>
 
 <link rel="stylesheet" href="css/style.css"/>
 
@@ -299,20 +300,34 @@ function deleteAllCookies() {
       .bg-yellow {background-color:#FFE960;}
 
       .papers {
-  background: url('images/papers2.jpg') no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+        background: url('images/papers2.jpg') no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
 
-}
+      }
+      .spinner_overlay {
 
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffff;
+        opacity: 0.95;
+        z-index: 1000;
+      }
       </style>
 
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 
     </head>
     <body class="container-fluid p-0">
+
+      <div id="spinner" class="spinner_overlay">
+
+      </div>
 
 
       <header>
@@ -356,15 +371,15 @@ function deleteAllCookies() {
 
 <!--
 <div class="row justify-content-md-center mx-auto no-gutters">
-  <div class="col-md-12 bg-light text-center">
-    <strong><i class="icon-paper-clip text-primary" style="font-size: 24px;"></i></strong>
-    <strong>Vid jobbansökan</strong> - Bifoga certifikatet med CV:n
-  </div>
+<div class="col-md-12 bg-light text-center">
+<strong><i class="icon-paper-clip text-primary" style="font-size: 24px;"></i></strong>
+<strong>Vid jobbansökan</strong> - Bifoga certifikatet med CV:n
+</div>
 
 
-  <div class="col text-center">
-    <span>Fungerar med ansökningar via email och rekryteringssystem</span>
-  </div>
+<div class="col text-center">
+<span>Fungerar med ansökningar via email och rekryteringssystem</span>
+</div>
 
 </div>
 -->
@@ -379,22 +394,22 @@ function deleteAllCookies() {
     <div class="card-body text-center mb-0 mt-0" style="background-color: rgba(245, 245, 245, 0.7); ">
       <!--
       <div id="wrap">
-        <div class="inner">
-        -->
+      <div class="inner">
+    -->
 
-          <!--
-          <h2 class="display-4">Workplace<br>of<br>choice</h2>
-        -->
-        <h1 class="display-4">Stick ut bland<br>andra<br>kandidater!</h1>
+    <!--
+    <h2 class="display-4">Workplace<br>of<br>choice</h2>
+  -->
+  <h1 class="display-4">Stick ut bland<br>andra<br>kandidater!</h1>
 
-        <!--
-        <p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
-        <p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet</p>
+  <!--
+  <p class="lead"><mark><strong>Välj för att bli vald</strong></mark></p>  -->
+  <p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet</p>
 
-<h3 class="display-5">Workplace Of Choice</h3>
-<!--
-<span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
-<span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
+  <h3 class="display-5">Workplace Of Choice</h3>
+  <!--
+  <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
+  <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
 -->
 <!--
 </div>
@@ -412,12 +427,12 @@ function deleteAllCookies() {
 
   <div class="col-md-12 text-center border-top border-bottom">
 
-<div class="card-body bg-white mb-0">
+    <div class="card-body bg-white mb-0">
 
-<h4>Utfärda snabbt och enkelt</h4>
+      <h4>Utfärda snabbt och enkelt</h4>
 
-</div>
-</div>
+    </div>
+  </div>
 </div>
 
 <div class="row justify-content-center">
@@ -426,7 +441,7 @@ function deleteAllCookies() {
 
     <div class="card-body mb-0 mt-0">
 
-        <h5 class="mb-4">1. Välj arbetsgivare</h5>
+      <h5 class="mb-4">1. Välj arbetsgivare</h5>
 
       <div class="input-group mb-3">
 
@@ -436,18 +451,18 @@ function deleteAllCookies() {
       </div>
 
       <div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Förnamn</span>
-  </div>
-  <input id="firstname" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-</div>
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Förnamn</span>
+        </div>
+        <input id="firstname" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
 
-<div class="input-group mb-3">
-  <div class="input-group-prepend">
-    <span class="input-group-text" id="inputGroup-sizing-default">Efternamn</span>
-  </div>
-  <input id="lastname" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-</div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Efternamn</span>
+        </div>
+        <input id="lastname" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      </div>
 
     </div>
   </div>
@@ -461,20 +476,20 @@ function deleteAllCookies() {
 
       </div>
 
-    <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att få en känsla för hur certifikatet kommer att se ut</p>
+      <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att få en känsla för hur certifikatet kommer att se ut</p>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
 
-      <!-- The Close Button -->
-      <span class="close">&times;</span>
+        <!-- The Close Button -->
+        <span class="close">&times;</span>
 
-      <!-- Modal Content (The Image) -->
-      <img class="modal-content" id="img01">
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
 
-      <!-- Modal Caption (Image Text) -->
-      <div id="caption"></div>
-    </div>
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption">Test</div>
+      </div>
 
     </div>
   </div>
@@ -503,14 +518,14 @@ function deleteAllCookies() {
 
   <div class="col-md-12 text-center border-top border-bottom">
 
-<div class="card-body bg-white mb-0">
+    <div class="card-body bg-white mb-0">
 
-<span><a id="test2" href="#example"><u>Visa ett exempel</u></a> -</span>
-<span><a id="test1" href="#faq"><u>Vanliga frågor</u></a> -</span>
-<a href="javascript:demo();"><u>Prova demoversionen</u></a>
-</div>
+      <span><a id="test2" href="#example"><u>Visa ett exempel</u></a> -</span>
+      <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a> -</span>
+      <a href="javascript:demo();"><u>Prova demoversionen</u></a>
+    </div>
 
-</div>
+  </div>
 </div>
 
 <!--
@@ -832,6 +847,7 @@ data-parent="#accordionExample275">
 <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
 <script src="js/typeahead.bundle.min.js"></script>
 <script src="js/autocomplete.js"></script>
+<script src="js/spin.js"></script>
 <script src="js/app.js"></script>
 
 <script type="text/javascript">
@@ -842,9 +858,31 @@ data-parent="#accordionExample275">
   h.parentNode.insertBefore(j, h);
 })(window, document, 'script', 'https://api.blivald.se/chat/livechat');
 RocketChat(function() {
-    this.setGuestToken(sessionStorage['transactionId']);
+  this.setGuestToken(sessionStorage['transactionId']);
 });
 
+$("#spinner").hide();
+
+var opts = {
+  lines: 13, // The number of lines to draw
+  length: 48, // The length of each line
+  width: 17, // The line thickness
+  radius: 45, // The radius of the inner circle
+  scale: 1, // Scales overall size of the spinner
+  corners: 1, // Corner roundness (0..1)
+  speed: 1, // Rounds per second
+  rotate: 0, // The rotation offset
+  animation: 'spinner-line-fade-quick', // The CSS animation name for the lines
+  direction: 1, // 1: clockwise, -1: counterclockwise
+  color: '#121212', // CSS color or array of colors
+  fadeColor: 'transparent', // CSS color or array of colors
+  top: '50%', // Top position relative to parent
+  left: '50%', // Left position relative to parent
+  shadow: '0 0 1px transparent', // Box-shadow for the lines
+  zIndex: 2000000000, // The z-index (defaults to 2e9)
+  className: 'spinner', // The CSS class to assign to the spinner
+  position: 'absolute', // Element positioning
+};
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -852,27 +890,70 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("myImg");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-var url="https://api.blivald.se/createpdf?";
+var url="http://localhost:9090/createpdf?";
 img.onclick = function(){
-  modal.style.display = "block";
+
   var firstname=$("#firstname").val();
   var lastname=$("#lastname").val();
   var company=$("#company").val();
-  modalImg.lowsrc="images/tickets.jpg"
-  modalImg.src = url+"firstname="+firstname+";"+"lastname="+lastname+";"+"company=\""+company+"\";type=Demo";
-  //getapi(url+"firstname="+firstname+";"+"lastname="+lastname+";"+"company=\""+company+"\";type=Demo");
+  var url_with = url+"firstname="+firstname+";"+"lastname="+lastname+";"+"company=\""+company+"\";type=Demo";
+  $.ajax({
+    url: url_with,
+    xhrFields: {
+      responseType: 'blob'
+    },
+    type: 'get',
+    beforeSend: function(){
+      // Show image container
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-${window.scrollY}px';
+      $("#spinner").show();
+      var target = document.getElementById('spinner');
+      var spinner = new Spin.Spinner().spin();
+      target.appendChild(spinner.el);
+    },
+    success: function(response){
 
-  captionText.innerHTML = this.alt;
+      const file = response;
+      const reader = new FileReader();
+
+      reader.addEventListener("load", function () {
+        // convert image file to base64 string
+        modal.style.display = "block";
+        modalImg.src = reader.result;
+        captionText.innerHTML = "Workplace Of Choice";//this.alt;
+      }, false);
+
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+
+    },
+    complete:function(data){
+      // Hide image container
+      //$("#spinner").hide();
+    }
+  });
 }
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
+  const scrollY = document.body.style.top;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  //window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  $("#spinner").hide();
 }
+
+// spinner
+
+
+
+
 
 
 </script>
