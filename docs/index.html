@@ -9,7 +9,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-167607629-1');
 </script>
 
@@ -57,6 +56,7 @@ window.addEventListener("load", function () {
         "border": "#fff"
       }
     },
+    "position":"bottom-left",
     "revokable": "true",
     "enabled": "true",
     onStatusChange: function (status, chosenBefore) {
@@ -79,7 +79,7 @@ window.addEventListener("load", function () {
     "content": {
       "header": "Cookies/Kakor på sajten",
       "message": "Sajten använder idag cookies för att följa användningen av sajten och för inloggning.",
-      "deny": "Avböj användarspårning med IP-nummer",
+      "deny": "Avböj användarspårning",
       "allow": "OK",
       "dismiss": "OK",
       "link": "Privacy policy",
@@ -479,7 +479,7 @@ function deleteAllCookies() {
 
       </div>
 
-      <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Fyll i informationen i steg ett och klicka på bilden</p>
+      <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att förhandsgranska</p>
 
       <!-- The Modal -->
       <div id="myModal" class="modal">
@@ -519,9 +519,9 @@ function deleteAllCookies() {
 
       <div class="mb-4 text-center">
 
-        <h5>4. Sök jobbet</h5>
+        <h5>4. Sök jobb som vanligt</h5>
 
-        <p>Ditt email med certifikatet innehåller också några tips om hur du bäst bifogar certifikatet vid jobbansökningar.</p>
+        <p>Oavsett om du mailar arbetsgivaren eller ansöker i ett system kan du bifoga certifikatet.</p><p> I ditt bekräftelsemail skickar vi med några tips om hur du bäst bifogar certifikatet.</p>
 
       </div>
 
@@ -788,25 +788,25 @@ data-parent="#accordionExample275">
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <h6>Erbjudande</h6>
+        <h6>Arbetsgivare</h6>
         <ul class="list-unstyled">
-          <li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
-          <li><a href="" class="text-dark">Verifiera giltigheten</a></li>
+          <li><a href="" class="text-dark">Har du fått ett certifikat?</a></li>
         </ul>
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <h6>Snabblänkar</h6>
+        <h6>Information</h6>
         <ul class="list-unstyled">
           <li><a href="privacy.html" class="text-dark">Om sajten</a></li>
           <li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
-          <li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
         </ul>
       </div>
 
       <div class="col-xs-6 col-md-3">
-        <h6>Öppna licenser</h6>
+        <h6>Villkor</h6>
         <ul class="list-unstyled">
+          <li><a href="privacy.html" class="text-dark">Privacy policy och GDPR</a></li>
+          <li><a href="privacy.html" class="text-dark">Kakor</a></li>
           <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" class="text-dark">Sajtens källkod</a></li>
           <li><a href="https://creativecommons.org/licenses/by/4.0/" class="text-dark">Sajtens innehåll</a></li>
         </ul>
