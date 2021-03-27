@@ -318,6 +318,11 @@ function deleteAllCookies() {
         opacity: 0.95;
         z-index: 1000;
       }
+      .equal {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+      }
       </style>
 
       <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
@@ -436,13 +441,15 @@ function deleteAllCookies() {
     </div>
   </div>
 </div>
-<div class="row justify-content-center bg-white align-items-center p-0">
-  <h3>endast</h3>
-  <div class="col-1 mr-0">
+<div class="row justify-content-center bg-white align-items-center">
+  <div class="col-2 text-right">
+    <h3>endast</h3>
+  </div>
+  <div class="col-2 text-center no-gutters">
     <span class="display-1" style="font-size: 8em;"><strong>1</strong></span>
   </div>
 
-  <div class="col-1 text-left ml-3">
+  <div class="col-2 text-left">
     <h3 class="text-dark ml-0">certifikat per person</h3>
   </div>
 
@@ -450,17 +457,17 @@ function deleteAllCookies() {
 </div>
 <section id="rules" class="features-icons bg-light text-center">
   <div class="container-fluid">
-<div class="features-icons-item mx-auto mb-5 mb-lg-3">
-  <div class="features-icons-icon d-flex">
-    <i class="icon-direction m-auto text-secondary"></i>
+    <div class="features-icons-item mx-auto mb-5 mb-lg-3">
+      <div class="features-icons-icon d-flex">
+        <i class="icon-direction m-auto text-secondary"></i>
+      </div>
+      <h3>Så här går det till</h3>
+    </div>
   </div>
-  <h3>Så här går det till</h3>
-</div>
-</div>
 </div>
 <div class="row justify-content-center">
 
-  <div class="col-md-3 bg-light text-center">
+  <div class="col-md-3 bg-light text-center equal">
 
     <div class="card-body border mb-0 mt-0">
 
@@ -491,7 +498,7 @@ function deleteAllCookies() {
     </div>
   </div>
 
-  <div class="col-md-3 bg-light text-center">
+  <div class="col-md-3 bg-light text-center equal">
     <div class="card-body border text-center mb-0">
 
       <div class="mb-4">
@@ -518,7 +525,7 @@ function deleteAllCookies() {
     </div>
   </div>
 
-  <div class="col-md-3 bg-light">
+  <div class="col-md-3 bg-light equal">
     <div class="card-body border mb-0">
 
       <div class="mb-4 text-center">
@@ -535,7 +542,7 @@ function deleteAllCookies() {
     </div>
   </div>
 
-  <div class="col-md-3 bg-light">
+  <div class="col-md-3 bg-light equal">
     <div class="card-body border mb-0">
 
       <div class="mb-4 text-center">
@@ -558,7 +565,6 @@ function deleteAllCookies() {
 
     <div class="card-body bg-light mb-0">
 
-      <span><a id="test2" href="#example"><u>Visa ett exempel</u></a> -</span>
       <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a> -</span>
       <a href="javascript:demo();"><u>Prova demoversionen</u></a>
     </div>
@@ -645,38 +651,38 @@ Enkelt att bifoga till arbetsgivaren.
       <div class="col-md-6">
         <div class="features-icons-item mx-auto">
           <div class="features-icons-icon d-flex">
-            <i class="icon-game-controller m-auto text-secondary"></i>
+            <i class="icon-info m-auto text-secondary"></i>
           </div>
           <h3>Snabbfakta</h3>
 
         </div>
 
 
-        <div class="card-body p-0">
+        <div class="card-body">
           <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center">
-              Vem får utfärda ett certifikat?
-              <span class="badge badge-primary badge-pill">Alla</span>
+              Vem kan utfärda ett certifikat?
+              <span class="badge badge-light badge-pill">Alla</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Vad kostar tjänsten?
-              <span class="badge badge-primary badge-pill">Kostnadsfritt</span>
+              <span class="badge badge-light badge-pill">Kostnadsfritt</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Antal certifikat per person
-              <span class="badge badge-primary badge-pill">1</span>
+              <span class="badge badge-light badge-pill">1</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Giltighetstid på certifikatet
-              <span class="badge badge-primary badge-pill">Tillsvidare</span>
+              <span class="badge badge-light badge-pill">Tillsvidare</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Går certifikatet att avaktivera?
-              <span class="badge badge-primary badge-pill">Ja</span>
+              <span class="badge badge-light badge-pill">Ja</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Kan jag skapa ett nytt certifikat efter avaktivering
-              <span class="badge badge-primary badge-pill">Efter 30 dagar</span>
+              <span class="badge badge-light badge-pill">Efter 30 dagar</span>
             </li>
           </ul>
 
@@ -742,7 +748,23 @@ Enkelt att bifoga till arbetsgivaren.
     </div>
   </div>
   <div class="card border-1">
-    <div class="card-header bg-white" id="headingThree2">
+    <div class="card-header bg-white" id="headingThree5">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
+        data-target="#collapseThree5" aria-expanded="false" aria-controls="collapseThree5">
+        Varför fungerar certifikatet?
+      </button>
+    </h5>
+  </div>
+  <div id="collapseThree5" class="collapse" aria-labelledby="headingThree5"
+  data-parent="#accordionExample275">
+  <div class="card-body text-left">
+    <strong>Eftersom du enbart kan ha ett giltigt certifikat.</strong> De allra flesta vill intervjua eller träffa den person som kan bevisa att de är intresserade av tjänsten.
+  </div>
+</div>
+</div>
+  <div class="card border-1">
+    <div class="card-header bg-white" id="headingThree5">
       <h5 class="mb-0">
         <button class="btn btn-link collapsed text-dark" type="button" data-toggle="collapse"
         data-target="#collapseThree2" aria-expanded="false" aria-controls="collapseThree2">
@@ -921,7 +943,7 @@ img.onclick = function(){
         modalImg.src = "images/certificate_example.png";
         captionText.innerHTML = "Tekniskt fel för tillfället - Visar ett exempel";
         spinner.stop();
-    }, 3000);
+      }, 3000);
 
     },
     complete:function(data){
