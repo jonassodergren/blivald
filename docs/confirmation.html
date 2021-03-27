@@ -5,7 +5,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167607629-1"></script>
-  
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -44,23 +44,6 @@
 
 <body id="confirmation">
 
-<!--
-  <div class="font-up-bold text-uppercase">
-    <nav class="navbar navbar-dark bg-dark">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb lighten-6 bg-dark my-auto">
-          <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
-            <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
-          </a></li>
-          <li class="breadcrumb-item active text-light" aria-current="page">
-            <h5 class="mr-3 mb-0"><strong>Utfärda</strong></h5>
-          </li>
-        </ol>
-      </nav>
-    </nav>
-
-  </div>
--->
 <header>
 
   <nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
@@ -86,23 +69,18 @@
   <nav class="navbar navbar-light bg-white">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-white my-auto">
-        <li class="breadcrumb-item active">Kom igång</li>
-        <li class="breadcrumb-item active">Välj</li>
-        <li class="breadcrumb-item active" aria-current="page" style="color: #E9565A">Kvitto</li>
+        <li class="breadcrumb-item active">Startsidan</li>
+        <li class="breadcrumb-item active">Beställ certifikat</li>
+        <li class="breadcrumb-item active" aria-current="page" style="color: #E9565A">Kvittens</li>
       </ol>
     </nav>
   </nav>
 
-
-  <div class="container-fluid bg-white">
     <div class="row justify-content-md-center">
       <div class="col-md-6">
 
         <div class="jumbotron bg-white text-center">
-          <div class="text-center">
-
             <img src="https://img.icons8.com/carbon-copy/100/000000/checked-checkbox.png" width="125" height="120"  /> <!-- style="display: block; border: 0px;" -->
-          </div>
           <h2 class="display-4 text-center">Ditt kvitto</h2>
           <p class="lead text-center">Certifikat är nu utfärdat! Certifikatet skickas direkt till din mail. Om du vill är det möjligt att skriva ut dokumentet.</p>
           <!--	<hr class="my-4">  -->
@@ -118,16 +96,17 @@
           </div>
         </div>
 
-
-
-        <hr>
+</div>
+</div>
+        <div class="row justify-content-md-center">
+          <div class="col-md-6">
 
         <div id="kvittens">
 
           <table class="table">
             <thead class="thead-dark">
               <tr>
-                <th scope="col" class="align-middle">Kvittens</th>
+                <th scope="col">Kvittens</th>
                 <th scope="col">Ref: <span id="order_id"></span></th>
               </tr>
             </thead>
@@ -144,57 +123,51 @@
           </table>
 
 
-          <hr>
 
         </div>
 
       </div>
     </div>
-  </div>
 
 
-  <footer class="bg-light">
-    <div class="container-fluid">
-      <hr class="mt-0">
-      <div class="row mx-auto">
-        <div class="col-sm-12 col-md-6">
-          <h6>Kort om blivald.se</h6>
-          <p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
-        </div>
 
-        <div class="col-xs-6 col-md-3">
-          <h6>Erbjudande</h6>
-          <ul class="list-unstyled">
-            <li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
-            <li><a href="" class="text-dark">Verifiera giltigheten</a></li>
-          </ul>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <h6>Snabblänkar</h6>
-          <ul class="list-unstyled">
-            <li><a href="" class="text-dark">Om sajten</a></li>
-            <li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
-            <li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-    </div>
-    <div class="container-fluid">
-      <div class="row justify-content-md-center mx-auto">
-        <div class="col-sm-12 col-md-8">
-
-
-          <div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
-          <p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
+    <footer class="bg-light">
+      <div class="container-fluid">
+        <hr class="mt-0">
+        <div class="row mx-auto">
+          <div class="col-xs-6 col-md-3">
+            <h6>Kort om blivald.se</h6>
+            <p>Hjälper de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilken arbetsgivare den helst föredrar.</p>
           </div>
 
+          <div class="col-xs-6 col-md-3">
+            <h6>Arbetsgivare</h6>
+            <ul class="list-unstyled">
+              <li><a href="" class="text-dark">Har du fått ett certifikat?</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Information</h6>
+            <ul class="list-unstyled">
+              <li><a href="privacy.html" class="text-dark">Om sajten</a></li>
+              <li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Villkor</h6>
+            <ul class="list-unstyled">
+              <li><a href="privacy.html" class="text-dark">Privacy policy och GDPR</a></li>
+              <li><a href="privacy.html" class="text-dark">Kakor</a></li>
+              <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html" class="text-dark">Sajtens källkod</a></li>
+              <li><a href="https://creativecommons.org/licenses/by/4.0/" class="text-dark">Sajtens innehåll</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-  </footer>
+    </footer>
 
 
   <script src="js/confirmation.js"></script>
