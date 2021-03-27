@@ -412,6 +412,7 @@ function deleteAllCookies() {
   <p class="lead">Visa att arbetsgivaren är ditt<br>förstahandsval med certifikatet</p>
 
   <h3 class="display-5">Workplace Of Choice</h3>
+
   <!--
   <span><a id="test2" href="#example"><u>Visa ett certifikat</u></a> -</span>
   <span><a id="test1" href="#faq"><u>Vanliga frågor</u></a></span>
@@ -499,15 +500,11 @@ function deleteAllCookies() {
 
   <div class="col-md-3 bg-light text-center equal">
     <div class="card-body border text-center mb-0">
+      <h5 class="card-title mb-4">Förhandsgranska</h5>
 
-      <div class="mb-4">
-
-        <h5>Förhandsgranska</h5>
-
-      </div>
-
+<p>
       <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att förhandsgranska</p>
-
+</p>
       <!-- The Modal -->
       <div id="myModal" class="modal">
 
@@ -531,8 +528,11 @@ function deleteAllCookies() {
 
         <h5>Beställ kostnadsfritt certifikat</h5>
 
-        <p>Logga in med ditt facebook eller googlekonto.</p><p>Bekräfta dina val.</p><p>Certifikatet skickas till din email.</p>
-
+ <ul class="list-group list-group-flush bg-light text-left">
+    <li class="list-group-item bg-light">Logga in med ditt facebook eller googlekonto.</li>
+    <li class="list-group-item bg-light">Bekräfta dina val.</li>
+    <li class="list-group-item bg-light">Certifikatet skickas till din email.</li>
+</ul>
         <button class="btn btn-lg btn-success mt-3 mr-1" type="button" onClick="create();">
           Till inloggningen
         </button>
@@ -548,7 +548,10 @@ function deleteAllCookies() {
 
         <h5>Ansök till jobbet</h5>
 
-        <p>Enkelt att bifoga certifikatet när du ansöker via mail eller ansökningssystem.</p><p> I ditt bekräftelsemail skickar vi med några tips.</p>
+<ul class="list-group list-group-flush text-left">
+        <li class="list-group-item bg-light">Enkelt att bifoga certifikatet när du ansöker via mail eller ansökningssystem.</li>
+        <li class="list-group-item bg-light">I ditt bekräftelsemail skickar vi med några tips.</li>
+</ul>
 
       </div>
 
@@ -661,27 +664,27 @@ Enkelt att bifoga till arbetsgivaren.
           <ul class="list-group">
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Vem kan utfärda ett certifikat?
-              <span class="badge badge-light badge-pill">Alla</span>
+              <span class="badge badge-secondary badge-pill">Alla</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Vad kostar tjänsten?
-              <span class="badge badge-light badge-pill">Kostnadsfritt</span>
+              <span class="badge badge-secondary badge-pill">Kostnadsfritt</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Antal certifikat per person
-              <span class="badge badge-light badge-pill">1</span>
+              <span class="badge badge-secondary badge-pill">1</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Giltighetstid på certifikatet
-              <span class="badge badge-light badge-pill">Tillsvidare</span>
+              <span class="badge badge-secondary badge-pill">Tillsvidare</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Går certifikatet att avaktivera?
-              <span class="badge badge-light badge-pill">Ja</span>
+              <span class="badge badge-secondary badge-pill">Ja</span>
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-center">
               Kan jag skapa ett nytt certifikat efter avaktivering
-              <span class="badge badge-light badge-pill">Efter 30 dagar</span>
+              <span class="badge badge-secondary badge-pill">Efter 30 dagar</span>
             </li>
           </ul>
 
