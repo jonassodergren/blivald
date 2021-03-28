@@ -3,6 +3,11 @@
   padding-bottom: 7rem;
 }
 
+.features-icons-white {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
 .features-icons .features-icons-item {
   max-width: 20rem;
 }
@@ -16,5 +21,21 @@
 }
 
 .features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.features-icons-white .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons-white .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons-white .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons-white .features-icons-item:hover .features-icons-icon i {
   font-size: 5rem;
 }
