@@ -880,6 +880,14 @@ img.onclick = function(){
         // convert image file to base64 string
         modal.style.display = "block";
         modalImg.src = reader.result;
+
+
+        let a = document.createElement("a");
+ a.href = reader.result;
+ a.text = "Ladda ner certifikatet";
+ a.download = "certifikat.pdf"
+modal.appendChild(a);
+
         captionText.innerHTML = "Workplace Of Choice";
         spinner.stop();
       }, false);
