@@ -462,11 +462,13 @@ function deleteAllCookies() {
         </div>
       </div>
 
+<div class="col-10 offset-1">
       <div class="input-group input-group-lg mb-3">
         <div id="prefetch" style="width: 100%; height: 100%;">
           <input id="company" type="text" class="form-control typeahead" placeholder="Skriv företagsnamn"> <!-- style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" -->
         </div>
       </div>
+    </div>
 
       <p>Tips! Möjligt att söka på företag som rekryterar just nu.</p>
 
@@ -478,19 +480,14 @@ function deleteAllCookies() {
       <h5 class="card-title mb-4">Förhandsgranska</h5>
       <h6 class="card-subtitle mb-4 text-muted">Ange dina uppgifter först</h6>
 
-      <div class="input-group input-group-sm mb-1 w-80">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="namnuppgifter">Förnamn</span>
-        </div>
-        <input id="firstname" type="text" class="form-control" aria-label="Default" aria-describedby="namnuppgifter">
+<div class="col-8 offset-2">
+      <div class="input-group mb-1">
+        <input id="firstname" type="text" class="form-control" placeholder="Förnamn" aria-label="Förnamn" aria-describedby="namnuppgifter">
       </div>
-
-      <div class="input-group input-group-sm mb-5 w-80">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-default">Efternamn</span>
-        </div>
-        <input id="lastname" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+      <div class="input-group mb-5">
+        <input id="lastname" type="text" class="form-control" placeholder="Efternamn" aria-label="Efternamn" aria-describedby="inputGroup-sizing-default">
       </div>
+    </div>
 
       <p>
         <img id="myImg" src="images/certificate_example.png" alt="Certifikatet" style="width:50%;max-width:300px"> <p class="font-italic">Klicka på bilden för att förhandsgranska</p>
