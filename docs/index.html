@@ -515,10 +515,11 @@ function deleteAllCookies() {
 
         <!--    <img id="img01"> -->
 
-
-        <div>
-          <iframe style="visibility:hidden;" class="iframe" onload="this.style.visibility = 'visible';" id="displayZone" src="" height="100%" width="100%" allowfullscreen> </iframe>
+<!-- style="visibility:hidden;" onload="this.style.visibility='visible';" height="100%" width="100%" -->
+        <div tyle="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+          <iframe class="embed-responsive-item" id="displayZone" src="" width="100%" height="100%" style="position:absolute; top:0; left: 0" allowfullscreen> </iframe>
         </div>
+
 
         <!-- Modal Caption (Image Text) -->
         <div id="caption">Workplace Of Choice</div>
@@ -848,8 +849,9 @@ const showFile = (blobData, reportName) => {
 
     var iframe = document.getElementById('displayZone');
     iframe.style.display = 'block';
-    //$('#displayZone').attr('src', dataUrl);
-    var frame = $('#displayZone')[0];
+    $('#displayZone').attr('src', dataUrl+'#zoom=FitW');
+
+   var frame = $('#displayZone')[0];
     frame.contentWindow.location.replace(dataUrl);
 
     setTimeout( () => {
