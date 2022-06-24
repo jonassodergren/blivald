@@ -35,6 +35,8 @@ var notify = function(url, data) {
         form.classList.remove("was-validated");
         form.reset();
 
+        window.scrollTo(0, 0);
+
       }
     })
 
