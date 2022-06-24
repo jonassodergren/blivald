@@ -13,7 +13,12 @@ var notify = function(url, data) {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
-    }).then(handleErrors).then(response => document.getElementById("alert-ok").style.display = 'block').catch((error) => {
+    }).then(handleErrors).then(response =>
+      {
+        document.getElementById("alert-ok").style.display = 'block';
+
+        window.scrollTo(-400, 0);
+      }).catch((error) => {
       document.getElementById("alert-error").style.display = 'block';
     });;
   }
@@ -32,10 +37,9 @@ var notify = function(url, data) {
         notify("https://blivald-order.azurewebsites.net/api/Apply",{email:email});
 
       //  var form2 = document.getElementById("form2");
-        form.classList.remove("was-validated");
-        form.reset();
+      form.classList.remove("was-validated");
+      form.reset();
 
-        window.scrollTo(0, 0);
 
       }
     })
