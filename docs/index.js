@@ -1,3 +1,32 @@
+class ProgressBar {
+
+  constructor(progressbar){
+    this.progressBar = progressbar;    // Progress Bar
+    this.progress = 0;                 // Tracking Progress
+  }
+  init(){
+    const context = this;   // Reference to the instantiated object.
+    this.myVar = setInterval(myTimer, 50);
+    function myTimer() {
+      context.changeProgress();
+    }
+  }
+  clear(){
+    clearInterval(this.myVar);
+    this.progressBar.style.width = 0 + '%';
+  }
+  changeProgress(){
+    this.progress = this.progress + 1;
+    this.progressBar.style.width = this.progress + '%';
+  //  this.progressBar.setAttribute('aria-valuenow', this.progress);
+  }
+}
+
+const progressBar = new ProgressBar(
+  // passing in reference to progress-bar div
+  document.querySelector('.progress-bar')
+);
+
 
 function handleErrors(response) {
   if (!response.ok) {
@@ -8,6 +37,9 @@ function handleErrors(response) {
 
 var notify = function(url, data) {
 
+  window.scrollTo(-400, 0);
+  progressBar.init();
+
   return fetch(url,
     {
       method: "POST",
@@ -15,10 +47,10 @@ var notify = function(url, data) {
       body: JSON.stringify(data)
     }).then(handleErrors).then(response =>
       {
+        progressBar.clear();
         document.getElementById("alert-ok").style.display = 'block';
-
-        window.scrollTo(-400, 0);
       }).catch((error) => {
+      progressBar.clear();
       document.getElementById("alert-error").style.display = 'block';
     });;
   }
