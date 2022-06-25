@@ -37,7 +37,7 @@ function handleErrors(response) {
 
 var notify = function(url, data) {
 
-  window.scrollTo(-400, 0);
+  document.body.scrollTop = 0;
   progressBar.init();
 
   return fetch(url,
