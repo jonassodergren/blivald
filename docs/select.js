@@ -60,10 +60,12 @@ var notify = function(url, data) {
         progressBar.clear();
         var kvitto = document.getElementById("alert-kvitto");
         kvitto.style.display = 'block';
+        window.location = '/kvitto.html';
 
       }).catch((error) => {
       progressBar.clear();
       document.getElementById("alert-error").style.display = 'block';
+      window.location = '/kvitto.html?error=true';
     });;
   }
 

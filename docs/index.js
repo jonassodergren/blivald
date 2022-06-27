@@ -51,19 +51,23 @@ var notify = function(url, data) {
         var alert = document.getElementById("alert-ok");
         var next = document.getElementById("create-certificate");
 
-                var a = document.createElement('a');
-                var link = document.createTextNode("Eller gå vidare nu >");
-                a.classList.add("fs-3");
-                a.appendChild(link);
-                a.title = "Utfärda";
-                a.href = "/select.html?"+"pin="+data.pin+"&"+"kund="+data.kund;
-                next.insertAdjacentElement("beforeend", a);
+              //  var a = document.createElement('a');
+              //  var link = document.createTextNode("Eller gå vidare nu >");
+              //  a.classList.add("fs-3");
+              //  a.appendChild(link);
+              //  a.title = "Utfärda";
+                var url = "/select.html?"+"pin="+data.pin+"&"+"kund="+data.kund;
+              //  next.insertAdjacentElement("beforeend", a);
 
-                alert.style.display = 'block';
+              //  alert.style.display = 'block';
+               var encoded = encodeURIComponent(url);
+                window.location = '/kvitto.html'+"?next="+encoded;
+
 
       }).catch((error) => {
       progressBar.clear();
       document.getElementById("alert-error").style.display = 'block';
+      window.location = '/kvitto.html?error=true';
     });;
   }
 
