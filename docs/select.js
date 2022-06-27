@@ -1,3 +1,13 @@
+window.onload = async () => {
+  let params = (new URL(document.location)).searchParams;
+  let pin = params.get('pin');
+  let kund = params.get('kund');
+  document.getElementById("pin").value = pin;
+  document.getElementById("kund").value = kund;
+  window.history.replaceState({}, document.title, "/create/");
+
+};
+
 class ProgressBar {
 
   constructor(progressbar){
@@ -45,21 +55,11 @@ var notify = function(url, data) {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(data)
-    }).then(handleErrors).then(response => response.json()).then(data =>
+    }).then(handleErrors).then(response =>
       {
         progressBar.clear();
-        var alert = document.getElementById("alert-ok");
-        var next = document.getElementById("create-certificate");
-
-                var a = document.createElement('a');
-                var link = document.createTextNode("Eller gå vidare nu >");
-                a.classList.add("fs-3");
-                a.appendChild(link);
-                a.title = "Utfärda";
-                a.href = "/select.html?"+"pin="+data.pin+"&"+"kund="+data.kund;
-                next.insertAdjacentElement("beforeend", a);
-
-                alert.style.display = 'block';
+        var kvitto = document.getElementById("alert-kvitto");
+        kvitto.style.display = 'block';
 
       }).catch((error) => {
       progressBar.clear();
@@ -77,13 +77,16 @@ var notify = function(url, data) {
         event.stopPropagation();
         form.classList.add("was-validated");
       }else{
-        var email = document.getElementById("email").value;
-        notify("https://blivald-order.azurewebsites.net/api/Apply",{email:email});
+        var name = document.getElementById("name").value;
+        var company = document.getElementById("company").value;
+        var pin = document.getElementById("pin").value;
+        var kund = document.getElementById("kund").value;
+
+        notify("https://blivald-order.azurewebsites.net/api/order",{name:name,company:company,pin:pin,kund:kund});
 
       //  var form2 = document.getElementById("form2");
       form.classList.remove("was-validated");
       form.reset();
-
 
       }
     })
