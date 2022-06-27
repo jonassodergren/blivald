@@ -3,6 +3,8 @@ window.onload = async () => {
   let pin = params.get('pin');
   let kund = params.get('kund');
   document.getElementById("pin").value = pin;
+  if(!!pin)
+  document.getElementById("pin").disabled = true;
   document.getElementById("kund").value = kund;
   window.history.replaceState({}, document.title, "/create/");
 

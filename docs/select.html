@@ -154,6 +154,10 @@ a:active { text-decoration: none; }
   background-repeat: repeat;
 }
 
+input:disabled {
+    background: black !important;
+}
+
 </style>
 
 </head>
@@ -185,8 +189,8 @@ a:active { text-decoration: none; }
     <div class="row p-0">
       <div class="col-md-6 mb-5 d-flex align-items-center justify-content-center text-center">
         <div>
-          <h1 class="display-5 fw-bold">Skapa certifikat</h1>
-          <p class="lead">Enkelt =)</p>
+          <h1 class="display-5 fw-bold">Utfärda certifikat</h1>
+          <p class="lead">Du kan alltid komma tillbaka till denna sida.</p>
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center justify-content-lg-start" >
@@ -227,8 +231,9 @@ a:active { text-decoration: none; }
               <div class="input-group input-group-lg mb-3 mt-2">
                   <input id="kund" type="hidden" class="form-control form-control-lg" placeholder="kundnummer"> <!-- style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;" --> <!-- form-control typeahead -->
               </div>
-
+  <a class="text-underline-hover fs-3" href="/">Vänta till senare</a>
 <div class="input-group input-group-lg mb-3 mt-2 justify-content-center">
+
               <button id="notify" type="button" class="btn btn-primary">Skapa</button>
             </div>
           </form>
