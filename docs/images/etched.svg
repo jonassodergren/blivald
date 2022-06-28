@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1300 700">
+	<style>
+		text { text-anchor: middle; font: 200px "Gill Sans", "Gill Sans MT", Calibri, sans-serif; }
+		:root { background: hsl(210, 88%, 90%); }
+		.etched { filter: url(#etch); } 
+		.fill1 { fill: hsl(210, 88%, 38%); }
+		.stroke1 { stroke: hsl(210, 88%, 38%); stroke-width:20px; }
+	</style>
+	<filter id="etch">
+		<feGaussianBlur stdDeviation="4"/>
+		<feComposite in="SourceGraphic" operator="out" result="glow"/>
+		
+		<feComponentTransfer in="SourceGraphic" result="lighter">
+			<feFuncA type="linear" slope="0.5"/>
+		</feComponentTransfer>
+		<feOffset dy="1" in="lighter"/>
+		<feComposite in2="SourceAlpha" operator="in" result="loff"/>
+		
+		<feComponentTransfer in="SourceGraphic" result="darker">
+			<feFuncA type="linear" slope="1.5"/>
+		</feComponentTransfer>
+		<feOffset dy="-1" in="darker"/>
+		<feComposite in2="SourceAlpha" operator="in" result="doff"/>
+
+		<feComposite in="glow" in2="loff" operator="over" result="lres"/>
+		<feComposite in="lres" in2="doff" operator="in" result="dres"/>
+		
+		<feFlood flood-color="white"/>
+		<feComposite in2="SourceAlpha" operator="in"/>
+		<feOffset in="whitened" dy="2" result="toff"/>
+		<feComposite in="dres" in2="toff" operator="over"/>
+	</filter>
+
+	<text x="70%" y="45%" class="fill1 etched">Filter<tspan dy="1em" x="70%">Effects</tspan></text>
+	
+	<g transform="translate(150 200)" class="etched">
+		<circle cx="150" cy="150" r="200" class="stroke1" fill="none"/>
+		<path class="fill1" transform="scale(3) translate(-220 -100)"
+		 d="M 258.93878,130.04411 C 262.28688,130.0442 264.81945,132.79138 266.53652,138.28573 C 269.97046,148.58782 272.41719,153.73881 273.8767,153.73876 C 274.99269,153.73881 276.15168,152.88032 277.35366,151.16325 C 301.47745,112.53076 323.79848,81.281331 344.31679,57.414831 C 349.63935,51.233801 358.09559,48.143191 369.68552,48.143021 C 372.43258,48.143191 374.27835,48.400731 375.22286,48.915661 C 376.16704,49.430931 376.63923,50.074811 376.6394,50.847311 C 376.63923,52.049371 375.22271,54.410261 372.38981,57.929951 C 339.25149,97.764551 308.51715,139.83111 280.18671,184.12972 C 278.21206,187.22036 274.17712,188.76567 268.08181,188.76564 C 261.90056,188.76567 258.25191,188.50811 257.13594,187.99297 C 254.21698,186.70526 250.78297,180.13773 246.83391,168.29037 C 242.36966,155.15534 240.13754,146.91374 240.13759,143.56551 C 240.13754,139.95988 243.14231,136.48295 249.15185,133.13472 C 252.84337,131.07438 256.10567,130.0442 258.93878,130.04411"/>
+	</g>
+</svg>

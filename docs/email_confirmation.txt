@@ -1,0 +1,12 @@
+Hej,
+
+Tack för att du har anmält intresse för att skapa ett certifikat!
+
+<a href="##URL">Länk till sidan för att skapa ett certifikat</a>, din PIN-kod är ##PIN.
+
+Tveka inte att svara på detta mail om du har frågor.
+
+Vänliga Hälsningar
+Teamet bakom blivald.se
+
+Om du inte har anmält intresse kan du bara bortse från detta mail.
