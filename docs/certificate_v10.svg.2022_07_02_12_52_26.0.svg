@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xml:space="preserve"
    inkscape:export-ydpi="96"
@@ -27,8 +29,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.64693624"
-     inkscape:cx="732.68426"
-     inkscape:cy="532.50997"
+     inkscape:cx="688.63046"
+     inkscape:cy="530.96423"
      inkscape:window-width="2374"
      inkscape:window-height="1205"
      inkscape:window-x="0"
@@ -3100,301 +3102,46 @@
            id="feMergeNode102376" /></feMerge><feComposite
          in2="SourceGraphic"
          operator="in"
-         result="composite2"
-         id="feComposite102380" /></filter><filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Noise Fill"
-       id="filter2229"
-       x="0"
-       y="0"
-       width="1"
-       height="1"><feTurbulence
-         type="fractalNoise"
-         baseFrequency="32.5879 46.9649"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         id="feTurbulence2213" /><feComposite
-         in="SourceGraphic"
-         in2="turbulence"
-         operator="in"
-         result="composite1"
-         id="feComposite2215" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color"
-         id="feColorMatrix2217" /><feFlood
-         flood-opacity="1"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood2219" /><feMerge
-         result="merge"
-         id="feMerge2225"><feMergeNode
-           in="flood"
-           id="feMergeNode2221" /><feMergeNode
-           in="color"
-           id="feMergeNode2223" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="composite2"
-         id="feComposite2227" /></filter><filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Noise Fill"
-       id="filter3287"
-       x="0"
-       y="0"
-       width="1"
-       height="1"><feTurbulence
-         type="fractalNoise"
-         baseFrequency="32.5879 46.9649"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         id="feTurbulence3271" /><feComposite
-         in="SourceGraphic"
-         in2="turbulence"
-         operator="in"
-         result="composite1"
-         id="feComposite3273" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color"
-         id="feColorMatrix3275" /><feFlood
-         flood-opacity="0"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood3277" /><feMerge
-         result="merge"
-         id="feMerge3283"><feMergeNode
-           in="flood"
-           id="feMergeNode3279" /><feMergeNode
-           in="color"
-           id="feMergeNode3281" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="composite2"
-         id="feComposite3285" /></filter><filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Noise Fill"
-       id="filter17970"
-       x="-0.0032543482"
-       y="-0.018087944"
-       width="1.0065087"
-       height="1.0361759"><feTurbulence
-         type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         id="feTurbulence17954" /><feComposite
-         in="SourceGraphic"
-         in2="turbulence"
-         operator="in"
-         result="composite1"
-         id="feComposite17956" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color"
-         id="feColorMatrix17958" /><feFlood
-         flood-opacity="0"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood17960" /><feMerge
-         result="merge"
-         id="feMerge17966"><feMergeNode
-           in="flood"
-           id="feMergeNode17962" /><feMergeNode
-           in="color"
-           id="feMergeNode17964" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
          result="fbSourceGraphic"
-         id="feComposite17968" /><feColorMatrix
+         id="feComposite102380" /><feColorMatrix
          result="fbSourceGraphicAlpha"
          in="fbSourceGraphic"
          values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix20139" /><feTurbulence
-         id="feTurbulence20141"
+         id="feColorMatrix104888" /><feTurbulence
+         id="feTurbulence104890"
          type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
+         baseFrequency="41.21 42.8115"
          numOctaves="5"
          seed="360"
          result="turbulence"
          in="fbSourceGraphic" /><feComposite
          in2="turbulence"
-         id="feComposite20143"
+         id="feComposite104892"
          in="fbSourceGraphic"
          operator="in"
          result="composite1" /><feColorMatrix
-         id="feColorMatrix20145"
+         id="feColorMatrix104894"
          values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
          result="color" /><feFlood
-         id="feFlood20147"
+         id="feFlood104896"
          flood-opacity="0"
          flood-color="rgb(0,0,0)"
          result="flood" /><feMerge
-         id="feMerge20149"
+         id="feMerge104898"
          result="merge"><feMergeNode
-           id="feMergeNode20151"
+           id="feMergeNode104900"
            in="flood" /><feMergeNode
-           id="feMergeNode20153"
+           id="feMergeNode104902"
            in="color" /></feMerge><feComposite
          in2="fbSourceGraphic"
-         id="feComposite20155"
+         id="feComposite104904"
          operator="in"
-         result="composite2" /></filter><filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Noise Fill"
-       id="filter21784"
-       x="-0.0067838614"
-       y="-0.0080530991"
-       width="1.0135677"
-       height="1.0161062"><feTurbulence
-         type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         id="feTurbulence21768" /><feComposite
-         in="SourceGraphic"
-         in2="turbulence"
-         operator="in"
-         result="composite1"
-         id="feComposite21770" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color"
-         id="feColorMatrix21772" /><feFlood
-         flood-opacity="0"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood21774" /><feMerge
-         result="merge"
-         id="feMerge21780"><feMergeNode
-           in="flood"
-           id="feMergeNode21776" /><feMergeNode
-           in="color"
-           id="feMergeNode21778" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="fbSourceGraphic"
-         id="feComposite21782" /><feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix22149" /><feTurbulence
-         id="feTurbulence22152"
-         type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         in="fbSourceGraphic" /><feComposite
-         in2="turbulence"
-         id="feComposite22154"
-         in="fbSourceGraphic"
-         operator="in"
-         result="composite1" /><feColorMatrix
-         id="feColorMatrix22156"
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color" /><feFlood
-         id="feFlood22158"
-         flood-opacity="0"
-         flood-color="rgb(255,255,255)"
-         result="flood" /><feMerge
-         id="feMerge22160"
-         result="merge"><feMergeNode
-           id="feMergeNode22162"
-           in="flood" /><feMergeNode
-           id="feMergeNode22164"
-           in="color" /></feMerge><feComposite
-         in2="fbSourceGraphic"
-         id="feComposite22166"
-         operator="in"
-         result="fbSourceGraphic" /><feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix22168" /><feTurbulence
-         id="feTurbulence22170"
-         type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         in="fbSourceGraphic" /><feComposite
-         in2="turbulence"
-         id="feComposite22172"
-         in="fbSourceGraphic"
-         operator="in"
-         result="composite1" /><feColorMatrix
-         id="feColorMatrix22174"
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color" /><feFlood
-         id="feFlood22176"
-         flood-opacity="1"
-         flood-color="rgb(255,255,255)"
-         result="flood" /><feMerge
-         id="feMerge22178"
-         result="merge"><feMergeNode
-           id="feMergeNode22180"
-           in="flood" /><feMergeNode
-           id="feMergeNode22182"
-           in="color" /></feMerge><feComposite
-         in2="fbSourceGraphic"
-         id="feComposite22184"
-         operator="in"
-         result="composite2" /></filter><filter
-       style="color-interpolation-filters:sRGB;"
-       inkscape:label="Noise Fill"
-       id="filter28089"
-       x="-0.0082120422"
-       y="-0.0069733545"
-       width="1.0164241"
-       height="1.0139467"><feTurbulence
-         type="fractalNoise"
-         baseFrequency="90.4153 87.5399"
-         numOctaves="5"
-         seed="360"
-         result="turbulence"
-         id="feTurbulence28073" /><feComposite
-         in="SourceGraphic"
-         in2="turbulence"
-         operator="in"
-         result="composite1"
-         id="feComposite28075" /><feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3.5 -1 "
-         result="color"
-         id="feColorMatrix28077" /><feFlood
-         flood-opacity="0"
-         flood-color="rgb(0,0,0)"
-         result="flood"
-         id="feFlood28079" /><feMerge
-         result="merge"
-         id="feMerge28085"><feMergeNode
-           in="flood"
-           id="feMergeNode28081" /><feMergeNode
-           in="color"
-           id="feMergeNode28083" /></feMerge><feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="composite2"
-         id="feComposite28087" /></filter></defs><g
+         result="composite2" /></filter></defs><g
      inkscape:label="Lager 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="fill:#f2eecb;fill-opacity:1;stroke:#fafafa;stroke-width:1.021;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28089)"
-       id="rect27708"
-       width="62.164806"
-       height="73.207237"
-       x="15.541202"
-       y="85.88559"
-       transform="matrix(6.9088141,0,0,3.3300202,-110.26269,-286.62925)" /><rect
-       style="fill:#f9fbff;fill-opacity:0;stroke-width:0.271595;stroke-dasharray:none;filter:url(#filter3287)"
-       id="rect2698"
-       width="72.389275"
-       height="100.60884"
-       x="7.7706008"
-       y="104.69862"
-       transform="matrix(5.8135598,0,0,2.4308942,-45.174852,-253.69332)" /><path
-       style="fill:#fafafa;stroke-width:0.336816;fill-opacity:1"
-       d="M 0.57838364,-0.11978712 C 421.13027,296.59103 1.0456635,296.59103 1.0456635,296.59103 H 420.19572"
+     id="layer1"><path
+       style="fill:#f2f2f2;stroke-width:0.336816"
+       d="M 0.57838363,0.28919183 C 421.13027,297.00001 1.0456635,297.00001 1.0456635,297.00001 H 420.19572"
        id="path1632" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;fill:#1a1a1a;stroke-width:0.264583"
@@ -3403,7 +3150,7 @@
        id="text1848"><tspan
          sodipodi:role="line"
          id="tspan1846"
-         x="50%"
+         x="206.19377"
          y="153.27165"
          style="font-size:22.5778px;stroke-width:0.264583">Volvo Lastvagnar</tspan></text><text
        xml:space="preserve"
@@ -3413,7 +3160,7 @@
        id="text1738"><tspan
          sodipodi:role="line"
          id="tspan1736"
-         x="50%"
+         x="205.61537"
          y="104.39825"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:'Snell Roundhand';-inkscape-font-specification:'Snell Roundhand';fill:#d6ad60;fill-opacity:1;stroke-width:0.264583">Lisa Testperson</tspan></text><text
        xml:space="preserve"
@@ -3423,7 +3170,7 @@
        id="text1844"><tspan
          sodipodi:role="line"
          id="tspan1842"
-         x="50%"
+         x="201.56668"
          y="124.93087"
          style="font-size:8.46667px;stroke-width:0.264583">har utsett</tspan></text><text
        xml:space="preserve"
@@ -3433,7 +3180,7 @@
        id="text1904"><tspan
          sodipodi:role="line"
          id="tspan1902"
-         x="50%"
+         x="203.01265"
          y="178.14215"
          style="font-size:9.87778px;fill:#000000;stroke-width:0.264583">som sitt förstahandsval bland alla arbetsgivare</tspan></text><text
        xml:space="preserve"
@@ -3454,7 +3201,7 @@
          sodipodi:role="line"
          id="tspan20422"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:Rockwell;-inkscape-font-specification:Rockwell;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
+         x="206.00981"
          y="55.16547">Workplace of Choice</tspan></text><rect
        style="fill:#fcfcfc;fill-opacity:1;stroke-width:0.293625;stroke-dasharray:none"
        id="rect31631"
@@ -3462,47 +3209,37 @@
        height="56.103214"
        x="-8.6757545"
        y="244.0779" /><rect
-       style="fill:#d6ad60;fill-opacity:1;stroke:#d6ad60;stroke-width:0.148065;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="rect74873-6-8"
-       width="17.772848"
-       height="17.707027"
-       x="375.55383"
-       y="252.07509" /><rect
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.148894;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect74873-6-1"
        width="17.567528"
        height="18.115177"
-       x="26.183943"
-       y="252.07556" /><text
+       x="32.318626"
+       y="260.25513" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
-       x="217.44965"
-       y="262.84268"
+       x="163.05544"
+       y="273.47617"
        id="text37685"><tspan
          sodipodi:role="line"
+         id="tspan37683"
          style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="262.84268"
-         id="tspan48274">Utfärdat av blivald.se till</tspan><tspan
-         sodipodi:role="line"
-         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="271.66214"
-         id="tspan48276"></tspan><tspan
-         sodipodi:role="line"
-         style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="280.48157"
-         id="tspan48332">lisa.testperson@mail.com</tspan></text><text
+         x="163.05544"
+         y="273.47617">Utfärdat av blivald.se till lisa.testperson@mail.com</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;white-space:pre;inline-size:226.083;display:inline;fill:url(#linearGradient65428);fill-opacity:1;stroke:url(#linearGradient65397);stroke-width:0.264999;stroke-dasharray:none;filter:url(#filter67656)"
        x="57.838364"
        y="121.46056"
-       id="text60946" /><text
+       id="text60946"><tspan
+         id="tspan60944"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:url(#linearGradient65428);fill-opacity:1;stroke:url(#linearGradient65397);stroke-width:0.265"
+         x="57.838367"
+         y="121.46056" /></text><text
        xml:space="preserve"
        transform="scale(0.26458333)"
        id="text69514"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;direction:rtl;white-space:pre;shape-inside:url(#rect69516);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-dasharray:none" /><rect
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;direction:rtl;text-anchor:middle;white-space:pre;shape-inside:url(#rect69516);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.00157;stroke-dasharray:none"><tspan
+         sodipodi:role="line"
+         id="tspan69518"></tspan></text><rect
        style="fill:#d6ad60;fill-opacity:1;stroke:#d6ad60;stroke-width:0.234102;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect74873"
        width="419.50867"
@@ -3513,69 +3250,40 @@
        id="rect74873-6"
        width="17.772848"
        height="17.707027"
-       x="8.597435"
-       y="269.55893" /><rect
-       style="fill:#f5f5f5;fill-opacity:0;stroke-width:0.264583;filter:url(#filter2229)"
-       id="rect910"
-       width="55.212166"
-       height="78.11499"
-       x="19.222012"
-       y="140.68878"
-       transform="matrix(1.0888889,0,0,1,-1.7086232,0)" /><image
+       x="22.093742"
+       y="268.74097" /><path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       d="m 0,243.3425 c 419.20346,0 419.20346,0.40897 419.20346,0.40897"
+       id="path93932" /><rect
+       style="fill:#d6ad60;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect94601"
+       width="27.401592"
+       height="71.162338"
+       x="255.40738"
+       y="-374.42029"
+       transform="rotate(90)" /><text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       x="339.91321"
+       y="273.24274"
+       id="text94605"><tspan
+         sodipodi:role="line"
+         id="tspan94603"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.87778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke-width:0"
+         x="339.91321"
+         y="273.24274">Verifiera</tspan></text><image
        preserveAspectRatio="none"
        inkscape:svg-dpi="96"
-       width="17.911314"
-       height="17.911314"
-       xlink:href="data:image/svg+xml;base64,PCEtLSBDcmVhdGVkIHdpdGggcXJlbmNvZGUgNC4xLjEgKGh0dHBzOi8vZnVrdWNoaS5vcmcvd29y
-a3MvcXJlbmNvZGUvaW5kZXguaHRtbCkgLS0+Cjxzdmcgd2lkdGg9IjIuNjVjbSIgaGVpZ2h0PSIy
-LjY1Y20iIHZpZXdCb3g9IjAgMCAyNSAyNSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVy
-c2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGcgaWQ9IlFS
-Y29kZSI+CgkJPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiBmaWxsPSIj
-ZmNmY2ZjIi8+CgkJPHBhdGggc3R5bGU9InN0cm9rZTojMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5z
-bGF0ZSgwLDAuNSkiIGQ9Ik0wLDBoMU0xLDBoMU0yLDBoMU0zLDBoMU00LDBoMU01LDBoMU02LDBo
-MU04LDBoMU0xMywwaDFNMTQsMGgxTTE1LDBoMU0xNiwwaDFNMTgsMGgxTTE5LDBoMU0yMCwwaDFN
-MjEsMGgxTTIyLDBoMU0yMywwaDFNMjQsMGgxTTAsMWgxTTYsMWgxTTgsMWgxTTExLDFoMU0xMiwx
-aDFNMTMsMWgxTTE2LDFoMU0xOCwxaDFNMjQsMWgxTTAsMmgxTTIsMmgxTTMsMmgxTTQsMmgxTTYs
-MmgxTTgsMmgxTTksMmgxTTEyLDJoMU0xNCwyaDFNMTYsMmgxTTE4LDJoMU0yMCwyaDFNMjEsMmgx
-TTIyLDJoMU0yNCwyaDFNMCwzaDFNMiwzaDFNMywzaDFNNCwzaDFNNiwzaDFNOCwzaDFNOSwzaDFN
-MTAsM2gxTTEyLDNoMU0xNSwzaDFNMTgsM2gxTTIwLDNoMU0yMSwzaDFNMjIsM2gxTTI0LDNoMU0w
-LDRoMU0yLDRoMU0zLDRoMU00LDRoMU02LDRoMU05LDRoMU0xMCw0aDFNMTIsNGgxTTE0LDRoMU0x
-NSw0aDFNMTYsNGgxTTE4LDRoMU0yMCw0aDFNMjEsNGgxTTIyLDRoMU0yNCw0aDFNMCw1aDFNNiw1
-aDFNOCw1aDFNOSw1aDFNMTAsNWgxTTE4LDVoMU0yNCw1aDFNMCw2aDFNMSw2aDFNMiw2aDFNMyw2
-aDFNNCw2aDFNNSw2aDFNNiw2aDFNOCw2aDFNMTAsNmgxTTEyLDZoMU0xNCw2aDFNMTYsNmgxTTE4
-LDZoMU0xOSw2aDFNMjAsNmgxTTIxLDZoMU0yMiw2aDFNMjMsNmgxTTI0LDZoMU0xMCw3aDFNMTEs
-N2gxTTEzLDdoMU0wLDhoMU0xLDhoMU00LDhoMU01LDhoMU02LDhoMU0xMCw4aDFNMTIsOGgxTTEz
-LDhoMU0xNSw4aDFNMTksOGgxTTIxLDhoMU0yMiw4aDFNMjMsOGgxTTI0LDhoMU0wLDloMU01LDlo
-MU0xMyw5aDFNMTQsOWgxTTE1LDloMU0yMCw5aDFNMjEsOWgxTTIzLDloMU0yLDEwaDFNNCwxMGgx
-TTYsMTBoMU05LDEwaDFNMTAsMTBoMU0xNSwxMGgxTTE2LDEwaDFNMTgsMTBoMU0yMCwxMGgxTTIx
-LDEwaDFNMjIsMTBoMU00LDExaDFNOCwxMWgxTTksMTFoMU0xMiwxMWgxTTE0LDExaDFNMTUsMTFo
-MU0xNywxMWgxTTIyLDExaDFNMjMsMTFoMU0wLDEyaDFNMSwxMmgxTTQsMTJoMU01LDEyaDFNNiwx
-MmgxTTcsMTJoMU04LDEyaDFNMTEsMTJoMU0xMywxMmgxTTE0LDEyaDFNMTcsMTJoMU0xOCwxMmgx
-TTE5LDEyaDFNMjEsMTJoMU0yMiwxMmgxTTIzLDEyaDFNMjQsMTJoMU0wLDEzaDFNMSwxM2gxTTIs
-MTNoMU00LDEzaDFNNSwxM2gxTTgsMTNoMU05LDEzaDFNMTAsMTNoMU0xMiwxM2gxTTE1LDEzaDFN
-MTYsMTNoMU0yMCwxM2gxTTIzLDEzaDFNMiwxNGgxTTMsMTRoMU00LDE0aDFNNSwxNGgxTTYsMTRo
-MU05LDE0aDFNMTAsMTRoMU0xMSwxNGgxTTEyLDE0aDFNMTMsMTRoMU0xNCwxNGgxTTE1LDE0aDFN
-MTYsMTRoMU0xNywxNGgxTTE4LDE0aDFNMTksMTRoMU0yMCwxNGgxTTIxLDE0aDFNMjIsMTRoMU0z
-LDE1aDFNNSwxNWgxTTcsMTVoMU04LDE1aDFNMTEsMTVoMU0xMywxNWgxTTE1LDE1aDFNMTksMTVo
-MU0yMCwxNWgxTTIyLDE1aDFNMjMsMTVoMU0wLDE2aDFNMSwxNmgxTTMsMTZoMU00LDE2aDFNNSwx
-NmgxTTYsMTZoMU05LDE2aDFNMTIsMTZoMU0xMywxNmgxTTE1LDE2aDFNMTYsMTZoMU0xNywxNmgx
-TTE4LDE2aDFNMTksMTZoMU0yMCwxNmgxTTIxLDE2aDFNMjIsMTZoMU04LDE3aDFNOSwxN2gxTTEw
-LDE3aDFNMTMsMTdoMU0xNCwxN2gxTTE2LDE3aDFNMjAsMTdoMU0wLDE4aDFNMSwxOGgxTTIsMTho
-MU0zLDE4aDFNNCwxOGgxTTUsMThoMU02LDE4aDFNOSwxOGgxTTEwLDE4aDFNMTYsMThoMU0xOCwx
-OGgxTTIwLDE4aDFNMCwxOWgxTTYsMTloMU04LDE5aDFNMTAsMTloMU0xMiwxOWgxTTE0LDE5aDFN
-MTYsMTloMU0yMCwxOWgxTTIxLDE5aDFNMjIsMTloMU0yMywxOWgxTTI0LDE5aDFNMCwyMGgxTTIs
-MjBoMU0zLDIwaDFNNCwyMGgxTTYsMjBoMU04LDIwaDFNMTEsMjBoMU0xMywyMGgxTTE0LDIwaDFN
-MTYsMjBoMU0xNywyMGgxTTE4LDIwaDFNMTksMjBoMU0yMCwyMGgxTTIxLDIwaDFNMjIsMjBoMU0y
-NCwyMGgxTTAsMjFoMU0yLDIxaDFNMywyMWgxTTQsMjFoMU02LDIxaDFNOSwyMWgxTTEwLDIxaDFN
-MTIsMjFoMU0xNSwyMWgxTTE3LDIxaDFNMTgsMjFoMU0xOSwyMWgxTTIyLDIxaDFNMjMsMjFoMU0y
-NCwyMWgxTTAsMjJoMU0yLDIyaDFNMywyMmgxTTQsMjJoMU02LDIyaDFNMTAsMjJoMU0xMSwyMmgx
-TTEyLDIyaDFNMTMsMjJoMU0xNCwyMmgxTTE1LDIyaDFNMTYsMjJoMU0xOCwyMmgxTTIxLDIyaDFN
-MjMsMjJoMU0wLDIzaDFNNiwyM2gxTTgsMjNoMU05LDIzaDFNMTEsMjNoMU0xMywyM2gxTTE1LDIz
-aDFNMTksMjNoMU0yMCwyM2gxTTIxLDIzaDFNMjIsMjNoMU0yMywyM2gxTTAsMjRoMU0xLDI0aDFN
-MiwyNGgxTTMsMjRoMU00LDI0aDFNNSwyNGgxTTYsMjRoMU04LDI0aDFNMTIsMjRoMU0xMywyNGgx
-TTE1LDI0aDFNMjIsMjRoMU0yMywyNGgxTTI0LDI0aDEiLz4KCTwvZz4KPC9zdmc+Cg==
-"
-       id="image45529"
-       x="393.27521"
-       y="269.35455" /></g></svg>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+       width="34.900131"
+       height="34.900131"
+       xlink:href="qr2.svg"
+       id="image100046"
+       x="377.62366"
+       y="251.65811" /><rect
+       style="fill:#fbfbf0;fill-opacity:1;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill;filter:url(#filter102382)"
+       id="rect102001"
+       width="64.209702"
+       height="67.481537"
+       x="10.633453"
+       y="91.202316"
+       transform="matrix(5.3821657,0,0,1.7030303,-47.824491,-58.392281)" /></g></svg>
