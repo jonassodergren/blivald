@@ -27,15 +27,17 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="0.64693624"
-     inkscape:cx="732.68426"
-     inkscape:cy="532.50997"
+     inkscape:cx="725.7284"
+     inkscape:cy="534.05572"
      inkscape:window-width="2374"
      inkscape:window-height="1205"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
-     inkscape:pageshadow="0" /><defs
+     inkscape:pageshadow="0"><inkscape:grid
+       type="xygrid"
+       id="grid2572" /></sodipodi:namedview><defs
      id="defs860"><rect
        x="159.57922"
        y="735.59467"
@@ -3462,37 +3464,31 @@
        height="56.103214"
        x="-8.6757545"
        y="244.0779" /><rect
-       style="fill:#d6ad60;fill-opacity:1;stroke:#d6ad60;stroke-width:0.148065;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
-       id="rect74873-6-8"
-       width="17.772848"
-       height="17.707027"
-       x="375.55383"
-       y="252.07509" /><rect
        style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.148894;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect74873-6-1"
        width="17.567528"
        height="18.115177"
-       x="26.183943"
+       x="390.58423"
        y="252.07556" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.05556px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;fill:#000000;fill-opacity:1;stroke-width:0.264999;stroke-dasharray:none"
-       x="217.44965"
-       y="262.84268"
+       x="216.63168"
+       y="263.25165"
        id="text37685"><tspan
          sodipodi:role="line"
          style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="262.84268"
+         x="216.63168"
+         y="263.25165"
          id="tspan48274">Utfärdat av blivald.se till</tspan><tspan
          sodipodi:role="line"
          style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="271.66214"
-         id="tspan48276"></tspan><tspan
+         x="216.63168"
+         y="272.07111"
+         id="tspan48276" /><tspan
          sodipodi:role="line"
          style="font-size:7.05556px;fill:#000000;fill-opacity:1;stroke-width:0.265"
-         x="50%"
-         y="280.48157"
+         x="216.63168"
+         y="280.89053"
          id="tspan48332">lisa.testperson@mail.com</tspan></text><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;white-space:pre;inline-size:226.083;display:inline;fill:url(#linearGradient65428);fill-opacity:1;stroke:url(#linearGradient65397);stroke-width:0.264999;stroke-dasharray:none;filter:url(#filter67656)"
@@ -3508,13 +3504,13 @@
        width="419.50867"
        height="1.875299"
        x="0.3915413"
-       y="294.85641" /><rect
+       y="242.09813" /><rect
        style="fill:#d6ad60;fill-opacity:1;stroke:#d6ad60;stroke-width:0.148065;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect74873-6"
        width="17.772848"
        height="17.707027"
-       x="8.597435"
-       y="269.55893" /><rect
+       x="372.58875"
+       y="269.9679" /><rect
        style="fill:#f5f5f5;fill-opacity:0;stroke-width:0.264583;filter:url(#filter2229)"
        id="rect910"
        width="55.212166"
@@ -3524,58 +3520,11 @@
        transform="matrix(1.0888889,0,0,1,-1.7086232,0)" /><image
        preserveAspectRatio="none"
        inkscape:svg-dpi="96"
-       width="17.911314"
-       height="17.911314"
-       xlink:href="data:image/svg+xml;base64,PCEtLSBDcmVhdGVkIHdpdGggcXJlbmNvZGUgNC4xLjEgKGh0dHBzOi8vZnVrdWNoaS5vcmcvd29y
-a3MvcXJlbmNvZGUvaW5kZXguaHRtbCkgLS0+Cjxzdmcgd2lkdGg9IjIuNjVjbSIgaGVpZ2h0PSIy
-LjY1Y20iIHZpZXdCb3g9IjAgMCAyNSAyNSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVy
-c2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGcgaWQ9IlFS
-Y29kZSI+CgkJPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiBmaWxsPSIj
-ZmNmY2ZjIi8+CgkJPHBhdGggc3R5bGU9InN0cm9rZTojMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5z
-bGF0ZSgwLDAuNSkiIGQ9Ik0wLDBoMU0xLDBoMU0yLDBoMU0zLDBoMU00LDBoMU01LDBoMU02LDBo
-MU04LDBoMU0xMywwaDFNMTQsMGgxTTE1LDBoMU0xNiwwaDFNMTgsMGgxTTE5LDBoMU0yMCwwaDFN
-MjEsMGgxTTIyLDBoMU0yMywwaDFNMjQsMGgxTTAsMWgxTTYsMWgxTTgsMWgxTTExLDFoMU0xMiwx
-aDFNMTMsMWgxTTE2LDFoMU0xOCwxaDFNMjQsMWgxTTAsMmgxTTIsMmgxTTMsMmgxTTQsMmgxTTYs
-MmgxTTgsMmgxTTksMmgxTTEyLDJoMU0xNCwyaDFNMTYsMmgxTTE4LDJoMU0yMCwyaDFNMjEsMmgx
-TTIyLDJoMU0yNCwyaDFNMCwzaDFNMiwzaDFNMywzaDFNNCwzaDFNNiwzaDFNOCwzaDFNOSwzaDFN
-MTAsM2gxTTEyLDNoMU0xNSwzaDFNMTgsM2gxTTIwLDNoMU0yMSwzaDFNMjIsM2gxTTI0LDNoMU0w
-LDRoMU0yLDRoMU0zLDRoMU00LDRoMU02LDRoMU05LDRoMU0xMCw0aDFNMTIsNGgxTTE0LDRoMU0x
-NSw0aDFNMTYsNGgxTTE4LDRoMU0yMCw0aDFNMjEsNGgxTTIyLDRoMU0yNCw0aDFNMCw1aDFNNiw1
-aDFNOCw1aDFNOSw1aDFNMTAsNWgxTTE4LDVoMU0yNCw1aDFNMCw2aDFNMSw2aDFNMiw2aDFNMyw2
-aDFNNCw2aDFNNSw2aDFNNiw2aDFNOCw2aDFNMTAsNmgxTTEyLDZoMU0xNCw2aDFNMTYsNmgxTTE4
-LDZoMU0xOSw2aDFNMjAsNmgxTTIxLDZoMU0yMiw2aDFNMjMsNmgxTTI0LDZoMU0xMCw3aDFNMTEs
-N2gxTTEzLDdoMU0wLDhoMU0xLDhoMU00LDhoMU01LDhoMU02LDhoMU0xMCw4aDFNMTIsOGgxTTEz
-LDhoMU0xNSw4aDFNMTksOGgxTTIxLDhoMU0yMiw4aDFNMjMsOGgxTTI0LDhoMU0wLDloMU01LDlo
-MU0xMyw5aDFNMTQsOWgxTTE1LDloMU0yMCw5aDFNMjEsOWgxTTIzLDloMU0yLDEwaDFNNCwxMGgx
-TTYsMTBoMU05LDEwaDFNMTAsMTBoMU0xNSwxMGgxTTE2LDEwaDFNMTgsMTBoMU0yMCwxMGgxTTIx
-LDEwaDFNMjIsMTBoMU00LDExaDFNOCwxMWgxTTksMTFoMU0xMiwxMWgxTTE0LDExaDFNMTUsMTFo
-MU0xNywxMWgxTTIyLDExaDFNMjMsMTFoMU0wLDEyaDFNMSwxMmgxTTQsMTJoMU01LDEyaDFNNiwx
-MmgxTTcsMTJoMU04LDEyaDFNMTEsMTJoMU0xMywxMmgxTTE0LDEyaDFNMTcsMTJoMU0xOCwxMmgx
-TTE5LDEyaDFNMjEsMTJoMU0yMiwxMmgxTTIzLDEyaDFNMjQsMTJoMU0wLDEzaDFNMSwxM2gxTTIs
-MTNoMU00LDEzaDFNNSwxM2gxTTgsMTNoMU05LDEzaDFNMTAsMTNoMU0xMiwxM2gxTTE1LDEzaDFN
-MTYsMTNoMU0yMCwxM2gxTTIzLDEzaDFNMiwxNGgxTTMsMTRoMU00LDE0aDFNNSwxNGgxTTYsMTRo
-MU05LDE0aDFNMTAsMTRoMU0xMSwxNGgxTTEyLDE0aDFNMTMsMTRoMU0xNCwxNGgxTTE1LDE0aDFN
-MTYsMTRoMU0xNywxNGgxTTE4LDE0aDFNMTksMTRoMU0yMCwxNGgxTTIxLDE0aDFNMjIsMTRoMU0z
-LDE1aDFNNSwxNWgxTTcsMTVoMU04LDE1aDFNMTEsMTVoMU0xMywxNWgxTTE1LDE1aDFNMTksMTVo
-MU0yMCwxNWgxTTIyLDE1aDFNMjMsMTVoMU0wLDE2aDFNMSwxNmgxTTMsMTZoMU00LDE2aDFNNSwx
-NmgxTTYsMTZoMU05LDE2aDFNMTIsMTZoMU0xMywxNmgxTTE1LDE2aDFNMTYsMTZoMU0xNywxNmgx
-TTE4LDE2aDFNMTksMTZoMU0yMCwxNmgxTTIxLDE2aDFNMjIsMTZoMU04LDE3aDFNOSwxN2gxTTEw
-LDE3aDFNMTMsMTdoMU0xNCwxN2gxTTE2LDE3aDFNMjAsMTdoMU0wLDE4aDFNMSwxOGgxTTIsMTho
-MU0zLDE4aDFNNCwxOGgxTTUsMThoMU02LDE4aDFNOSwxOGgxTTEwLDE4aDFNMTYsMThoMU0xOCwx
-OGgxTTIwLDE4aDFNMCwxOWgxTTYsMTloMU04LDE5aDFNMTAsMTloMU0xMiwxOWgxTTE0LDE5aDFN
-MTYsMTloMU0yMCwxOWgxTTIxLDE5aDFNMjIsMTloMU0yMywxOWgxTTI0LDE5aDFNMCwyMGgxTTIs
-MjBoMU0zLDIwaDFNNCwyMGgxTTYsMjBoMU04LDIwaDFNMTEsMjBoMU0xMywyMGgxTTE0LDIwaDFN
-MTYsMjBoMU0xNywyMGgxTTE4LDIwaDFNMTksMjBoMU0yMCwyMGgxTTIxLDIwaDFNMjIsMjBoMU0y
-NCwyMGgxTTAsMjFoMU0yLDIxaDFNMywyMWgxTTQsMjFoMU02LDIxaDFNOSwyMWgxTTEwLDIxaDFN
-MTIsMjFoMU0xNSwyMWgxTTE3LDIxaDFNMTgsMjFoMU0xOSwyMWgxTTIyLDIxaDFNMjMsMjFoMU0y
-NCwyMWgxTTAsMjJoMU0yLDIyaDFNMywyMmgxTTQsMjJoMU02LDIyaDFNMTAsMjJoMU0xMSwyMmgx
-TTEyLDIyaDFNMTMsMjJoMU0xNCwyMmgxTTE1LDIyaDFNMTYsMjJoMU0xOCwyMmgxTTIxLDIyaDFN
-MjMsMjJoMU0wLDIzaDFNNiwyM2gxTTgsMjNoMU05LDIzaDFNMTEsMjNoMU0xMywyM2gxTTE1LDIz
-aDFNMTksMjNoMU0yMCwyM2gxTTIxLDIzaDFNMjIsMjNoMU0yMywyM2gxTTAsMjRoMU0xLDI0aDFN
-MiwyNGgxTTMsMjRoMU00LDI0aDFNNSwyNGgxTTYsMjRoMU04LDI0aDFNMTIsMjRoMU0xMywyNGgx
-TTE1LDI0aDFNMjIsMjRoMU0yMywyNGgxTTI0LDI0aDEiLz4KCTwvZz4KPC9zdmc+Cg==
-"
+       width="36.724346"
+       height="36.724346"
+       xlink:href="data:image/svg+xml;base64,PCEtLSBDcmVhdGVkIHdpdGggcXJlbmNvZGUgNC4xLjEgKGh0dHBzOi8vZnVrdWNoaS5vcmcvd29y a3MvcXJlbmNvZGUvaW5kZXguaHRtbCkgLS0+Cjxzdmcgd2lkdGg9IjIuNjVjbSIgaGVpZ2h0PSIy LjY1Y20iIHZpZXdCb3g9IjAgMCAyNSAyNSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgdmVy c2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgoJPGcgaWQ9IlFS Y29kZSI+CgkJPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjI1IiBoZWlnaHQ9IjI1IiBmaWxsPSIj ZmNmY2ZjIi8+CgkJPHBhdGggc3R5bGU9InN0cm9rZTojMDAwMDAwIiB0cmFuc2Zvcm09InRyYW5z bGF0ZSgwLDAuNSkiIGQ9Ik0wLDBoMU0xLDBoMU0yLDBoMU0zLDBoMU00LDBoMU01LDBoMU02LDBo MU04LDBoMU0xMywwaDFNMTQsMGgxTTE1LDBoMU0xNiwwaDFNMTgsMGgxTTE5LDBoMU0yMCwwaDFN MjEsMGgxTTIyLDBoMU0yMywwaDFNMjQsMGgxTTAsMWgxTTYsMWgxTTgsMWgxTTExLDFoMU0xMiwx aDFNMTMsMWgxTTE2LDFoMU0xOCwxaDFNMjQsMWgxTTAsMmgxTTIsMmgxTTMsMmgxTTQsMmgxTTYs MmgxTTgsMmgxTTksMmgxTTEyLDJoMU0xNCwyaDFNMTYsMmgxTTE4LDJoMU0yMCwyaDFNMjEsMmgx TTIyLDJoMU0yNCwyaDFNMCwzaDFNMiwzaDFNMywzaDFNNCwzaDFNNiwzaDFNOCwzaDFNOSwzaDFN MTAsM2gxTTEyLDNoMU0xNSwzaDFNMTgsM2gxTTIwLDNoMU0yMSwzaDFNMjIsM2gxTTI0LDNoMU0w LDRoMU0yLDRoMU0zLDRoMU00LDRoMU02LDRoMU05LDRoMU0xMCw0aDFNMTIsNGgxTTE0LDRoMU0x NSw0aDFNMTYsNGgxTTE4LDRoMU0yMCw0aDFNMjEsNGgxTTIyLDRoMU0yNCw0aDFNMCw1aDFNNiw1 aDFNOCw1aDFNOSw1aDFNMTAsNWgxTTE4LDVoMU0yNCw1aDFNMCw2aDFNMSw2aDFNMiw2aDFNMyw2 aDFNNCw2aDFNNSw2aDFNNiw2aDFNOCw2aDFNMTAsNmgxTTEyLDZoMU0xNCw2aDFNMTYsNmgxTTE4 LDZoMU0xOSw2aDFNMjAsNmgxTTIxLDZoMU0yMiw2aDFNMjMsNmgxTTI0LDZoMU0xMCw3aDFNMTEs N2gxTTEzLDdoMU0wLDhoMU0xLDhoMU00LDhoMU01LDhoMU02LDhoMU0xMCw4aDFNMTIsOGgxTTEz LDhoMU0xNSw4aDFNMTksOGgxTTIxLDhoMU0yMiw4aDFNMjMsOGgxTTI0LDhoMU0wLDloMU01LDlo MU0xMyw5aDFNMTQsOWgxTTE1LDloMU0yMCw5aDFNMjEsOWgxTTIzLDloMU0yLDEwaDFNNCwxMGgx TTYsMTBoMU05LDEwaDFNMTAsMTBoMU0xNSwxMGgxTTE2LDEwaDFNMTgsMTBoMU0yMCwxMGgxTTIx LDEwaDFNMjIsMTBoMU00LDExaDFNOCwxMWgxTTksMTFoMU0xMiwxMWgxTTE0LDExaDFNMTUsMTFo MU0xNywxMWgxTTIyLDExaDFNMjMsMTFoMU0wLDEyaDFNMSwxMmgxTTQsMTJoMU01LDEyaDFNNiwx MmgxTTcsMTJoMU04LDEyaDFNMTEsMTJoMU0xMywxMmgxTTE0LDEyaDFNMTcsMTJoMU0xOCwxMmgx TTE5LDEyaDFNMjEsMTJoMU0yMiwxMmgxTTIzLDEyaDFNMjQsMTJoMU0wLDEzaDFNMSwxM2gxTTIs MTNoMU00LDEzaDFNNSwxM2gxTTgsMTNoMU05LDEzaDFNMTAsMTNoMU0xMiwxM2gxTTE1LDEzaDFN MTYsMTNoMU0yMCwxM2gxTTIzLDEzaDFNMiwxNGgxTTMsMTRoMU00LDE0aDFNNSwxNGgxTTYsMTRo MU05LDE0aDFNMTAsMTRoMU0xMSwxNGgxTTEyLDE0aDFNMTMsMTRoMU0xNCwxNGgxTTE1LDE0aDFN MTYsMTRoMU0xNywxNGgxTTE4LDE0aDFNMTksMTRoMU0yMCwxNGgxTTIxLDE0aDFNMjIsMTRoMU0z LDE1aDFNNSwxNWgxTTcsMTVoMU04LDE1aDFNMTEsMTVoMU0xMywxNWgxTTE1LDE1aDFNMTksMTVo MU0yMCwxNWgxTTIyLDE1aDFNMjMsMTVoMU0wLDE2aDFNMSwxNmgxTTMsMTZoMU00LDE2aDFNNSwx NmgxTTYsMTZoMU05LDE2aDFNMTIsMTZoMU0xMywxNmgxTTE1LDE2aDFNMTYsMTZoMU0xNywxNmgx TTE4LDE2aDFNMTksMTZoMU0yMCwxNmgxTTIxLDE2aDFNMjIsMTZoMU04LDE3aDFNOSwxN2gxTTEw LDE3aDFNMTMsMTdoMU0xNCwxN2gxTTE2LDE3aDFNMjAsMTdoMU0wLDE4aDFNMSwxOGgxTTIsMTho MU0zLDE4aDFNNCwxOGgxTTUsMThoMU02LDE4aDFNOSwxOGgxTTEwLDE4aDFNMTYsMThoMU0xOCwx OGgxTTIwLDE4aDFNMCwxOWgxTTYsMTloMU04LDE5aDFNMTAsMTloMU0xMiwxOWgxTTE0LDE5aDFN MTYsMTloMU0yMCwxOWgxTTIxLDE5aDFNMjIsMTloMU0yMywxOWgxTTI0LDE5aDFNMCwyMGgxTTIs MjBoMU0zLDIwaDFNNCwyMGgxTTYsMjBoMU04LDIwaDFNMTEsMjBoMU0xMywyMGgxTTE0LDIwaDFN MTYsMjBoMU0xNywyMGgxTTE4LDIwaDFNMTksMjBoMU0yMCwyMGgxTTIxLDIwaDFNMjIsMjBoMU0y NCwyMGgxTTAsMjFoMU0yLDIxaDFNMywyMWgxTTQsMjFoMU02LDIxaDFNOSwyMWgxTTEwLDIxaDFN MTIsMjFoMU0xNSwyMWgxTTE3LDIxaDFNMTgsMjFoMU0xOSwyMWgxTTIyLDIxaDFNMjMsMjFoMU0y NCwyMWgxTTAsMjJoMU0yLDIyaDFNMywyMmgxTTQsMjJoMU02LDIyaDFNMTAsMjJoMU0xMSwyMmgx TTEyLDIyaDFNMTMsMjJoMU0xNCwyMmgxTTE1LDIyaDFNMTYsMjJoMU0xOCwyMmgxTTIxLDIyaDFN MjMsMjJoMU0wLDIzaDFNNiwyM2gxTTgsMjNoMU05LDIzaDFNMTEsMjNoMU0xMywyM2gxTTE1LDIz aDFNMTksMjNoMU0yMCwyM2gxTTIxLDIzaDFNMjIsMjNoMU0yMywyM2gxTTAsMjRoMU0xLDI0aDFN MiwyNGgxTTMsMjRoMU00LDI0aDFNNSwyNGgxTTYsMjRoMU04LDI0aDFNMTIsMjRoMU0xMywyNGgx TTE1LDI0aDFNMjIsMjRoMU0yMywyNGgxTTI0LDI0aDEiLz4KCTwvZz4KPC9zdmc+Cg== "
        id="image45529"
-       x="393.27521"
-       y="269.35455" /></g></svg>
+       x="10.879863"
+       y="251.76845" /></g></svg>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
