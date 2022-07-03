@@ -210,13 +210,18 @@ span{
 }
  .carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md {
 	 margin: 8px;
- height: 300px;
+ height: 280px;
 
 /**
 	 background-position: center center;
    background-repeat: no-repeat;
    background-size: 350px;
    **/
+}
+
+.carousel-inner > .item {
+-webkit-backface-visibility: visible;
+backface-visibility: visible;
 }
 
 
@@ -255,17 +260,19 @@ span{
         <div>
           <h1 class="display-5 fw-bold">Workplace <span style="color: #000">of</span> Choice</h1>
           <p class="lead">Certifikatet som visar ditt förstahandsval</p>
-          <p><a class="text-underline-hover fs-3" href="certificate.pdf">Se produkten ></a></p>
+          <p><a class="text-underline-hover fs-3" href="certificate.pdf#zoom=75&toolbar=0">Se exempelcertifikat ></a></p>
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center justify-content-lg-start" >
 
+<!--
         <div class="card border-0 align-items-center" style="background:#FBFBFB" >
           <img class="frame" src="certificate_v10.svg"/>
         </div>
+      -->
 
 
-<!--
+
       <div class="container-fluid">
         <div class="row d-flex align-items-center">
          <div class="col-1 d-flex align-items-center justify-content-center">
@@ -322,7 +329,7 @@ span{
          </div>
        </div>
       </div>
--->
+
 
       </div>
     </div>
@@ -438,6 +445,7 @@ span{
    </div>
 </div>
 -->
+
 
 <footer style="background:#FBFBFB">
   <div class="container-fluid mt-3">
