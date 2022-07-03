@@ -3381,13 +3381,13 @@
      inkscape:label="Lager 1"
      inkscape:groupmode="layer"
      id="layer1"><rect
-       style="fill:#f2eecb;fill-opacity:1;stroke:#fafafa;stroke-width:1.021;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter28089)"
+       style="fill:#f2eecb;fill-opacity:1;stroke:#fafafa;stroke-width:1.021;stroke-dasharray:none;stroke-opacity:0;filter:url(#filter28089)"
        id="rect27708"
        width="62.164806"
        height="73.207237"
        x="15.541202"
        y="85.88559"
-       transform="matrix(6.9088141,0,0,3.3300202,-110.26269,-286.62925)" /><rect
+       transform="matrix(6.9478715,0,0,3.3298321,-113.31062,-286.60621)" /><rect
        style="fill:#f9fbff;fill-opacity:0;stroke-width:0.271595;stroke-dasharray:none;filter:url(#filter3287)"
        id="rect2698"
        width="72.389275"
