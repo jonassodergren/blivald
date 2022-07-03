@@ -171,15 +171,46 @@ a:active { text-decoration: none; }
 
 }
 
+span{
+   position: absolute;
+   transform: translate(-50%,-50%);
+   top: 50%;
+   left: 50%;
+   font-family: 'Times New Roman',serif;
+   letter-spacing: 5px;
+   font-size: 150px;
+   font-weight: bold;
+   background-image: linear-gradient(
+	to right,
+	#462523 0,
+       	#cb9b51 22%,
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#462523 100%
+	);
+   color:transparent;
+   -webkit-background-clip:text;
 
+}
+
+.icon-glow{
+  box-shadow: 0px 1px 2px 0px rgba(255,255,255,0.7),
+            1px 2px 4px 0px rgba(255,255,255,0.7),
+            2px 4px 8px 0px rgba(255,255,255,0.7),
+            2px 4px 16px 0px rgba(255,255,255,0.7);
+}
 
 </style>
 
 </head>
 <body class="container-fluid p-0">
-  <nav class="navbar p-2" style="background-color: rgb(51,51,51)">
+  <nav class="navbar p-2" style="background-image: linear-gradient(to right,#462523 0,#cb9b51 22%,#f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);">
     <div class="container-fluid">
-      <span class="navbar-brand text-white p-0 mb-0 h2 fs-6" href="/">Blivald.se - Välj och bli vald</span>
+      <a class="navbar-brand p-0 mb-0 h2 fs-6 text-white" href="/">Blivald
+      <!--  <img class="icon-glow2" height="25" src="certificate_v10.svg"/> -->
+      </a>
     </div>
   </nav>
 
@@ -206,7 +237,7 @@ a:active { text-decoration: none; }
         <div>
           <h1 class="display-5 fw-bold">Workplace <span style="color: #000">of</span> Choice</h1>
           <p class="lead">Certifikatet som visar ditt förstahandsval</p>
-          <p><a class="text-underline-hover fs-3" href="certificate.pdf">Se exempel ></a></p>
+          <p><a class="text-underline-hover fs-3" href="certificate.pdf">Se produkten ></a></p>
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center justify-content-lg-start" >
@@ -260,21 +291,6 @@ a:active { text-decoration: none; }
 
     </div>
   </div>
-
-  <!--
-  <footer class="w-100 py-4 flex-shrink-0 bg-white">
-  <div class="container py-4">
-  <div class="row gy-4 gx-5 justify-content-center align-items-center p-0">
-  <div class="col-lg-4 col-md-6">
-  <h5 class="h3">Om</h5>
-  <p class="small text-muted">Alla får utfärda ETT certifikat per år.</p>
-</div>
-
-</div>
-</div>
-</footer>
-
--->
 
 <footer style="background:#FBFBFB">
   <div class="container-fluid mt-3">
