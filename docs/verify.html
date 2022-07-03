@@ -25,77 +25,20 @@
   <meta name="twitter:card" content="https://www.blivald.se/images/stairs.jpg">
   <meta property="og:site_name" content="Blivald.se">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
-  <link href="css/simple-line-icons.css" rel="stylesheet" type="text/css">
-  <!-- Main Style Css -->
-  <link rel="stylesheet" href="css/features.css"/>
 
-  <link rel="stylesheet" href="css/footer.css"/>
-
-  <link rel="stylesheet" href="css/style.css"/>
-  <style type="text/css">
-
-  //	.jumbotron {
-    //    background-image: url(images/stairs.jpg);
-    //    background-size: cover;
-    //  -webkit-background-size: 100% 100%;
-    //    -moz-background-size: 100% 100%;
-    //    -o-background-size: 100% 100%;
-    //    background-size: 100% 100%;
-    //}
-    .breadcrumb {
-      padding-top: 0px;
-      padding-bottom: 0px;
-    }
-    .breadcrumb-item + .breadcrumb-item::before {
-      content: "";
-    }
-    .font-up-bold .breadcrumb-item + .breadcrumb-item::before {
-      content: none; }
-      .font-up-bold .breadcrumb-item a h5::after {
-        content: "";
-        margin-left: 1rem;
-        color: #868e96; }
-        </style>
       </head>
-      <body>
+      <body class="container-fluid p-0">
 
-
-
-
-<!--
-          <div class="font-up-bold text-uppercase">
-            <nav class="navbar navbar-dark bg-dark">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb lighten-6 bg-dark my-auto">
-                  <li class="breadcrumb-item active text-light"><a href="/" class="text-white">
-                    <h5 class="mr-3 mb-0"><strong>Blivald.se</strong></h5>
-                  </a></li>
-                </ol>
-              </nav>
-            </nav>
-
-          </div>
-  -->
   <header>
 
-    <nav class="navbar navbar-default border-bottom border-dark navbar-light"> <!-- navbar-dark bg-dark -->
-      <a class="navbar-brand text-dark text-uppercase" href="/"><strong>Blivald.se</strong> <span class="badge badge-secondary">Provperiod 2020</span></a> <!-- <i class="icon-badge" style="font-size:30px;"></i> -->
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <hr>
-        <ul class="navbar-nav navbar-right ml-auto">
-          <li class="nav-item">
-        <!--		<h4 class="text-light">För arbetsgivare</h4>-->
-            <a class="nav-link" href="https://www.blivald.se/verify.html">Verifiera certifikat</a>
-          </li>
-        </ul>
+    <nav class="navbar p-2" style="background-image: linear-gradient(to right,#462523 0,#cb9b51 22%,#f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);">
+      <div class="container-fluid">
+        <a class="navbar-brand p-0 mb-0 h2 fs-6 text-white" href="/">Blivald
+        <!--  <img class="icon-glow2" height="25" src="certificate_v10.svg"/> -->
+        </a>
       </div>
-
     </nav>
 
   </header>
@@ -103,9 +46,9 @@
           <div id="message"></div>
 
 
-          <div class="row justify-content-md-center">
+          <div class="row justify-content-md-center mt-5">
 
-            <div class="col-md-6 text-center">
+            <div class="col-md-6 text-center p-5">
               <div class="jumbotron bg-white text-center">
 
                 <h2 class="display-3">Verifiera certifikat</h2>
@@ -117,9 +60,9 @@
 
                 <form id="verify" action="https://api.blivald.se/certificates/">
                   <div class="input-group">
-                    <input class="form-control" type="text" name="certificate" placeholder="Fyll i det ID-nummer som står på certifikatet" id="certificate_id">
+                    <input class="form-control form-control-lg" type="text" name="certificate" placeholder="Fyll i det ID-nummer som står på certifikatet" id="certificate_id">
                     <span class="input-group-btn">
-                      <button href="" type="submit" class="btn btn-secondary">Verifiera</button>
+                      <button href="" type="submit" class="btn btn-lg btn-primary rounded-0">Verifiera</button>
                     </span>
                   </div>
                 </form>
@@ -132,46 +75,39 @@
 
 
 
-          <footer class="bg-light">
-          	<div class="container-fluid">
-          		<hr class="mt-0">
-          		<div class="row mx-auto">
-          			<div class="col-sm-12 col-md-6">
-          				<h6>Kort om blivald.se</h6>
-          				<p>Hjälpa de som söker arbete och de som söker arbetskraft. Certifikatet är unikt och möjliggör för jobbsökaren att förmedla vilket jobb/företag/arbetsplats den helst föredrar.</p>
-          			</div>
+          <footer style="background:#FBFBFB">
+            <div class="container-fluid mt-3">
 
-          			<div class="col-xs-6 col-md-3">
-          				<h6>Erbjudande</h6>
-          				<ul class="list-unstyled">
-          					<li><a href="certificate.html" class="text-dark">Utfärda certifikat</a></li>
-          					<li><a href="" class="text-dark">Verifiera giltigheten</a></li>
-          				</ul>
-          			</div>
+              <div class="row mx-auto p-5">
+                <div class="col-xs-6 col-md-3">
+                  <h6>Kort om blivald.se</h6>
+                  <p>Hjälper de som söker arbete och de som söker arbetskraft. Alla får utfärda ETT certifikat per år.</p>
+                </div>
 
-          			<div class="col-xs-6 col-md-3">
-          				<h6>Snabblänkar</h6>
-          				<ul class="list-unstyled">
-          					<li><a href="" class="text-dark">Om sajten</a></li>
-          					<li><a href="mailto:info@blivald.se" class="text-dark">Kontakt</a></li>
-          					<li><a href="privacy.html" class="text-dark">Privacy policy</a></li>
-          				</ul>
-          			</div>
-          		</div>
-          		<hr>
-          	</div>
-          	<div class="container-fluid">
-          		<div class="row justify-content-md-center mx-auto">
-          			<div class="col-sm-12 col-md-8">
+                <div class="col-xs-6 col-md-3">
+                  <h6>Arbetsgivare</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="verify.html">Har du fått ett certifikat?</a></li>
+                  </ul>
+                </div>
 
+                <div class="col-xs-6 col-md-3">
+                  <h6>Kontakt</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="mailto:info@blivald.se" class="text-decoration-none">Email</a></li>
+                  </ul>
+                </div>
 
-          				<div xmlns:cc="https://creativecommons.org/ns#" about="https://creativecommons.org">
-          					<p>Källkoden är licensierad med Apache 2.<br>Innehåll på denna sida är licensierad med <a class="text-dark" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</p>
-          				</div>
-
-          			</div>
-          		</div>
-          	</div>
+                <div class="col-xs-6 col-md-3">
+                  <h6>Villkor sajten</h6>
+                  <ul class="list-unstyled">
+                    <li><a href="privacy.html">Privacy policy</a></li>
+                    <li><a href="https://www.gnu.org/licenses/agpl-3.0.en.html">Källkod</a></li>
+                    <li><a href="https://creativecommons.org/licenses/by/4.0/">Innehåll</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
           </footer>
 
@@ -182,8 +118,7 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <!--	<script src="js/jquery.steps.js"></script>  -->
         <!--<script src="js/jquery-ui.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/js/bootstrap.min.js"></script>
-        <script src="https://cdn.auth0.com/js/auth0-spa-js/1.7/auth0-spa-js.production.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/bootstrap@5.2.0-beta1/js/bootstrap.min.js"></script>
         <script src="js/verify.js"></script>
         <script>
         // Attach a submit handler to the form
@@ -224,7 +159,7 @@
             //alert("done");
           })
           .fail(function() {
-            $('#message').html('<div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Tyvärr!</strong> Hittar inget certifikat med det angivna numret. Dubbelkolla att du angivet rätt nummer. Får du det inte att fungera så kan du maila certifikatet till <a href=\"mailto:info@blivald.se\">verify@blivald.se</a> så kontrollerar vi och återkommer snart med ett svar.</div>');
+            $('#message').html('<div id="alert" class="alert alert-warning fade show" role="alert"><strong>Tyvärr!</strong> Hittar inget certifikat med det angivna numret. Dubbelkolla att du angivet rätt nummer. Får du det inte att fungera så kan du maila certifikatet till <a href=\"mailto:info@blivald.se\">verify@blivald.se</a> så kontrollerar vi och återkommer snart med ett svar.</div>');
             //  alert( "error" );
           })
           .always(function() {
