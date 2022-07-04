@@ -154,13 +154,27 @@
 }
 
 
-  /**
-  .carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md {
-  margin: 0px;
-  height: 250px;
+
+/**
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 0.6s;
 }
 **/
 
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+
+}
+.carousel-indicators {
+    bottom: -55px;
+}
 
 
 </style>
@@ -212,7 +226,14 @@
     <div class="container-fluid">
       <div class="row mb-4">
 
-        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-interval="0" >
+        <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade" data-interval="0" >
+          <div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+</div>
+
           <div class="carousel-inner frame">
             <div class="carousel-item active">
               <div class="row">
@@ -265,10 +286,11 @@
       -->
 
 
-
+<!--
         <div class="col-auto d-flex justify-content-center">
           <p class="my-auto">4 sidor</p>
         </div>
+      -->
 
     <!--
         <div class="col-1 d-flex align-items-center justify-content-center"><a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
