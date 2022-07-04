@@ -146,6 +146,14 @@
 }
 
 
+.carousel-control-prev-icon{
+  filter: invert(100%);
+}
+.carousel-control-next-icon{
+  filter: invert(100%);
+}
+
+
   /**
   .carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md {
   margin: 0px;
@@ -228,11 +236,23 @@
             </div>
 
           </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
         </div>
 
 
       </div>
       <div class="row d-flex justify-content-center align-items-center">
+
+<!--
         <div class="col-1 d-flex align-items-center justify-content-center">
           <a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
             <div class="carousel-nav-icon">
@@ -242,9 +262,15 @@
             </div>
           </a>
         </div>
+      -->
+
+
+
         <div class="col-auto d-flex justify-content-center">
           <p class="my-auto">4 sidor</p>
         </div>
+
+    <!--
         <div class="col-1 d-flex align-items-center justify-content-center"><a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
           <div class="carousel-nav-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -253,6 +279,7 @@
           </div>
         </a>
       </div>
+    -->
 
     </div>
   </div>
