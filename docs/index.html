@@ -122,11 +122,19 @@
   }
 
   .frame {
-
+/**
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
     box-shadow: 0px 0px 5px 2px black inset;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    **/
+
+
+
+              box-shadow: 0 1px 1px rgba(0,0,0,0.25),
+             0 2px 2px rgba(0,0,0,0.20),
+             0 4px 4px rgba(0,0,0,0.15),
+             0 8px 8px rgba(0,0,0,0.10),
+             0 16px 16px rgba(0,0,0,0.05);
 
   }
 
@@ -177,15 +185,39 @@
 }
 
 
+.noisy {
+  filter: url(#noise);
+}
+
+#filter {
+  visibility: hidden;
+}
+
+.border-color{
+border-bottom: 2px solid !important;
+border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
+}
+
+body{
+  background-color: #FBFBFB;
+}
+
+/**
+a {color: #1d70b8;}
+a:hover {color: #003078;}
+**/
+
 </style>
 
 </head>
 <body class="container-fluid p-0">
-  <nav class="navbar p-2" style="background-image: linear-gradient(to right,#462523 0,#cb9b51 22%,#f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);">
+  <nav class="navbar p-2 bg-white border-color" > <!-- style="background-image: linear-gradient(to right,#462523 0,#cb9b51 22%,#f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);" -->
     <div class="container-fluid">
-      <a class="navbar-brand p-0 mb-0 h2 fs-6 text-white" href="/">Blivald
+      <a class="navbar-brand p-0 mb-0 h2 fs-5 fw-bold2" href="/" style="letter-spacing2: 0.04em;">BLIVALD
         <!--  <img class="icon-glow2" height="25" src="certificate_v10.svg"/> -->
       </a>
+
+
     </div>
   </nav>
 
@@ -206,7 +238,7 @@
   </div>
 
 
-  <div class="container-fluid py-5 mt-5 mb-5" style="background:#FBFBFB">
+  <div class="container-fluid py-5 mt-0 mb-5" style="background:#FBFBFB">
     <div class="row p-0" >
       <div class="col-md-6 mb-5 d-flex align-items-center justify-content-center text-center">
         <div>
@@ -247,7 +279,9 @@
             </div>
             <div class="carousel-item">
               <div class="row">
-                <img class="img-fluid" src="images/certificate/information2.svg"/>
+                <img class="img-fluid noisy" src="images/certificate/information2.svg"/>
+
+
               </div>
             </div>
             <div class="carousel-item">
