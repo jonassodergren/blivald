@@ -17,6 +17,7 @@
   <style>
 
 
+/**
   @media (max-width:767px) {
     img {
       max-width: 90%;
@@ -48,7 +49,39 @@
 
     }
   }
+  **/
 
+  @media (max-width:767px) {
+    #carouselExampleIndicators {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+
+  @media (min-width:768px) {
+    #carouselExampleIndicators {
+
+      max-width: 380px;
+      max-height: 380px;
+
+    }
+  }
+
+  @media (min-width:992px) {
+    #carouselExampleIndicators {
+      max-width: 450px;
+      max-height: 450px;
+
+    }
+  }
+
+  @media (min-width:1200px) {
+    #carouselExampleIndicators {
+      max-width: 500px;
+      max-height: 500px;
+
+    }
+  }
 
 
   .text-small {
@@ -207,6 +240,72 @@ a {color: #1d70b8;}
 a:hover {color: #003078;}
 **/
 
+/** shine **/
+
+.btn-shine {
+
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear;
+  animation-iteration-count: 2;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+ font-weight: 600;
+  font-size: 46px;
+  text-decoration: none;
+
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+
 
 </style>
 
@@ -214,7 +313,7 @@ a:hover {color: #003078;}
 <body class="container-fluid p-0">
   <nav class="navbar p-2 bg-white border-color" > <!-- style="background-image: linear-gradient(to right,#462523 0,#cb9b51 22%,#f6e27a 45%,#f6f2c0 50%,#f6e27a 55%,#cb9b51 78%,#462523 100%);" -->
     <div class="container-fluid">
-      <a class="navbar-brand p-0 mb-0 h2 fs-5 fw-bold2" href="/" style="letter-spacing2: 0.04em;">BLIVALD
+      <a class="navbar-brand p-0 mb-0 h2 fs-5 fw-bold2" href="/" style="letter-spacing2: 0.04em;">Till startsidan
         <!--  <img class="icon-glow2" height="25" src="certificate_v10.svg"/> -->
       </a>
 
@@ -244,10 +343,11 @@ a:hover {color: #003078;}
     <div class="row p-0" >
       <div class="col-md-6 mb-5 d-flex align-items-center justify-content-center text-center">
         <div>
-
-          <h1 class="display-5 fw-bold">Workplace <span style="color: #000">of</span> Choice</h1>
-          <p class="lead">Certifikatet som visar ditt förstahandsval</p>
-          <p></p> <!-- <a class="text-underline-hover fs-3" href="certificate.pdf#zoom=75&toolbar=0">Se exempelcertifikat ></a> -->
+            <h1 class="display-1">Certifikatet</h1>
+      <!--    <h1 class="display-5 fw-bold">Workplace of choice</h1> -->
+          <p class="lead fs-3" style="color:#1D1D20">Som visar ditt förstahandsval</p>
+    <!--      <p class="btn-shine text-center">Nr 1</p> -->
+          <!-- <a class="text-underline-hover fs-3" href="certificate.pdf#zoom=75&toolbar=0">Se exempelcertifikat ></a> -->
         </div>
       </div>
       <div class="col-md-6 d-flex justify-content-center justify-content-lg-start mx-0" >
@@ -259,7 +359,7 @@ a:hover {color: #003078;}
     -->
 
     <div class="container-fluid">
-      <div class="row mb-4">
+      <div class="row mb-4 justify-content-center">
 
         <div id="carouselExampleIndicators" class="carousel carousel-dark slide carousel-fade" data-interval="0" >
           <div class="carousel-indicators">
@@ -409,7 +509,7 @@ a:hover {color: #003078;}
 
 
         <h1 class="display-6">Öka chansen till <span class="jobb-text">jobb</span></h1>
-        <span class="d-block lead" style="color: #86868B">Med ett kostnadsfritt certifikat</span>
+        <span class="d-block lead" style="color: #86868B">Kostnadsfritt att beställa certifikatet</span>
 
         <!--        <div class="d-grid gap-4 d-md-flex mt-4"> -->
 
@@ -426,7 +526,7 @@ a:hover {color: #003078;}
             </div>
 
             <div class="col col-md-2 ml-auto">
-              <button id="notify" class="btn btn-lg btn-primary rounded-0" type="button">Anmäl</button>
+              <button id="notify" class="btn btn-lg btn-primary rounded-0" type="button">Beställ</button>
             </div>
           </div>
 
