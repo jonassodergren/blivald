@@ -229,9 +229,9 @@
 }
 
 .border-color{
-border-bottom: 2px solid !important;
-/** border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1; **/
+border-bottom: 1px solid !important;
 border-color: #e7e7e7;
+border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1; 
 }
 
 body{
@@ -281,6 +281,20 @@ html {
   -webkit-box-shadow:0px 0px 4px 2px rgba(214,173,96,0.9);
   -moz-box-shadow: 0px 0px 4px 2px rgba(214,173,96,0.9);
   box-shadow: 0px 0px 4px 2px rgba(214,173,96,0.9);
+}
+
+h1:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+	top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow:
+		-1px 0 1px #c6bb9f,
+		0 1px 1px #c6bb9f,
+		5px 5px 10px rgba(0, 0, 0, 0.4),
+		-5px -5px 10px rgba(0, 0, 0, 0.4);
 }
 
 </style>
@@ -338,8 +352,8 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </metadata>
 <defs>
   <linearGradient id="myGradient" gradientTransform="rotate(90)">
-    <stop offset="0%"   stop-color="#e2ad27" />
-    <stop offset="100%" stop-color="#daa520" />
+    <stop offset="0%"   stop-color="#020202" />
+    <stop offset="100%" stop-color="#181818" />
  </linearGradient>
 </defs>
 <g fill="url('#myGradient')" transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)"
@@ -355,6 +369,10 @@ Created by potrace 1.15, written by Peter Selinger 2001-2017
 </g>
 </svg>
 </div>
+
+</svg>
+
+
 
 
     <!--      <p class="btn-shine text-center">Nr 1</p> -->
