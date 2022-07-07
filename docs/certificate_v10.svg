@@ -28,7 +28,7 @@
      showgrid="false"
      inkscape:zoom="0.64693624"
      inkscape:cx="598.97711"
-     inkscape:cy="535.60147"
+     inkscape:cy="509.32376"
      inkscape:window-width="2374"
      inkscape:window-height="1205"
      inkscape:window-x="4"
@@ -3525,13 +3525,13 @@
        height="70.344391"
        x="6.1346846"
        y="49.895439"
-       transform="matrix(7.5316087,0,0,3.596462,-64.446481,-188.15655)" /><rect
+       transform="matrix(7.5316087,0,0,3.596462,-41.543657,-192.65532)" /><rect
        style="fill:#ffffff;fill-opacity:0.79798;stroke:#000000;stroke-width:0;stroke-dasharray:none;stroke-opacity:1"
        id="rect35615"
        width="451.92178"
        height="247.84126"
-       x="-9.8154898"
-       y="-6.1346889" /><rect
+       x="-6.5436587"
+       y="-6.1346784" /><rect
        style="fill:#f9fbff;fill-opacity:0;stroke-width:0.271595;stroke-dasharray:none;filter:url(#filter3287)"
        id="rect2698"
        width="72.389275"
@@ -3539,8 +3539,8 @@
        x="7.7706008"
        y="104.69862"
        transform="matrix(5.8135598,0,0,2.4308942,-45.174852,-253.69332)" /><path
-       style="fill:#fafafa;stroke-width:0.336816;fill-opacity:1"
-       d="M 0.57838364,-0.11978712 C 421.13027,296.59103 1.0456635,296.59103 1.0456635,296.59103 H 420.19572"
+       style="fill:#e1000a;fill-opacity:0.12549;stroke-width:0.336816"
+       d="M -0.2395744,3.9700028 C 420.31231,300.68082 0.2277055,300.68082 0.2277055,300.68082 H 419.37776"
        id="path1632" /><text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22.5778px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;direction:rtl;text-anchor:middle;fill:#1a1a1a;stroke-width:0.264583"
@@ -3648,7 +3648,7 @@
        width="419.50867"
        height="1.875299"
        x="0.3915413"
-       y="241.68915" /><rect
+       y="242.09813" /><rect
        style="fill:#d6ad60;fill-opacity:1;stroke:#d6ad60;stroke-width:0.148065;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
        id="rect74873-6"
        width="17.772848"
