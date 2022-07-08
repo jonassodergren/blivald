@@ -171,16 +171,28 @@ a:active { text-decoration: none; }
   fill: #9F7629;
 }
 
+.carousel-nav-icon-right {
+  height: 48px;
+  width: 48px;
+  fill: #000;
+}
+
 .carousel-nav-icon:hover{
   fill: #d6ad60;
+}
+
+.carousel-nav-icon-right:hover{
+  fill: #1E2D2F;
 }
 
 
 .carousel-control-prev-icon{
   filter: invert(100%);
+  display: none;
 }
 .carousel-control-next-icon{
   filter: invert(100%);
+    display: none;
 }
 
 
@@ -191,7 +203,7 @@ a:active { text-decoration: none; }
 
 }
 .carousel-indicators {
-  bottom: -55px;
+  bottom: -50px;
 }
 
 
@@ -210,6 +222,7 @@ a:active { text-decoration: none; }
   border-bottom: 1px solid !important;
   border-color: #e7e7e7;
   border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
+  background: #FBFBFB;
 }
 
 .border-top{
@@ -447,37 +460,52 @@ details p {
 
 
   </div>
-  <div class="row d-flex justify-content-center align-items-center">
+  <div class="row d-flex justify-content-center align-items-center mt-5">
 
-    <!--
-    <div class="col-1 d-flex align-items-center justify-content-center">
+
+    <div class="col-2 d-flex align-items-center justify-content-center">
     <a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <div class="carousel-nav-icon">
+      <!--
     <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
     <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+  </svg> -->
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+  <path id="XMLID_6_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M205.606,234.394
+  	c5.858,5.857,5.858,15.355,0,21.213C202.678,258.535,198.839,260,195,260s-7.678-1.464-10.606-4.394l-80-79.998
+  	c-2.813-2.813-4.394-6.628-4.394-10.606c0-3.978,1.58-7.794,4.394-10.607l80-80.002c5.857-5.858,15.355-5.858,21.213,0
+  	c5.858,5.857,5.858,15.355,0,21.213l-69.393,69.396L205.606,234.394z"/>
   </svg>
 </div>
 </a>
 </div>
--->
 
 
 <!--
+
 <div class="col-auto d-flex justify-content-center">
 <p class="my-auto">4 sidor</p>
 </div>
+
 -->
 
-<!--
-<div class="col-1 d-flex align-items-center justify-content-center"><a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-<div class="carousel-nav-icon">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
-<path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
-</svg>
+
+
+<div class="col-2 d-flex align-items-center justify-content-center"><a role="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+<div class="carousel-nav-icon-right">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  	 viewBox="0 0 330 330" style="enable-background:new 0 0 330 330;" xml:space="preserve">
+  <path id="XMLID_2_" d="M165,0C74.019,0,0,74.019,0,165s74.019,165,165,165s165-74.019,165-165S255.981,0,165,0z M225.606,175.605
+  	l-80,80.002C142.678,258.535,138.839,260,135,260s-7.678-1.464-10.606-4.394c-5.858-5.857-5.858-15.355,0-21.213l69.393-69.396
+  	l-69.393-69.392c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.858,15.355-5.858,21.213,0l80,79.998
+  	c2.814,2.813,4.394,6.628,4.394,10.606C230,168.976,228.42,172.792,225.606,175.605z"/>
+
+  </svg>
 </div>
 </a>
 </div>
--->
+
 
 </div>
 </div>
@@ -675,7 +703,7 @@ details p {
 </section>
 
 
-<footer class="border-top" style="background:#fff">
+<footer style="background:#fff">
   <div class="container-fluid mt-5 mb-5">
 
     <div class="row mx-auto p-5">
