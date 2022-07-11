@@ -1,0 +1,238 @@
+
+
+
+@media (max-width:767px) {
+  #carouselExampleIndicators {
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+
+@media (min-width:768px) {
+  #carouselExampleIndicators {
+
+    max-width: 380px;
+    max-height: 380px;
+
+  }
+}
+
+@media (min-width:992px) {
+  #carouselExampleIndicators {
+    max-width: 450px;
+    max-height: 450px;
+
+  }
+}
+
+@media (min-width:1200px) {
+  #carouselExampleIndicators {
+    max-width: 500px;
+    max-height: 500px;
+
+  }
+}
+
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.form-control:focus {
+  background: #000;
+  box-shadow: none;
+  border-color: #fff;
+}
+
+.form-control {
+  color: #F5F5F7 !important;
+  border-width: 2px;
+  background: #000;
+  box-shadow: none;
+}
+
+
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: underline; }
+
+
+a:active { text-decoration: none; }
+
+.jobb-text{
+
+  background-color: #f3ec78;
+  background-image: linear-gradient(45deg, #f3ec78, #af4261);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.shadow2 {
+  -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+}
+
+.frame {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.25),
+  0 2px 2px rgba(0,0,0,0.20),
+  0 4px 4px rgba(0,0,0,0.15),
+  0 8px 8px rgba(0,0,0,0.10),
+  0 16px 16px rgba(0,0,0,0.05);
+}
+
+
+.icon-glow {
+  box-shadow: 0px 1px 2px 0px rgba(255,255,255,0.7),1px 2px 4px 0px rgba(255,255,255,0.7),2px 4px 8px 0px rgba(255,255,255,0.7),2px 4px 16px 0px rgba(255,255,255,0.7);
+}
+
+.carousel-nav-icon {
+  height: 48px;
+  width: 48px;
+  fill: #9F7629;
+}
+
+.carousel-nav-icon-right {
+  height: 48px;
+  width: 48px;
+  fill: #000;
+}
+
+.carousel-nav-icon:hover{
+  fill: #d6ad60;
+}
+
+.carousel-nav-icon-right:hover{
+  fill: #1E2D2F;
+}
+
+
+.carousel-control-prev-icon{
+  filter: invert(100%);
+  display: none;
+}
+.carousel-control-next-icon{
+  filter: invert(100%);
+    display: none;
+}
+
+
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+
+
+.noisy {
+  filter: url(#noise);
+}
+
+#filter {
+  visibility: hidden;
+}
+
+.border-color{
+  border-top: 0px solid !important;
+  border-left: 0px solid !important;
+  border-right: 0px solid !important;
+  border-bottom: 1px solid !important;
+  border-color: #e7e7e7;
+  border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
+  background: #FBFBFB;
+}
+
+.border-top{
+  border-top: 1px solid !important;
+  border-left: 0px solid !important;
+  border-right: 0px solid !important;
+  border-bottom: 0px solid !important;
+  border-color: #e7e7e7;
+  border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
+}
+
+
+body{
+background-color: #FBFBFB;
+}
+
+
+text {
+  fill: #35322a;
+  filter: url('#money');
+  /**  font-family: 'Playfair Display', 'Open-Sans', 'Georgia', serif; **/
+  font-size: 100px;
+  font-weight: 900;
+}
+
+/** shadow **/
+
+.glow{
+  -webkit-box-shadow:0px 0px 4px 2px rgba(214,173,96,0.9);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(214,173,96,0.9);
+  box-shadow: 0px 0px 4px 2px rgba(214,173,96,0.9);
+}
+
+/** FAQ **/
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid black;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 300;
+  list-style: none;
+}
+
+details summary:after {
+  content: "+";
+
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+
+}
+
+details summary {
+  outline: 100;
+}
+details p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  padding-top: 1rem;
+}
+
+input:disabled {
+    background: black !important;
+}
