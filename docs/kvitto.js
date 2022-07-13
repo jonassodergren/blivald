@@ -15,7 +15,7 @@ window.onload = async () => {
       var next = document.getElementById("create-certificate");
 
               var a = document.createElement('a');
-              var link = document.createTextNode("Till skapa certifikat >");
+              var link = document.createTextNode("Eller, gå vidare till skapa certifikat direkt >");
               a.classList.add("fs-3");
               a.appendChild(link);
               a.title = "Utfärda";
