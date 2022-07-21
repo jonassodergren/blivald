@@ -104,21 +104,21 @@ a:active { text-decoration: none; }
 .carousel-nav-icon {
   height: 48px;
   width: 48px;
+  fill: #d6ad60;
+}
+
+.carousel-nav-icon:hover{
   fill: #9F7629;
 }
 
 .carousel-nav-icon-right {
   height: 48px;
   width: 48px;
-  fill: #000;
-}
-
-.carousel-nav-icon:hover{
-  fill: #d6ad60;
+  fill: #1E2D2F;
 }
 
 .carousel-nav-icon-right:hover{
-  fill: #1E2D2F;
+  fill: #000;
 }
 
 
