@@ -142,7 +142,6 @@ a:active { text-decoration: none; }
   bottom: -50px;
 }
 
-
 .noisy {
   filter: url(#noise);
 }
@@ -162,12 +161,12 @@ a:active { text-decoration: none; }
 }
 
 .border-top{
-  border-top: 1px solid !important;
+  border-top: 2px solid !important;
   border-left: 0px solid !important;
   border-right: 0px solid !important;
   border-bottom: 0px solid !important;
-  border-color: #e7e7e7;
-  border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
+  border-color: #fff !important;
+  #border-image: linear-gradient(45deg,#BF953F,#FCF6BA,#B38728,#FBF5B7,#AA771C) 1;
 }
 
 
