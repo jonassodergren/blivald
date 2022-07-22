@@ -235,3 +235,9 @@ details p {
 input:disabled {
     background: black !important;
 }
+
+.indetext{
+text-indent: 100%;
+white-space: nowrap;
+overflow: hidden;
+}
