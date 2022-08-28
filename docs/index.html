@@ -320,6 +320,13 @@
 
 <script>
 (function () {
+
+  var id = window.localStorage.getItem('id');
+  if (id === null){
+  id = createUUID();
+  window.localStorage.setItem('id', id);
+  }
+
   fetch("https://api.blivald.se/logs/analytics", {
     method: "post",
     headers: {
@@ -327,11 +334,21 @@
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      message: "Besök startsida"
+      message: "Besök startsida",
+      id: id
     })
+
   });
 
 })();
+
+function createUUID() {
+   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+      return v.toString(16);
+   });
+}
+
 </script>
 </body>
 </html>
