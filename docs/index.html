@@ -327,6 +327,14 @@
   window.localStorage.setItem('id', id);
   }
 
+  let params = new URLSearchParams(window.location.search);
+  var source = params.get('source'); // 'node'
+  var msg = "Besök startsida";
+
+  if (source === "email"){
+    msg = "Besök startsida via email";
+  }
+
   fetch("https://api.blivald.se/logs/analytics", {
     method: "post",
     headers: {
@@ -334,7 +342,7 @@
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      message: "Besök startsida",
+      message: msg,
       id: id
     })
 
