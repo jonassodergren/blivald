@@ -329,6 +329,7 @@
 
   let params = new URLSearchParams(window.location.search);
   var source = params.get('source'); // 'node'
+  window.history.pushState({}, document.title, window.location.pathname);
   var msg = "Besök startsida";
 
   if (source === "email"){
