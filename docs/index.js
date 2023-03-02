@@ -35,7 +35,7 @@ function handleErrors(response) {
   return response;
 }
 
-var notify = function(url, data) {
+var notify = function(url, email) {
 
   document.body.scrollTop = 0;
   progressBar.init();
@@ -44,7 +44,7 @@ var notify = function(url, data) {
     {
       method: "POST",
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(data)
+      body: JSON.stringify(email)
     }).then(handleErrors).then(response => response.json()).then(data =>
       {
         progressBar.clear();
@@ -61,7 +61,7 @@ var notify = function(url, data) {
 
               //  alert.style.display = 'block';
                var encoded = encodeURIComponent(url);
-                window.location = '/kvitto.html'+"?next="+encoded;
+                window.location = '/kvitto.html'+"?next="+encoded+"&"+"email="+email.email;
 
 
       }).catch((error) => {
